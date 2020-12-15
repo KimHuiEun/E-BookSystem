@@ -17,49 +17,65 @@ namespace EBookDevexpress
         {
             InitializeComponent();
         }
-
+/*
 
         private void ShowChildForm(Form form)
         {
             form.MdiParent = this;
             form.Show();
-        }
+        }*/
 
-        private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ShowChildForm(new DailyChartForm());
+            Overlap(new DailyChartForm());
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ShowChildForm(new WeeklyChartForm());
+            Overlap(new WeeklyChartForm());
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ShowChildForm(new QuaterlyChartForm());
+            Overlap(new QuaterlyChartForm());
         }
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ShowChildForm(new Age_GenreChartForm());
+            Overlap(new Age_GenreChartForm());
         }
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ShowChildForm(new Age_GenderChartForm());
+            Overlap(new Age_GenderChartForm());
         }
 
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ShowChildForm(new BestSellerRankForm());
+            Overlap(new BestSellerRankForm());
         }
 
         private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ShowChildForm(new NewBookRankForm());
+            Overlap(new NewBookRankForm());
         }
 
- 
+
+
+        //탭 중복 생성 방지
+        private void Overlap(Form form)
+        {
+            var childform = MdiChildren.FirstOrDefault(x => x.GetType() == form.GetType());
+
+            if (childform == null)
+            {
+                form.MdiParent = this;
+                form.Show();
+            }
+            else
+            {
+                childform.Focus();
+            }
+        }
     }
 }

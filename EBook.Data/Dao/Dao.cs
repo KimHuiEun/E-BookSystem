@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EBook.Data.Dao
+namespace EBook.Data
 {
     class Dao
     {

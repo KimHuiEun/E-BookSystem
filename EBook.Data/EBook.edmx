@@ -13,7 +13,7 @@
           <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Author" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Publisher" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="PublicationYear" Type="datetime" Nullable="false" />
+          <Property Name="PublicationYear" Type="int" Nullable="false" />
           <Property Name="Genre" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Price" Type="decimal" Precision="10" Scale="0" Nullable="false" />
         </EntityType>
@@ -23,7 +23,7 @@
           </Key>
           <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="BirthYear" Type="datetime" Nullable="false" />
+          <Property Name="BirthYear" Type="int" Nullable="false" />
           <Property Name="Gender" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
@@ -91,7 +91,7 @@
           <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Publisher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="PublicationYear" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PublicationYear" Type="Int32" Nullable="false" />
           <Property Name="Genre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Price" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
           <NavigationProperty Name="Rents" Relationship="Self.FK_Rent_Book" FromRole="Book" ToRole="Rent" />
@@ -102,7 +102,7 @@
           </Key>
           <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="BirthYear" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BirthYear" Type="Int32" Nullable="false" />
           <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Rents" Relationship="Self.FK_Rent_Customer" FromRole="Customer" ToRole="Rent" />
