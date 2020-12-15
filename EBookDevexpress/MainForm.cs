@@ -1,5 +1,4 @@
-﻿using DevExpress.XtraBars.Ribbon;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EBookDevepress
+namespace EBookDevexpress
 {
-    public partial class MainForm : RibbonForm
+    public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public MainForm()
         {

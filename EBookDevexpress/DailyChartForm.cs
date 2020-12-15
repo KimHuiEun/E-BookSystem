@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EBookDevepress
+namespace EBookDevexpress
 {
-    public partial class WeeklyChartForm : Form
+    public partial class DailyChartForm : Form
     {
-        public WeeklyChartForm()
+        public DailyChartForm()
         {
             InitializeComponent();
         }

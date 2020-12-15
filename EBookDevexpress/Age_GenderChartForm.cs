@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EBookDevepress
+namespace EBookDevexpress
 {
-    public partial class QuaterlyChartForm : Form
+    public partial class Age_GenderChartForm : Form
     {
-        public QuaterlyChartForm()
+        public Age_GenderChartForm()
         {
             InitializeComponent();
         }

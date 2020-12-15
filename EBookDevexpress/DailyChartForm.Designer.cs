@@ -1,7 +1,7 @@
 ﻿
-namespace EBookDevepress
+namespace EBookDevexpress
 {
-    partial class Age_GenderChartForm
+    partial class DailyChartForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace EBookDevepress
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Age_GenderChartForm";
+            this.Text = "DailyChart";
         }
 
         #endregion

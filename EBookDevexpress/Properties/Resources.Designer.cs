@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace EBookDevepress.Properties
+namespace EBookDevexpress.Properties
 {
     /// <summary>
     ///   지역화된 문자열 등을 찾기 위한 강력한 형식의 리소스 클래스입니다.
@@ -43,7 +43,7 @@ namespace EBookDevepress.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EBookDevepress.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EBookDevexpress.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

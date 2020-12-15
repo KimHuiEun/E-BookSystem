@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EBookDevepress
+namespace EBookDevexpress
 {
-    public partial class BestSellerRankForm : Form
+    public partial class WeeklyChartForm : Form
     {
-        public BestSellerRankForm()
+        public WeeklyChartForm()
         {
             InitializeComponent();
         }

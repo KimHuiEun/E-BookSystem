@@ -1,5 +1,5 @@
 ﻿
-namespace EBookDevepress
+namespace EBookDevexpress
 {
     partial class MainForm
     {
