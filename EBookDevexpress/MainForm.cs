@@ -24,7 +24,8 @@ namespace EBookDevexpress
             form.MdiParent = this;
             form.Show();
         }
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+
+        private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ShowChildForm(new DailyChartForm());
         }
@@ -58,5 +59,7 @@ namespace EBookDevexpress
         {
             ShowChildForm(new NewBookRankForm());
         }
+
+ 
     }
 }
