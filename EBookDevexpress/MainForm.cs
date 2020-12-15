@@ -37,5 +37,25 @@ namespace EBookDevexpress
         {
             ShowChildForm(new QuaterlyChartForm());
         }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ShowChildForm(new Age_GenreChartForm());
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ShowChildForm(new Age_GenderChartForm());
+        }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ShowChildForm(new BestSellerRankForm());
+        }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ShowChildForm(new NewBookRankForm());
+        }
     }
 }

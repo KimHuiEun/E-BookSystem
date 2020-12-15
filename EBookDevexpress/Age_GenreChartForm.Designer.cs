@@ -29,10 +29,17 @@ namespace EBookDevexpress
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Age_GenreChartForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Age_GenreChartForm";
+            this.Name = "Age_GenreChartForm";
+            this.Text = "연령/장르 차트";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

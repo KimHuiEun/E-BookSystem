@@ -101,8 +101,23 @@
     <Compile Include="WeeklyChartForm.Designer.cs">
       <DependentUpon>WeeklyChartForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Age_GenderChartForm.resx">
+      <DependentUpon>Age_GenderChartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Age_GenreChartForm.resx">
+      <DependentUpon>Age_GenreChartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BestSellerRankForm.resx">
+      <DependentUpon>BestSellerRankForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyChartForm.resx">
+      <DependentUpon>DailyChartForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewBookRankForm.resx">
+      <DependentUpon>NewBookRankForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -114,6 +129,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuaterlyChartForm.resx">
+      <DependentUpon>QuaterlyChartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeeklyChartForm.resx">
+      <DependentUpon>WeeklyChartForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
