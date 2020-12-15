@@ -152,5 +152,11 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EBook.Data\EBook.Data.csproj">
+      <Project>{0574a039-925c-4bdc-b9cf-f512a89dfd50}</Project>
+      <Name>EBook.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
