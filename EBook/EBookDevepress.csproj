@@ -90,12 +90,6 @@
     <Compile Include="DailyChartForm.Designer.cs">
       <DependentUpon>DailyChartForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mainform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mainform.Designer.cs">
-      <DependentUpon>Mainform.cs</DependentUpon>
-    </Compile>
     <Compile Include="NewBookRankForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,9 +110,6 @@
     <Compile Include="WeeklyChartForm.Designer.cs">
       <DependentUpon>WeeklyChartForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Mainform.resx">
-      <DependentUpon>Mainform.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
