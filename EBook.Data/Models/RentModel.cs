@@ -10,9 +10,9 @@ namespace EBook.Data
     {
         public DateTime RentDate { get; set; } //TODO : 시간안나오고 날짜만 나오는 데이터형식 찾기.
 
-        public int CustomerCount { get; set; }
+        //public int CustomerCount { get; set; }
 
-        public int BookCount { get; set; }
+        //public int BookCount { get; set; }
 
         public DateTime ReturnDate { get; set; }
     }

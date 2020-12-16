@@ -15,5 +15,7 @@ namespace EBook.Data
         public string Gender { get; set; }
         
         public string Phone { get; set; }
+
+        public int RentCount { get; set; }
     }
 }
