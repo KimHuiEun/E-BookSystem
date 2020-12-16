@@ -1,6 +1,8 @@
 ﻿using EFLibrary;
 using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Linq;
 
 namespace EBook.Data
 {
@@ -14,6 +16,5 @@ namespace EBook.Data
                 return x => x.CustomerId;
             }
         }
-
     }
 }

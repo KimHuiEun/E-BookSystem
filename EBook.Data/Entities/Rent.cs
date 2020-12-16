@@ -12,5 +12,17 @@ namespace EBook.Data
         {
             return $"{RentId} / {RentDate} / {CustomerId} / {BookId} / {ReturnedDate}";
         }
+
+        public int Decade
+        {
+            get
+            {
+                return (DateTime.Now.Year - BirthYear) / 10 * 10;
+            }
+        }
+
+        public int BirthYear { get; set; }
+
+        public string Genre { get; set; }
     }
 }

@@ -31,14 +31,7 @@ namespace EBookDevexpress
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram3D xyDiagram3D1 = new DevExpress.XtraCharts.XYDiagram3D();
-            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SideBySideBar3DSeriesView sideBySideBar3DSeriesView1 = new DevExpress.XtraCharts.SideBySideBar3DSeriesView();
-            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.Line3DSeriesView line3DSeriesView1 = new DevExpress.XtraCharts.Line3DSeriesView();
-            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.Line3DSeriesView line3DSeriesView2 = new DevExpress.XtraCharts.Line3DSeriesView();
-            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.Line3DSeriesView line3DSeriesView3 = new DevExpress.XtraCharts.Line3DSeriesView();
             DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn chartControlCommandGalleryItemGroup2DColumn1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn();
             DevExpress.XtraCharts.UI.CreateBarChartItem createBarChartItem1 = new DevExpress.XtraCharts.UI.CreateBarChartItem();
             DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem createFullStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem();
@@ -153,7 +146,6 @@ namespace EBookDevexpress
             DevExpress.Skins.SkinPaddingEdges skinPaddingEdges1 = new DevExpress.Skins.SkinPaddingEdges();
             DevExpress.Skins.SkinPaddingEdges skinPaddingEdges2 = new DevExpress.Skins.SkinPaddingEdges();
             this.uiChart_Main = new DevExpress.XtraCharts.ChartControl();
-            this.rentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.commandBarGalleryDropDown1 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown2 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown3 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
@@ -163,17 +155,10 @@ namespace EBookDevexpress
             this.commandBarGalleryDropDown7 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown8 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.chartBarController1 = new DevExpress.XtraCharts.UI.ChartBarController(this.components);
+            this.rentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.uiChart_Main)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3D1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBar3DSeriesView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(line3DSeriesView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(line3DSeriesView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(line3DSeriesView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown3)).BeginInit();
@@ -183,43 +168,29 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBarController1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // uiChart_Main
             // 
             this.uiChart_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.uiChart_Main.DataSource = this.rentBindingSource;
-            xyDiagram3D1.RotationMatrixSerializable = "0.945814160384411;0.163648894810998;0.280454297958857;0;-0.153809086584375;0.9864" +
-    "60809072701;-0.0569019951128002;0;-0.285969122285145;0.0106822933340986;0.958179" +
-    "28891661;0;0;0;0;1";
+            xyDiagram3D1.RotationMatrixSerializable = "0.766044443118978;-0.219846310392954;0.604022773555054;0;0;0.939692620785908;0.34" +
+    "2020143325669;0;-0.642787609686539;-0.262002630229385;0.719846310392954;0;0;0;0;" +
+    "1";
             this.uiChart_Main.Diagram = xyDiagram3D1;
             this.uiChart_Main.Legend.Name = "Default Legend";
             this.uiChart_Main.Location = new System.Drawing.Point(-1, 26);
             this.uiChart_Main.Name = "uiChart_Main";
             this.uiChart_Main.PaletteName = "Red Orange";
-            series1.Name = "연령별 대여량";
-            sideBySideBar3DSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            series1.View = sideBySideBar3DSeriesView1;
-            series2.Name = "경제";
-            line3DSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
-            series2.View = line3DSeriesView1;
-            series3.Name = "교양";
-            line3DSeriesView2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
-            series3.View = line3DSeriesView2;
-            series4.Name = "문학";
-            line3DSeriesView3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(112)))), ((int)(((byte)(192)))));
-            series4.View = line3DSeriesView3;
-            this.uiChart_Main.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1,
-        series2,
-        series3,
-        series4};
+            this.uiChart_Main.SeriesDataMember = "Genre";
+            this.uiChart_Main.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.uiChart_Main.SeriesTemplate.ArgumentDataMember = "Decade";
+            this.uiChart_Main.SeriesTemplate.SeriesDataMember = "Genre";
+            this.uiChart_Main.SeriesTemplate.ValueDataMembersSerializable = "Count";
+            this.uiChart_Main.SeriesTemplate.View = line3DSeriesView1;
             this.uiChart_Main.Size = new System.Drawing.Size(918, 677);
             this.uiChart_Main.TabIndex = 0;
-            // 
-            // rentBindingSource
-            // 
-            this.rentBindingSource.DataSource = typeof(EBook.Data.Rent);
             // 
             // commandBarGalleryDropDown1
             // 
@@ -908,6 +879,10 @@ namespace EBookDevexpress
             // 
             this.chartBarController1.Control = this.uiChart_Main;
             // 
+            // rentBindingSource
+            // 
+            this.rentBindingSource.DataSource = typeof(EBook.Data.RentSummary);
+            // 
             // Age_GenreChartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -917,16 +892,8 @@ namespace EBookDevexpress
             this.Name = "Age_GenreChartForm";
             this.Text = "연령/장르 차트";
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3D1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBar3DSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(line3DSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(line3DSeriesView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(line3DSeriesView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiChart_Main)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown3)).EndInit();
@@ -936,6 +903,7 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBarController1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

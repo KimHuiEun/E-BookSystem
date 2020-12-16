@@ -78,7 +78,6 @@
     </Compile>
     <Compile Include="ChartBasePage.cs" />
     <Compile Include="Diagram3D.cs" />
-    <Compile Include="Overlap.cs" />
     <Compile Include="DailyChartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +144,10 @@
     <EmbeddedResource Include="WeeklyChartForm.resx">
       <DependentUpon>WeeklyChartForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="EBook.Data.Book.datasource" />
+    <None Include="EBook.Data.Customer.datasource" />
+    <None Include="EBook.Data.CustomerSummary.datasource" />
+    <None Include="EBook.Data.Rent.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -25,8 +25,5 @@ namespace EBook.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Book> Books { get; set; }
-        public virtual DbSet<Customer> Customers { get; set; }
-        public virtual DbSet<Rent> Rents { get; set; }
     }
 }
