@@ -78,6 +78,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EBook.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Book.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\Rent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rent.cs">

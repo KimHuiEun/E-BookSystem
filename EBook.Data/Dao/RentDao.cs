@@ -6,11 +6,6 @@ namespace EBook.Data
 {
     public class RentDao : SingleKeyDao<Rent, int>
     {
-         protected override Expression<Func<Rent, bool>> IsKey(int key)
-            {
-                return x => x.RentId == key;
-            }
-
         protected override Expression<Func<Rent, int>> KeySelector
         {
             get

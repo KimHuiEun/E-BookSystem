@@ -189,9 +189,9 @@ namespace EBookDevexpress
             // 
             this.uiChart_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.uiChart_Main.DataSource = this.rentBindingSource;
-            xyDiagram3D1.RotationMatrixSerializable = "0.949569587570908;0.163648894810998;0.267463338773148;0;-0.154574612035793;0.9864" +
-    "60809072701;-0.0547883334088659;0;-0.272808151774327;0.0106822933340986;0.962009" +
-    "148051489;0;0;0;0;1";
+            xyDiagram3D1.RotationMatrixSerializable = "0.945814160384411;0.163648894810998;0.280454297958857;0;-0.153809086584375;0.9864" +
+    "60809072701;-0.0569019951128002;0;-0.285969122285145;0.0106822933340986;0.958179" +
+    "28891661;0;0;0;0;1";
             this.uiChart_Main.Diagram = xyDiagram3D1;
             this.uiChart_Main.Legend.Name = "Default Legend";
             this.uiChart_Main.Location = new System.Drawing.Point(-1, 26);
