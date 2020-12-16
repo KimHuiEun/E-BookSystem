@@ -54,12 +54,12 @@ namespace EBook.Data
 
         private List<Rent> GetWithExtra(int year) //Search 메소드에서 만든 것 생성.
         {
-            using (var context = DbContextCreator.Create())   //MSSQL 사용문
+           using (var context = DbContextCreator.Create())   //MSSQL 사용문
             {
                 //쿼리문
                 var query = from x in context.Rents                 //x에 Rents 다 불러오기.          
                             where x.RentDate.Year == year           //불러온 것 중에 RentDate를 year에 넣기
-                            select new                              //익명개체 생성
+                            select new                              //익명객체 생성
                             { 
                                 Rent = x,                            
                                 Genre = x.Book.Genre, 
@@ -68,12 +68,6 @@ namespace EBook.Data
 
                 var list = query.ToList();                  //시퀀스 요소 리스트화
 
-
-                //TODO : 익명개체에 대해서 .....다시....질문이요...
-
-
-
-
                 foreach(var item in list)                       //리스트에 item이라는 매개변수를 생성해서 돌림.
                 {
                     item.Rent.Genre = item.Genre;
@@ -81,16 +75,22 @@ namespace EBook.Data
                 }
 
                 return list.Select(x => x.Rent).ToList();   //return list.ConvertAll(x => x.Rent)
+                                                            //x라고 이름이 지정되고 x의 Rent값을 반환하는 매개변수를
+                                                            //지정하는 람다식을 리스트를 Return으로 반환.
+                                                            //list
+                                                            //Select(x => x.Rent)
+                                                            //ToList
             }
         }
 
-        private List<Rent> GetWithExtra2(int year)
+       /* private List<Rent> GetWithExtra2(int year) 
         {
             using (var context = DbContextCreator.Create())
             {
 
                 Dictionary<int, int> birthyears
                     = context.Customers.ToDictionary(x => x.CustomerId, x => x.BirthYear);
+
                 Dictionary<int, string> genres = context.Books.ToDictionary(x => x.BookId, x => x.Genre);
 
                 var query = from x in context.Rents
@@ -98,14 +98,19 @@ namespace EBook.Data
                             select x;
 
                 List<Rent> list = query.ToList();
+
                 foreach(var rent in list)
                 {
                     rent.Genre = genres[rent.BookId];
+
+                    //rent.Genre = genres[1] //1, 역사
+                    //rent.Genre = genres[2] //2, 문학
+
                     rent.BirthYear = birthyears[rent.CustomerId];
                 }
 
                 return list;
             }
-        }
+        }*/
     }
 }
