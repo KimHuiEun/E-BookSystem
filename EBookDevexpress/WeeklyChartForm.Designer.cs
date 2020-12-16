@@ -41,17 +41,17 @@ namespace EBookDevexpress
             DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeeklyChartForm));
             this.timeSpanChartRangeControlClient1 = new DevExpress.XtraEditors.TimeSpanChartRangeControlClient();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.chartCntrlWeekly = new DevExpress.XtraCharts.ChartControl();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.checkedListBoxControl1 = new DevExpress.XtraEditors.CheckedListBoxControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.checkedListBox = new DevExpress.XtraEditors.CheckedListBoxControl();
+            this.groupCtrlWeekly = new DevExpress.XtraEditors.GroupControl();
+            this.lblSearchGuide = new DevExpress.XtraEditors.LabelControl();
+            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.txtSelectedDate = new DevExpress.XtraEditors.TextEdit();
+            this.lblCtrlStartdate = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.timeSpanChartRangeControlClient1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartCntrlWeekly)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
@@ -62,23 +62,23 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkedListBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupCtrlWeekly)).BeginInit();
+            this.groupCtrlWeekly.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSelectedDate.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // chartControl1
+            // chartCntrlWeekly
             // 
             xyDiagram1.AxisX.MinorCount = 5;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             xyDiagram1.EnableAxisXScrolling = true;
             xyDiagram1.PaneDistance = 100;
-            this.chartControl1.Diagram = xyDiagram1;
-            this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Location = new System.Drawing.Point(12, 114);
-            this.chartControl1.Name = "chartControl1";
+            this.chartCntrlWeekly.Diagram = xyDiagram1;
+            this.chartCntrlWeekly.Legend.Name = "Default Legend";
+            this.chartCntrlWeekly.Location = new System.Drawing.Point(12, 114);
+            this.chartCntrlWeekly.Name = "chartCntrlWeekly";
             series1.Name = "경제";
             series1.View = lineSeriesView1;
             series2.Name = "교양";
@@ -87,72 +87,72 @@ namespace EBookDevexpress
             series3.View = lineSeriesView2;
             series4.Name = "사회과학";
             series4.View = lineSeriesView3;
-            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+            this.chartCntrlWeekly.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2,
         series3,
         series4};
-            this.chartControl1.Size = new System.Drawing.Size(558, 324);
-            this.chartControl1.TabIndex = 2;
+            this.chartCntrlWeekly.Size = new System.Drawing.Size(558, 324);
+            this.chartCntrlWeekly.TabIndex = 2;
             // 
-            // checkedListBoxControl1
+            // checkedListBox
             // 
-            this.checkedListBoxControl1.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
+            this.checkedListBox.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "경제"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "교양"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "문학"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "사회과학")});
-            this.checkedListBoxControl1.Location = new System.Drawing.Point(586, 168);
-            this.checkedListBoxControl1.MultiColumn = true;
-            this.checkedListBoxControl1.Name = "checkedListBoxControl1";
-            this.checkedListBoxControl1.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.checkedListBoxControl1.Size = new System.Drawing.Size(202, 270);
-            this.checkedListBoxControl1.TabIndex = 3;
-            this.checkedListBoxControl1.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxControl1_SelectedIndexChanged);
+            this.checkedListBox.Location = new System.Drawing.Point(586, 168);
+            this.checkedListBox.MultiColumn = true;
+            this.checkedListBox.Name = "checkedListBox";
+            this.checkedListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.checkedListBox.Size = new System.Drawing.Size(202, 270);
+            this.checkedListBox.TabIndex = 3;
+            
             // 
-            // groupControl1
+            // groupCtrlWeekly
             // 
-            this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.simpleButton1);
-            this.groupControl1.Controls.Add(this.textEdit1);
-            this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(12, 12);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(776, 96);
-            this.groupControl1.TabIndex = 4;
-            this.groupControl1.Text = "주간 대여 통계";
+            this.groupCtrlWeekly.Controls.Add(this.lblSearchGuide);
+            this.groupCtrlWeekly.Controls.Add(this.btnSearch);
+            this.groupCtrlWeekly.Controls.Add(this.txtSelectedDate);
+            this.groupCtrlWeekly.Controls.Add(this.lblCtrlStartdate);
+            this.groupCtrlWeekly.Location = new System.Drawing.Point(12, 12);
+            this.groupCtrlWeekly.Name = "groupCtrlWeekly";
+            this.groupCtrlWeekly.Size = new System.Drawing.Size(776, 96);
+            this.groupCtrlWeekly.TabIndex = 4;
+            this.groupCtrlWeekly.Text = "주간 대여 통계";
             // 
-            // labelControl2
+            // lblSearchGuide
             // 
-            this.labelControl2.Location = new System.Drawing.Point(118, 68);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(378, 18);
-            this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "*선택일 시작 기준으로 일주일 간의 통계를 조회할 수 있습니다.";
+            this.lblSearchGuide.Location = new System.Drawing.Point(118, 68);
+            this.lblSearchGuide.Name = "lblSearchGuide";
+            this.lblSearchGuide.Size = new System.Drawing.Size(378, 18);
+            this.lblSearchGuide.TabIndex = 3;
+            this.lblSearchGuide.Text = "*선택일 시작 기준으로 일주일 간의 통계를 조회할 수 있습니다.";
             // 
-            // simpleButton1
+            // btnSearch
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(281, 35);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(71, 27);
-            this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "조회";
+            this.btnSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(281, 35);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(71, 27);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "조회";
             // 
-            // textEdit1
+            // txtSelectedDate
             // 
-            this.textEdit1.Location = new System.Drawing.Point(118, 38);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(157, 24);
-            this.textEdit1.TabIndex = 1;
+            this.txtSelectedDate.Location = new System.Drawing.Point(118, 38);
+            this.txtSelectedDate.Name = "txtSelectedDate";
+            this.txtSelectedDate.Size = new System.Drawing.Size(157, 24);
+            this.txtSelectedDate.TabIndex = 1;
             // 
-            // labelControl1
+            // lblCtrlStartdate
             // 
-            this.labelControl1.Location = new System.Drawing.Point(14, 41);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(88, 18);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "조회 기간 선택";
+            this.lblCtrlStartdate.Location = new System.Drawing.Point(14, 41);
+            this.lblCtrlStartdate.Name = "lblCtrlStartdate";
+            this.lblCtrlStartdate.Size = new System.Drawing.Size(88, 18);
+            this.lblCtrlStartdate.TabIndex = 0;
+            this.lblCtrlStartdate.Text = "조회 기간 선택";
             // 
             // labelControl3
             // 
@@ -171,9 +171,9 @@ namespace EBookDevexpress
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.groupControl1);
-            this.Controls.Add(this.checkedListBoxControl1);
-            this.Controls.Add(this.chartControl1);
+            this.Controls.Add(this.groupCtrlWeekly);
+            this.Controls.Add(this.checkedListBox);
+            this.Controls.Add(this.chartCntrlWeekly);
             this.Name = "WeeklyChartForm";
             this.Text = "주간 대여";
             ((System.ComponentModel.ISupportInitialize)(this.timeSpanChartRangeControlClient1)).EndInit();
@@ -186,13 +186,13 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartCntrlWeekly)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkedListBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupCtrlWeekly)).EndInit();
+            this.groupCtrlWeekly.ResumeLayout(false);
+            this.groupCtrlWeekly.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSelectedDate.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,14 +200,14 @@ namespace EBookDevexpress
 
         #endregion
         private DevExpress.XtraEditors.TimeSpanChartRangeControlClient timeSpanChartRangeControlClient1;
-        private DevExpress.XtraCharts.ChartControl chartControl1;
+        private DevExpress.XtraCharts.ChartControl chartCntrlWeekly;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
-        private DevExpress.XtraEditors.CheckedListBoxControl checkedListBoxControl1;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.CheckedListBoxControl checkedListBox;
+        private DevExpress.XtraEditors.GroupControl groupCtrlWeekly;
+        private DevExpress.XtraEditors.LabelControl lblSearchGuide;
+        private DevExpress.XtraEditors.SimpleButton btnSearch;
+        private DevExpress.XtraEditors.TextEdit txtSelectedDate;
+        private DevExpress.XtraEditors.LabelControl lblCtrlStartdate;
         private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }

@@ -17,19 +17,5 @@ namespace EBookDevexpress
             InitializeComponent();
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chartControl1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
