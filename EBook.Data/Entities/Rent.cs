@@ -10,7 +10,7 @@ namespace EBook.Data
     {
         public override string ToString()
         {
-            return base.ToString();
+            return $"{RentId} / {RentDate} / {CustomerId} / {BookId} / {ReturnedDate}";
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using EFLibrary;
 using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace EBook.Data
@@ -16,6 +17,18 @@ namespace EBook.Data
             get
             {
                 return x => x.CustomerId;
+            }
+        }
+
+        public List<Book> GetByTitle(string title)
+        {
+            using(EBookEntities context = (EBookEntities)DbContextCreator.Context())
+            {
+                var query = from x in context.Books
+                            where x.Title.Contains(title)
+                            select x;
+
+                return query.ToList();
             }
         }
 
