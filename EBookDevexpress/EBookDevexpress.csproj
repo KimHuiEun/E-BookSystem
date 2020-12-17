@@ -85,7 +85,31 @@
       <DependentUpon>BestSellerRankForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ChartBasePage.cs" />
+    <Compile Include="UserControls\PeriodBaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PeriodBaseControl.Designer.cs">
+      <DependentUpon>PeriodBaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\QuarterSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\QuarterSelectControl.Designer.cs">
+      <DependentUpon>QuarterSelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WeekSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\WeekSelectControl.Designer.cs">
+      <DependentUpon>WeekSelectControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Diagram3D.cs" />
+    <Compile Include="UserControls\GenreSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GenreSelectControl.Designer.cs">
+      <DependentUpon>GenreSelectControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="NaverBooks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +133,12 @@
     </Compile>
     <Compile Include="NewBookRankForm.Designer.cs">
       <DependentUpon>NewBookRankForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DaySelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DaySelectControl.Designer.cs">
+      <DependentUpon>DaySelectControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,6 +191,18 @@
     <EmbeddedResource Include="PeriodForm\WeeklyChartForm.resx">
       <DependentUpon>WeeklyChartForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GenreSelectControl.resx">
+      <DependentUpon>GenreSelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DaySelectControl.resx">
+      <DependentUpon>DaySelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\QuarterSelectControl.resx">
+      <DependentUpon>QuarterSelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\WeekSelectControl.resx">
+      <DependentUpon>WeekSelectControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="EBook.Data.Book.datasource" />
     <None Include="EBook.Data.BookModel.datasource" />
     <None Include="EBook.Data.Customer.datasource" />
@@ -192,7 +234,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="RankForm\" />
-    <Folder Include="UserControls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

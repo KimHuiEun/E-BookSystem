@@ -108,7 +108,6 @@ namespace EBookDevexpress
             this.checkedListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.checkedListBox.Size = new System.Drawing.Size(202, 270);
             this.checkedListBox.TabIndex = 3;
-            
             // 
             // groupCtrlWeekly
             // 
@@ -132,7 +131,7 @@ namespace EBookDevexpress
             // 
             // btnSearch
             // 
-            this.btnSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.ImageOptions.Image")));
             this.btnSearch.Location = new System.Drawing.Point(281, 35);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(71, 27);
