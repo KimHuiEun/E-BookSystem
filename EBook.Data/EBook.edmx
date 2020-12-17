@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Book">
           <Key>
             <PropertyRef Name="BookId" />
@@ -25,17 +25,17 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="BirthYear" Type="datetime" Nullable="false" />
           <Property Name="Gender" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Rent">
           <Key>
             <PropertyRef Name="RentId" />
           </Key>
-          <Property Name="RentId" Type="int" Nullable="false" />
-          <Property Name="RentDate" Type="datetime" Nullable="false" />
+          <Property Name="RentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RentDate" Type="date" Nullable="false" />
           <Property Name="CustomerId" Type="int" Nullable="false" />
           <Property Name="BookId" Type="int" Nullable="false" />
-          <Property Name="ReturnedDate" Type="datetime" />
+          <Property Name="ReturnedDate" Type="date" />
         </EntityType>
         <Association Name="FK_Rent_Book">
           <End Role="Book" Type="Self.Book" Multiplicity="1">
@@ -78,52 +78,64 @@
             <End Role="Rent" EntitySet="Rent" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EBookEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Books" EntityType="Model.Book" />
+          <EntitySet Name="Customers" EntityType="Model.Customer" />
+          <EntitySet Name="Rents" EntityType="Model.Rent" />
+          <AssociationSet Name="FK_Rent_Book" Association="Model.FK_Rent_Book">
+            <End Role="Book" EntitySet="Books" />
+            <End Role="Rent" EntitySet="Rents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rent_Customer" Association="Model.FK_Rent_Customer">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Rent" EntitySet="Rents" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="Book">
           <Key>
             <PropertyRef Name="BookId" />
           </Key>
           <Property Name="BookId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Publisher" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="PublicationYear" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Genre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Price" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
-          <NavigationProperty Name="Rents" Relationship="Self.FK_Rent_Book" FromRole="Book" ToRole="Rent" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Publisher" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PublicationYear" Type="Int32" Nullable="false" />
+          <Property Name="Genre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <NavigationProperty Name="Rents" Relationship="Model.FK_Rent_Book" FromRole="Book" ToRole="Rent" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="CustomerId" />
           </Key>
           <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="BirthYear" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Rents" Relationship="Self.FK_Rent_Customer" FromRole="Customer" ToRole="Rent" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BirthYear" Type="Int32" Nullable="false" />
+          <Property Name="Gender" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Rents" Relationship="Model.FK_Rent_Customer" FromRole="Customer" ToRole="Rent" />
         </EntityType>
         <EntityType Name="Rent">
           <Key>
             <PropertyRef Name="RentId" />
           </Key>
-          <Property Name="RentId" Type="Int32" Nullable="false" />
-          <Property Name="RentDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RentDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="CustomerId" Type="Int32" Nullable="false" />
           <Property Name="BookId" Type="Int32" Nullable="false" />
-          <Property Name="ReturnedDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Book" Relationship="Self.FK_Rent_Book" FromRole="Rent" ToRole="Book" />
-          <NavigationProperty Name="Customer" Relationship="Self.FK_Rent_Customer" FromRole="Rent" ToRole="Customer" />
+          <Property Name="ReturnedDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Book" Relationship="Model.FK_Rent_Book" FromRole="Rent" ToRole="Book" />
+          <NavigationProperty Name="Customer" Relationship="Model.FK_Rent_Customer" FromRole="Rent" ToRole="Customer" />
         </EntityType>
         <Association Name="FK_Rent_Book">
-          <End Role="Book" Type="Self.Book" Multiplicity="1">
+          <End Type="Model.Book" Role="Book" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Rent" Type="Self.Rent" Multiplicity="*" />
+          <End Type="Model.Rent" Role="Rent" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Book">
               <PropertyRef Name="BookId" />
@@ -134,10 +146,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rent_Customer">
-          <End Role="Customer" Type="Self.Customer" Multiplicity="1">
+          <End Type="Model.Customer" Role="Customer" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Rent" Type="Self.Rent" Multiplicity="*" />
+          <End Type="Model.Rent" Role="Rent" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Customer">
               <PropertyRef Name="CustomerId" />
@@ -147,20 +159,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EBookEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Books" EntityType="Self.Book" />
-          <EntitySet Name="Customers" EntityType="Self.Customer" />
-          <EntitySet Name="Rents" EntityType="Self.Rent" />
-          <AssociationSet Name="FK_Rent_Book" Association="Self.FK_Rent_Book">
-            <End Role="Book" EntitySet="Books" />
-            <End Role="Rent" EntitySet="Rents" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Rent_Customer" Association="Self.FK_Rent_Customer">
-            <End Role="Customer" EntitySet="Customers" />
-            <End Role="Rent" EntitySet="Rents" />
-          </AssociationSet>
-        </EntityContainer>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -169,35 +168,35 @@
           <EntitySetMapping Name="Books">
             <EntityTypeMapping TypeName="Model.Book">
               <MappingFragment StoreEntitySet="Book">
-                <ScalarProperty Name="BookId" ColumnName="BookId" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Author" ColumnName="Author" />
-                <ScalarProperty Name="Publisher" ColumnName="Publisher" />
-                <ScalarProperty Name="PublicationYear" ColumnName="PublicationYear" />
-                <ScalarProperty Name="Genre" ColumnName="Genre" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Genre" ColumnName="Genre" />
+                <ScalarProperty Name="PublicationYear" ColumnName="PublicationYear" />
+                <ScalarProperty Name="Publisher" ColumnName="Publisher" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="BookId" ColumnName="BookId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Customers">
             <EntityTypeMapping TypeName="Model.Customer">
               <MappingFragment StoreEntitySet="Customer">
-                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="BirthYear" ColumnName="BirthYear" />
-                <ScalarProperty Name="Gender" ColumnName="Gender" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="BirthYear" ColumnName="BirthYear" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Rents">
             <EntityTypeMapping TypeName="Model.Rent">
               <MappingFragment StoreEntitySet="Rent">
-                <ScalarProperty Name="RentId" ColumnName="RentId" />
-                <ScalarProperty Name="RentDate" ColumnName="RentDate" />
-                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
-                <ScalarProperty Name="BookId" ColumnName="BookId" />
                 <ScalarProperty Name="ReturnedDate" ColumnName="ReturnedDate" />
+                <ScalarProperty Name="BookId" ColumnName="BookId" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="RentDate" ColumnName="RentDate" />
+                <ScalarProperty Name="RentId" ColumnName="RentId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

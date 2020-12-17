@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace EBook.Data
 {
-    public partial class Customer
+    public partial class Book
     {
         public override string ToString()
         {
-            return $"{CustomerId} / {Name} / {BirthYear} / {Gender} / {Phone}";
+            return $"{BookId} / {Title} / {Author} / {Publisher} / {PublicationYear} / {Genre} / {Price}";
         }
-
-       /* public int Age { get; set; }
-        public int Decade { get; set; }*/
     }
 }

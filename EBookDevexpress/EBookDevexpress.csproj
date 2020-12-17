@@ -83,6 +83,8 @@
     <Compile Include="BestSellerRankForm.Designer.cs">
       <DependentUpon>BestSellerRankForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChartBasePage.cs" />
+    <Compile Include="Diagram3D.cs" />
     <Compile Include="DailyChartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +151,10 @@
     <EmbeddedResource Include="WeeklyChartForm.resx">
       <DependentUpon>WeeklyChartForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="EBook.Data.Book.datasource" />
+    <None Include="EBook.Data.Customer.datasource" />
+    <None Include="EBook.Data.CustomerSummary.datasource" />
+    <None Include="EBook.Data.Rent.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -167,7 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EBook.Data\EBook.Data.csproj">
-      <Project>{ce61332c-fd50-414b-98e4-463f29012cda}</Project>
+      <Project>{0574a039-925c-4bdc-b9cf-f512a89dfd50}</Project>
       <Name>EBook.Data</Name>
     </ProjectReference>
   </ItemGroup>
