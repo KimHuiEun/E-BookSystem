@@ -32,17 +32,18 @@ namespace EBookDevexpress
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeekSelectControl));
             this.gcWeek = new DevExpress.XtraEditors.GroupControl();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.txtSelectedDate = new DevExpress.XtraEditors.TextEdit();
             this.lblCtrlStartdate = new DevExpress.XtraEditors.LabelControl();
+            this.dateEdit = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gcWeek)).BeginInit();
             this.gcWeek.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSelectedDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gcWeek
             // 
+            this.gcWeek.Controls.Add(this.dateEdit);
             this.gcWeek.Controls.Add(this.btnSearch);
-            this.gcWeek.Controls.Add(this.txtSelectedDate);
             this.gcWeek.Controls.Add(this.lblCtrlStartdate);
             this.gcWeek.Location = new System.Drawing.Point(12, 12);
             this.gcWeek.Name = "gcWeek";
@@ -58,13 +59,7 @@ namespace EBookDevexpress
             this.btnSearch.Size = new System.Drawing.Size(71, 27);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "조회";
-            // 
-            // txtSelectedDate
-            // 
-            this.txtSelectedDate.Location = new System.Drawing.Point(118, 38);
-            this.txtSelectedDate.Name = "txtSelectedDate";
-            this.txtSelectedDate.Size = new System.Drawing.Size(157, 24);
-            this.txtSelectedDate.TabIndex = 1;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lblCtrlStartdate
             // 
@@ -73,6 +68,18 @@ namespace EBookDevexpress
             this.lblCtrlStartdate.Size = new System.Drawing.Size(88, 18);
             this.lblCtrlStartdate.TabIndex = 0;
             this.lblCtrlStartdate.Text = "조회 날짜 선택";
+            // 
+            // dateEdit
+            // 
+            this.dateEdit.EditValue = null;
+            this.dateEdit.Location = new System.Drawing.Point(108, 37);
+            this.dateEdit.Name = "dateEdit";
+            this.dateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit.Size = new System.Drawing.Size(167, 24);
+            this.dateEdit.TabIndex = 4;
             // 
             // WeekSelectControl
             // 
@@ -84,7 +91,8 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(this.gcWeek)).EndInit();
             this.gcWeek.ResumeLayout(false);
             this.gcWeek.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSelectedDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -93,7 +101,7 @@ namespace EBookDevexpress
 
         private DevExpress.XtraEditors.GroupControl gcWeek;
         private DevExpress.XtraEditors.SimpleButton btnSearch;
-        private DevExpress.XtraEditors.TextEdit txtSelectedDate;
         private DevExpress.XtraEditors.LabelControl lblCtrlStartdate;
+        private DevExpress.XtraEditors.DateEdit dateEdit;
     }
 }

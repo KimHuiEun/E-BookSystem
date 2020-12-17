@@ -47,6 +47,7 @@ namespace EBookDevexpress
             this.checkedListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.checkedListBox.Size = new System.Drawing.Size(202, 270);
             this.checkedListBox.TabIndex = 5;
+            this.checkedListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_SelectedIndexChanged);
             // 
             // labelControl3
             // 

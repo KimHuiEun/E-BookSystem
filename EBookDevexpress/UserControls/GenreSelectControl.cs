@@ -16,5 +16,10 @@ namespace EBookDevexpress
         {
             InitializeComponent();
         }
+
+        private void checkedListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
