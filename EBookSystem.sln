@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBook.ConsoleUI", "EBook.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBook.WebApi", "EBook.WebApi\EBook.WebApi.csproj", "{674B60FA-8652-4078-B891-9C842000570E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBook.UnitTest", "EBook.UnitTest\EBook.UnitTest.csproj", "{80B3BDEC-DE55-46FF-9A86-3D0C1CF68E93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentDaoTest", "RentDaoTest\RentDaoTest.csproj", "{9CC6F8D6-E51E-43A3-A096-771BFDF880FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{674B60FA-8652-4078-B891-9C842000570E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{674B60FA-8652-4078-B891-9C842000570E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{674B60FA-8652-4078-B891-9C842000570E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80B3BDEC-DE55-46FF-9A86-3D0C1CF68E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80B3BDEC-DE55-46FF-9A86-3D0C1CF68E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80B3BDEC-DE55-46FF-9A86-3D0C1CF68E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80B3BDEC-DE55-46FF-9A86-3D0C1CF68E93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CC6F8D6-E51E-43A3-A096-771BFDF880FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC6F8D6-E51E-43A3-A096-771BFDF880FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CC6F8D6-E51E-43A3-A096-771BFDF880FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CC6F8D6-E51E-43A3-A096-771BFDF880FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
