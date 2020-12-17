@@ -183,6 +183,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="RankForm\" />
+    <Folder Include="UserControls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

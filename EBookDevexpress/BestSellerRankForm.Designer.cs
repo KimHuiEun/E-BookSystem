@@ -59,7 +59,7 @@ namespace EBookDevexpress
             // 
             // rentModelBindingSource
             // 
-            this.rentModelBindingSource.DataSource = typeof(EBook.Data.RentModel);
+            //this.rentModelBindingSource.DataSource = typeof(EBook.Data.RentModel);
             // 
             // BestSellerRankForm
             // 
@@ -69,7 +69,7 @@ namespace EBookDevexpress
             this.Controls.Add(this.BestSellerRankChart);
             this.Name = "BestSellerRankForm";
             this.Text = "베스트셀러 대여순위";
-            this.Load += new System.EventHandler(this.Form_Load);
+            //this.Load += new System.EventHandler(this.Form_Load);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BestSellerRankChart)).EndInit();

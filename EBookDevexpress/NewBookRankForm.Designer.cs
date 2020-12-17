@@ -42,7 +42,7 @@ namespace EBookDevexpress
             // 
             // bookModelBindingSource
             // 
-            this.bookModelBindingSource.DataSource = typeof(EBook.Data.BookModel);
+            //this.bookModelBindingSource.DataSource = typeof(EBook.Data.BookModel);
             // 
             // NewBookRankChart
             // 

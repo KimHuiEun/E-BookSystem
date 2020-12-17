@@ -20,7 +20,7 @@ namespace EBookDevexpress
 
             if (DesignMode)
                 return;
-
+/*
             //NewBookRankChart.DataSource = BookModel.RentCount.GetModels();
             var book = BookModel.RentCount.GetModels();
             BestSellerRankChart.Series[0].View.Colorizer = CreateColorizer(book);
@@ -37,7 +37,7 @@ namespace EBookDevexpress
                 colorizer.Keys.AddRange(names);
 
                 return colorizer;
-            }
+            }*/
         }
 
 
