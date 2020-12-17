@@ -86,6 +86,12 @@
     </Compile>
     <Compile Include="ChartBasePage.cs" />
     <Compile Include="Diagram3D.cs" />
+    <Compile Include="NaverBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NaverBooks.Designer.cs">
+      <DependentUpon>NaverBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="PeriodForm\DailyChartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BestSellerRankForm.resx">
       <DependentUpon>BestSellerRankForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NaverBooks.resx">
+      <DependentUpon>NaverBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PeriodForm\DailyChartForm.resx">
       <DependentUpon>DailyChartForm.cs</DependentUpon>
