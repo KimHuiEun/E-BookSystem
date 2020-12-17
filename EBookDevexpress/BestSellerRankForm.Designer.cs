@@ -30,58 +30,65 @@ namespace EBookDevexpress
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             this.BestSellerRankChart = new DevExpress.XtraCharts.ChartControl();
-            this.rentModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sbsBestSellerRank = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.BestSellerRankChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rentModelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbsBestSellerRank)).BeginInit();
             this.SuspendLayout();
             // 
             // BestSellerRankChart
             // 
-            this.BestSellerRankChart.DataSource = this.rentModelBindingSource;
-            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram2.Rotated = true;
-            this.BestSellerRankChart.Diagram = xyDiagram2;
+            this.BestSellerRankChart.DataSource = this.sbsBestSellerRank;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram1.Rotated = true;
+            this.BestSellerRankChart.Diagram = xyDiagram1;
             this.BestSellerRankChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BestSellerRankChart.Legend.Name = "Default Legend";
             this.BestSellerRankChart.Location = new System.Drawing.Point(0, 0);
+            this.BestSellerRankChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BestSellerRankChart.Name = "BestSellerRankChart";
-            series2.Name = "Series 1";
+            this.BestSellerRankChart.SeriesDataMember = "Title";
+            series1.ArgumentDataMember = "Title";
+            series1.Name = "Series 1";
+            series1.ValueDataMembersSerializable = "BookCount";
             this.BestSellerRankChart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series2};
-            this.BestSellerRankChart.Size = new System.Drawing.Size(800, 450);
+        series1};
+            this.BestSellerRankChart.SeriesTemplate.ArgumentDataMember = "BookCount";
+            this.BestSellerRankChart.SeriesTemplate.SeriesDataMember = "Title";
+            this.BestSellerRankChart.SeriesTemplate.ValueDataMembersSerializable = "Rank";
+            this.BestSellerRankChart.SeriesTemplate.Visible = false;
+            this.BestSellerRankChart.Size = new System.Drawing.Size(800, 540);
             this.BestSellerRankChart.TabIndex = 0;
             // 
-            // rentModelBindingSource
+            // sbsBestSellerRank
             // 
-            this.rentModelBindingSource.DataSource = typeof(EBook.Data.RentModel);
+            this.sbsBestSellerRank.DataSource = typeof(EBook.Data.Summary);
             // 
             // BestSellerRankForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 540);
             this.Controls.Add(this.BestSellerRankChart);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "BestSellerRankForm";
             this.Text = "베스트셀러 대여순위";
-            this.Load += new System.EventHandler(this.Form_Load);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BestSellerRankChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rentModelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbsBestSellerRank)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private DevExpress.XtraCharts.ChartControl BestSellerRankChart;
-        private System.Windows.Forms.BindingSource rentModelBindingSource;
+        private System.Windows.Forms.BindingSource sbsBestSellerRank;
     }
 }
