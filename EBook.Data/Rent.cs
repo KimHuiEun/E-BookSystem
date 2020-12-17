@@ -15,7 +15,7 @@ namespace EBook.Data
     public partial class Rent
     {
         public int RentId { get; set; }
-        public DateTime RentDate { get; set; }
+        public System.DateTime RentDate { get; set; }
         public int CustomerId { get; set; }
         public int BookId { get; set; }
         public Nullable<System.DateTime> ReturnedDate { get; set; }

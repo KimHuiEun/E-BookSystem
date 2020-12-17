@@ -16,6 +16,11 @@ namespace EBook.Data
 
         public int Rank { get; set; }
 
-        public int RentAmount { get; set; }
+        public int BookCount { get; set; }
+
+        public string Title { get; set; }
+
+        public string Gender { get; set; }
+
     }
 }
