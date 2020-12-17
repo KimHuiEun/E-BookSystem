@@ -50,6 +50,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
@@ -152,9 +153,12 @@
       <DependentUpon>WeeklyChartForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="EBook.Data.Book.datasource" />
+    <None Include="EBook.Data.BookModel.datasource" />
     <None Include="EBook.Data.Customer.datasource" />
     <None Include="EBook.Data.CustomerSummary.datasource" />
     <None Include="EBook.Data.Rent.datasource" />
+    <None Include="EBook.Data.RentModel.datasource" />
+    <None Include="EBook.Data.RentSummary.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

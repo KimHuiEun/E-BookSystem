@@ -29,66 +29,62 @@ namespace EBookDevexpress
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
-            this.lblChartGuide = new DevExpress.XtraEditors.LabelControl();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            this.bookModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.NewBookRankChart = new DevExpress.XtraCharts.ChartControl();
+            ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewBookRankChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblChartGuide
+            // bookModelBindingSource
             // 
-            this.lblChartGuide.Location = new System.Drawing.Point(12, 12);
-            this.lblChartGuide.Name = "lblChartGuide";
-            this.lblChartGuide.Size = new System.Drawing.Size(347, 18);
-            this.lblChartGuide.TabIndex = 4;
-            this.lblChartGuide.Text = "*신간 대여 순위의 기준은 최근 3개월 신규 발행본 입니다.";
+            this.bookModelBindingSource.DataSource = typeof(EBook.Data.BookModel);
             // 
-            // chartControl1
+            // NewBookRankChart
             // 
-            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram2.Rotated = true;
-            this.chartControl1.Diagram = xyDiagram2;
-            this.chartControl1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Right;
-            this.chartControl1.Legend.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Location = new System.Drawing.Point(12, 48);
-            this.chartControl1.Name = "chartControl1";
-            series2.Name = "3개월간 판매량";
-            series2.Tag = "전 장르 신간 판매량을 집계";
-            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series2};
-            this.chartControl1.Size = new System.Drawing.Size(757, 390);
-            this.chartControl1.TabIndex = 5;
-            chartTitle2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartTitle2.Text = "신간 판매량 순위";
-            this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle2});
+            this.NewBookRankChart.DataSource = this.bookModelBindingSource;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram1.Rotated = true;
+            this.NewBookRankChart.Diagram = xyDiagram1;
+            this.NewBookRankChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NewBookRankChart.Legend.Name = "Default Legend";
+            this.NewBookRankChart.Location = new System.Drawing.Point(0, 0);
+            this.NewBookRankChart.Name = "NewBookRankChart";
+            this.NewBookRankChart.PaletteName = "Apex";
+            series1.ArgumentDataMember = "Title";
+            series1.DataSource = this.bookModelBindingSource;
+            series1.Name = "Series 1";
+            series1.ValueDataMembersSerializable = "RentCount";
+            this.NewBookRankChart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.NewBookRankChart.SeriesTemplate.ArgumentDataMember = "RentCount";
+            this.NewBookRankChart.Size = new System.Drawing.Size(800, 450);
+            this.NewBookRankChart.TabIndex = 0;
             // 
             // NewBookRankForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.chartControl1);
-            this.Controls.Add(this.lblChartGuide);
+            this.Controls.Add(this.NewBookRankChart);
             this.Name = "NewBookRankForm";
             this.Text = "신간 대여순위";
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewBookRankChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.LabelControl lblChartGuide;
-        private DevExpress.XtraCharts.ChartControl chartControl1;
+        private DevExpress.XtraCharts.ChartControl NewBookRankChart;
+        private System.Windows.Forms.BindingSource bookModelBindingSource;
     }
 }
