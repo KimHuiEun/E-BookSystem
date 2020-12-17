@@ -96,6 +96,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EBook.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Documents\README.md" />
     <None Include="EBook.edmx.diagram">
       <DependentUpon>EBook.edmx</DependentUpon>
     </None>
