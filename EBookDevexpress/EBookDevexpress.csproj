@@ -66,16 +66,16 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Age_GenderChartForm.cs">
+    <Compile Include="CustomerForm\Age_GenderChartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Age_GenderChartForm.Designer.cs">
+    <Compile Include="CustomerForm\Age_GenderChartForm.Designer.cs">
       <DependentUpon>Age_GenderChartForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Age_GenreChartForm.cs">
+    <Compile Include="CustomerForm\Age_GenreChartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Age_GenreChartForm.Designer.cs">
+    <Compile Include="CustomerForm\Age_GenreChartForm.Designer.cs">
       <DependentUpon>Age_GenreChartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BestSellerRankForm.cs">
@@ -86,10 +86,10 @@
     </Compile>
     <Compile Include="ChartBasePage.cs" />
     <Compile Include="Diagram3D.cs" />
-    <Compile Include="DailyChartForm.cs">
+    <Compile Include="PeriodForm\DailyChartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DailyChartForm.Designer.cs">
+    <Compile Include="PeriodForm\DailyChartForm.Designer.cs">
       <DependentUpon>DailyChartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -106,28 +106,28 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuaterlyChartForm.cs">
+    <Compile Include="PeriodForm\QuaterlyChartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuaterlyChartForm.Designer.cs">
+    <Compile Include="PeriodForm\QuaterlyChartForm.Designer.cs">
       <DependentUpon>QuaterlyChartForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WeeklyChartForm.cs">
+    <Compile Include="PeriodForm\WeeklyChartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WeeklyChartForm.Designer.cs">
+    <Compile Include="PeriodForm\WeeklyChartForm.Designer.cs">
       <DependentUpon>WeeklyChartForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Age_GenderChartForm.resx">
+    <EmbeddedResource Include="CustomerForm\Age_GenderChartForm.resx">
       <DependentUpon>Age_GenderChartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Age_GenreChartForm.resx">
+    <EmbeddedResource Include="CustomerForm\Age_GenreChartForm.resx">
       <DependentUpon>Age_GenreChartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BestSellerRankForm.resx">
       <DependentUpon>BestSellerRankForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DailyChartForm.resx">
+    <EmbeddedResource Include="PeriodForm\DailyChartForm.resx">
       <DependentUpon>DailyChartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -146,10 +146,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QuaterlyChartForm.resx">
+    <EmbeddedResource Include="PeriodForm\QuaterlyChartForm.resx">
       <DependentUpon>QuaterlyChartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WeeklyChartForm.resx">
+    <EmbeddedResource Include="PeriodForm\WeeklyChartForm.resx">
       <DependentUpon>WeeklyChartForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="EBook.Data.Book.datasource" />
@@ -180,6 +180,9 @@
       <Project>{0574a039-925c-4bdc-b9cf-f512a89dfd50}</Project>
       <Name>EBook.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RankForm\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
