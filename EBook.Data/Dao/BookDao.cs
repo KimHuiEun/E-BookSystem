@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Linq;
 
-namespace EBook.Data.Dao
+namespace EBook.Data
 {
     public class BookDao : SingleKeyDao<Book, int>
     {
@@ -44,8 +44,7 @@ namespace EBook.Data.Dao
 
                 return query.ToList();
             }
-                return query.ToList();
-            }
+        }
 
 
     }

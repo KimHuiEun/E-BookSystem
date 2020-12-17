@@ -163,7 +163,6 @@ namespace EBookDevexpress
             this.labelControl3.Size = new System.Drawing.Size(53, 21);
             this.labelControl3.TabIndex = 5;
             this.labelControl3.Text = "항목 선택";
-            this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
             // 
             // WeeklyChartForm
             // 
