@@ -2,7 +2,7 @@
 using System;
 using System.Linq.Expressions;
 
-namespace EBook.Data
+namespace EBook.Data.Dao
 {
     public class CustomerDao : SingleKeyDao<Customer, int>
     {

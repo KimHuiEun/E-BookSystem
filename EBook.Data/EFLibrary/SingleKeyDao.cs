@@ -5,7 +5,6 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace EFLibrary
 {
     public abstract class SingleKeyDao<T, K> : BaseDao<T> where T : class

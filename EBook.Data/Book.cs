@@ -24,7 +24,7 @@ namespace EBook.Data
         public string Title { get; set; }
         public string Author { get; set; }
         public string Publisher { get; set; }
-        public int PublicationYear { get; set; }
+        public System.DateTime PublicationYear { get; set; }
         public string Genre { get; set; }
         public decimal Price { get; set; }
     

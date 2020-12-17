@@ -83,7 +83,6 @@
     <Compile Include="BestSellerRankForm.Designer.cs">
       <DependentUpon>BestSellerRankForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Overlap.cs" />
     <Compile Include="DailyChartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +164,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EBook.Data\EBook.Data.csproj">
+      <Project>{ce61332c-fd50-414b-98e4-463f29012cda}</Project>
+      <Name>EBook.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
