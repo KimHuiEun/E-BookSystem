@@ -47,6 +47,7 @@
     <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -145,9 +146,12 @@
       <DependentUpon>WeeklyChartForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="EBook.Data.Book.datasource" />
+    <None Include="EBook.Data.BookModel.datasource" />
     <None Include="EBook.Data.Customer.datasource" />
     <None Include="EBook.Data.CustomerSummary.datasource" />
     <None Include="EBook.Data.Rent.datasource" />
+    <None Include="EBook.Data.RentModel.datasource" />
+    <None Include="EBook.Data.RentSummary.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
