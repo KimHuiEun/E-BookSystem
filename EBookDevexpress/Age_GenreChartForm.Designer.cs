@@ -881,7 +881,7 @@ namespace EBookDevexpress
             // 
             // rentBindingSource
             // 
-            this.rentBindingSource.DataSource = typeof(EBook.Data.RentSummary);
+            this.rentBindingSource.DataSource = typeof(EBook.Data.Summay);
             // 
             // Age_GenreChartForm
             // 

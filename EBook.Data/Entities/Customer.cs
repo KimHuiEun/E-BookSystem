@@ -13,7 +13,7 @@ namespace EBook.Data
             return $"{CustomerId} / {Name} / {BirthYear} / {Gender} / {Phone}";
         }
 
-        public int Age { get; set; }
-        public int Decade { get; set; }
+       /* public int Age { get; set; }
+        public int Decade { get; set; }*/
     }
 }

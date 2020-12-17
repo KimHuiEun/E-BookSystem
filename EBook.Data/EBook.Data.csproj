@@ -81,9 +81,7 @@
     <Compile Include="Entities\Book.cs" />
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Rent.cs" />
-    <Compile Include="Models\BookModel.cs" />
-    <Compile Include="Models\RentSummary.cs" />
-    <Compile Include="Models\RentModel.cs" />
+    <Compile Include="Summary\Summay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Dao\RentDao.cs" />

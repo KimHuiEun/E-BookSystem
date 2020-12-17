@@ -9,11 +9,17 @@ namespace EBook.Data
     public class CustomerDao : SingleKeyDao<Customer, int>
     {
 
-        protected override Expression<Func<Customer, int>> KeySelector
+        protected override Expression<Func<Customer, int>> KeySelector => x => x.CustomerId;
+
+        public List<Customer> GetByGender(string gender)
         {
-            get
+            using (var context = DbContextCreator.Create())
             {
-                return x => x.CustomerId;
+                var query = from x in context.Customers
+                            where x.Gender == gender
+                            select x;
+
+                return query.ToList();
             }
         }
     }
