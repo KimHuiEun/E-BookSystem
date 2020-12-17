@@ -77,9 +77,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EBook.edmx</DependentUpon>
     </Compile>
-    <Compile Include="EFLibrary\BaseDao.cs" />
-    <Compile Include="EFLibrary\DbContextCreator.cs" />
-    <Compile Include="EFLibrary\SingleKeyDao.cs" />
+    <Compile Include="Entities\Book.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\Rent.cs" />
+    <Compile Include="Models\BookModel.cs" />
+    <Compile Include="Models\RentSummary.cs" />
+    <Compile Include="Models\RentModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rent.cs">
