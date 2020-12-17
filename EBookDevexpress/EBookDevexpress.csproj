@@ -45,6 +45,7 @@
     <Reference Include="DevExpress.XtraCharts.v20.2.UI, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v20.2.Wizard, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -208,6 +209,7 @@
     <None Include="EBook.Data.Customer.datasource" />
     <None Include="EBook.Data.CustomerSummary.datasource" />
     <None Include="EBook.Data.Rent.datasource" />
+    <None Include="EBook.Data.RentDao.datasource" />
     <None Include="EBook.Data.RentModel.datasource" />
     <None Include="EBook.Data.RentSummary.datasource" />
     <None Include="Properties\Settings.settings">

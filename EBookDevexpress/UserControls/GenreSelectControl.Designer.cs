@@ -45,7 +45,7 @@ namespace EBookDevexpress
             this.checkedListBox.MultiColumn = true;
             this.checkedListBox.Name = "checkedListBox";
             this.checkedListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.checkedListBox.Size = new System.Drawing.Size(202, 270);
+            this.checkedListBox.Size = new System.Drawing.Size(132, 270);
             this.checkedListBox.TabIndex = 5;
             this.checkedListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_SelectedIndexChanged);
             // 
@@ -66,7 +66,7 @@ namespace EBookDevexpress
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.checkedListBox);
             this.Name = "gcGenre";
-            this.Size = new System.Drawing.Size(235, 328);
+            this.Size = new System.Drawing.Size(160, 328);
             ((System.ComponentModel.ISupportInitialize)(this.checkedListBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
