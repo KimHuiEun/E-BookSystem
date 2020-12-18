@@ -31,21 +31,21 @@ namespace EBookDevexpress
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeekSelectControl));
             this.gcWeek = new DevExpress.XtraEditors.GroupControl();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.week = new DevExpress.XtraEditors.DateEdit();
             this.lblSearchGuide = new DevExpress.XtraEditors.LabelControl();
-            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.btnWeekSearch = new DevExpress.XtraEditors.SimpleButton();
             this.lblCtrlStartdate = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gcWeek)).BeginInit();
             this.gcWeek.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.week.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.week.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gcWeek
             // 
-            this.gcWeek.Controls.Add(this.dateEdit1);
+            this.gcWeek.Controls.Add(this.week);
             this.gcWeek.Controls.Add(this.lblSearchGuide);
-            this.gcWeek.Controls.Add(this.btnSearch);
+            this.gcWeek.Controls.Add(this.btnWeekSearch);
             this.gcWeek.Controls.Add(this.lblCtrlStartdate);
             this.gcWeek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcWeek.Location = new System.Drawing.Point(0, 0);
@@ -54,17 +54,17 @@ namespace EBookDevexpress
             this.gcWeek.TabIndex = 5;
             this.gcWeek.Text = "주간 대여 통계";
             // 
-            // dateEdit1
+            // week
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(109, 37);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.week.EditValue = null;
+            this.week.Location = new System.Drawing.Point(109, 37);
+            this.week.Name = "week";
+            this.week.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.week.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(166, 24);
-            this.dateEdit1.TabIndex = 4;
+            this.week.Size = new System.Drawing.Size(166, 24);
+            this.week.TabIndex = 4;
             // 
             // lblSearchGuide
             // 
@@ -74,14 +74,15 @@ namespace EBookDevexpress
             this.lblSearchGuide.TabIndex = 3;
             this.lblSearchGuide.Text = "*선택일 시작 기준으로 일주일 간의 통계를 조회할 수 있습니다.";
             // 
-            // btnSearch
+            // btnWeekSearch
             // 
-            this.btnSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.ImageOptions.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(281, 35);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(71, 27);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "조회";
+            this.btnWeekSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnWeekSearch.ImageOptions.Image")));
+            this.btnWeekSearch.Location = new System.Drawing.Point(281, 35);
+            this.btnWeekSearch.Name = "btnWeekSearch";
+            this.btnWeekSearch.Size = new System.Drawing.Size(71, 27);
+            this.btnWeekSearch.TabIndex = 2;
+            this.btnWeekSearch.Text = "조회";
+            this.btnWeekSearch.Click += new System.EventHandler(this.btnWeekSearch_Click);
             // 
             // lblCtrlStartdate
             // 
@@ -101,8 +102,8 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(this.gcWeek)).EndInit();
             this.gcWeek.ResumeLayout(false);
             this.gcWeek.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.week.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.week.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -111,8 +112,8 @@ namespace EBookDevexpress
 
         private DevExpress.XtraEditors.GroupControl gcWeek;
         private DevExpress.XtraEditors.LabelControl lblSearchGuide;
-        private DevExpress.XtraEditors.SimpleButton btnSearch;
+        private DevExpress.XtraEditors.SimpleButton btnWeekSearch;
         private DevExpress.XtraEditors.LabelControl lblCtrlStartdate;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit week;
     }
 }

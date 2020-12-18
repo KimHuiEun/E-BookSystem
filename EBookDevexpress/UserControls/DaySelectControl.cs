@@ -16,5 +16,50 @@ namespace EBookDevexpress
         {
             InitializeComponent();
         }
+
+        private void btnDaySearch_Click(object sender, EventArgs e)
+        {
+            OnButtonDaySearch(day.Text);
+        }
+
+        #region ButtonDaySearch event things for C# 3.0
+        public event EventHandler<ButtonDaySearchEventArgs> ButtonDaySearch;
+
+        protected virtual void OnButtonDaySearch(ButtonDaySearchEventArgs e)
+        {
+            if (ButtonDaySearch != null)
+                ButtonDaySearch(this, e);
+        }
+
+        private ButtonDaySearchEventArgs OnButtonDaySearch(string daySelect)
+        {
+            ButtonDaySearchEventArgs args = new ButtonDaySearchEventArgs(daySelect);
+            OnButtonDaySearch(args);
+
+            return args;
+        }
+
+        private ButtonDaySearchEventArgs OnButtonDaySearchForOut()
+        {
+            ButtonDaySearchEventArgs args = new ButtonDaySearchEventArgs();
+            OnButtonDaySearch(args);
+
+            return args;
+        }
+
+        public class ButtonDaySearchEventArgs : EventArgs
+        {
+            public string DaySelect { get; set; }
+
+            public ButtonDaySearchEventArgs()
+            {
+            }
+
+            public ButtonDaySearchEventArgs(string daySelect)
+            {
+                DaySelect = daySelect;
+            }
+        }
+        #endregion
     }
 }

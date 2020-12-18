@@ -31,19 +31,19 @@ namespace EBookDevexpress
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DaySelectControl));
             this.gcDay = new DevExpress.XtraEditors.GroupControl();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.day = new DevExpress.XtraEditors.DateEdit();
+            this.btnDaySearch = new DevExpress.XtraEditors.SimpleButton();
             this.lblCtrlStartdate = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gcDay)).BeginInit();
             this.gcDay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.day.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.day.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gcDay
             // 
-            this.gcDay.Controls.Add(this.dateEdit1);
-            this.gcDay.Controls.Add(this.btnSearch);
+            this.gcDay.Controls.Add(this.day);
+            this.gcDay.Controls.Add(this.btnDaySearch);
             this.gcDay.Controls.Add(this.lblCtrlStartdate);
             this.gcDay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcDay.Location = new System.Drawing.Point(0, 0);
@@ -52,26 +52,27 @@ namespace EBookDevexpress
             this.gcDay.TabIndex = 6;
             this.gcDay.Text = "일간 대여 통계";
             // 
-            // dateEdit1
+            // day
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(109, 36);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.day.EditValue = null;
+            this.day.Location = new System.Drawing.Point(109, 36);
+            this.day.Name = "day";
+            this.day.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.day.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(166, 24);
-            this.dateEdit1.TabIndex = 3;
+            this.day.Size = new System.Drawing.Size(166, 24);
+            this.day.TabIndex = 3;
             // 
-            // btnSearch
+            // btnDaySearch
             // 
-            this.btnSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.ImageOptions.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(281, 35);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(71, 27);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "조회";
+            this.btnDaySearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.ImageOptions.Image")));
+            this.btnDaySearch.Location = new System.Drawing.Point(281, 35);
+            this.btnDaySearch.Name = "btnDaySearch";
+            this.btnDaySearch.Size = new System.Drawing.Size(71, 27);
+            this.btnDaySearch.TabIndex = 2;
+            this.btnDaySearch.Text = "조회";
+            this.btnDaySearch.Click += new System.EventHandler(this.btnDaySearch_Click);
             // 
             // lblCtrlStartdate
             // 
@@ -91,8 +92,8 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(this.gcDay)).EndInit();
             this.gcDay.ResumeLayout(false);
             this.gcDay.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.day.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.day.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -100,8 +101,8 @@ namespace EBookDevexpress
         #endregion
 
         private DevExpress.XtraEditors.GroupControl gcDay;
-        private DevExpress.XtraEditors.SimpleButton btnSearch;
+        private DevExpress.XtraEditors.SimpleButton btnDaySearch;
         private DevExpress.XtraEditors.LabelControl lblCtrlStartdate;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit day;
     }
 }
