@@ -34,6 +34,7 @@ namespace EBookDevexpress
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             this.NewBookRankChart = new DevExpress.XtraCharts.ChartControl();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.genreSelectControl1 = new EBookDevexpress.GenreSelectControl();
             ((System.ComponentModel.ISupportInitialize)(this.NewBookRankChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
@@ -60,13 +61,20 @@ namespace EBookDevexpress
             this.NewBookRankChart.SeriesTemplate.ArgumentDataMember = "RentCount";
             this.NewBookRankChart.Size = new System.Drawing.Size(620, 395);
             this.NewBookRankChart.TabIndex = 3;
-            
-            //
+            // 
+            // genreSelectControl1
+            // 
+            this.genreSelectControl1.Location = new System.Drawing.Point(649, 92);
+            this.genreSelectControl1.Name = "genreSelectControl1";
+            this.genreSelectControl1.Size = new System.Drawing.Size(220, 315);
+            this.genreSelectControl1.TabIndex = 4;
+            // 
             // NewBookRankForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 470);
+            this.ClientSize = new System.Drawing.Size(895, 446);
+            this.Controls.Add(this.genreSelectControl1);
             this.Controls.Add(this.NewBookRankChart);
             this.Name = "NewBookRankForm";
             this.Text = "신간 대여순위";
@@ -82,5 +90,6 @@ namespace EBookDevexpress
         private System.Windows.Forms.BindingSource bookModelBindingSource;
         private DevExpress.XtraCharts.ChartControl NewBookRankChart;
         private System.Windows.Forms.BindingSource bookBindingSource;
+        private GenreSelectControl genreSelectControl1;
     }
 }

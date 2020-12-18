@@ -62,7 +62,7 @@ namespace EBookDevexpress
             this.BestSellerRankChart.SeriesTemplate.SeriesDataMember = "Title";
             this.BestSellerRankChart.SeriesTemplate.ValueDataMembersSerializable = "Rank";
             this.BestSellerRankChart.SeriesTemplate.Visible = false;
-            this.BestSellerRankChart.Size = new System.Drawing.Size(800, 540);
+            this.BestSellerRankChart.Size = new System.Drawing.Size(777, 542);
             this.BestSellerRankChart.TabIndex = 0;
             // 
             // sbsBestSellerRank
@@ -73,7 +73,7 @@ namespace EBookDevexpress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 540);
+            this.ClientSize = new System.Drawing.Size(777, 542);
             this.Controls.Add(this.BestSellerRankChart);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "BestSellerRankForm";
