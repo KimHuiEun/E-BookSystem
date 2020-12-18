@@ -29,11 +29,14 @@ namespace EBookDevexpress
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gcGenre = new DevExpress.XtraEditors.GroupControl();
             this.clGenre = new DevExpress.XtraEditors.CheckedListBoxControl();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gcGenre)).BeginInit();
             this.gcGenre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clGenre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gcGenre
@@ -48,6 +51,7 @@ namespace EBookDevexpress
             // 
             // clGenre
             // 
+            this.clGenre.CheckMember = "Genre";
             this.clGenre.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "경제"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "교양"),
@@ -59,6 +63,12 @@ namespace EBookDevexpress
             this.clGenre.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.clGenre.Size = new System.Drawing.Size(202, 270);
             this.clGenre.TabIndex = 9;
+            this.clGenre.SelectedIndexChanged += new System.EventHandler(this.clGenre_SelectedIndexChanged);
+            this.clGenre.Click += new System.EventHandler(this.clGenre_SelectedIndexChanged);
+            // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataSource = typeof(EBook.Data.Book);
             // 
             // GenreSelectControl
             // 
@@ -70,6 +80,7 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(this.gcGenre)).EndInit();
             this.gcGenre.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.clGenre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,5 +90,6 @@ namespace EBookDevexpress
 
         private DevExpress.XtraEditors.GroupControl gcGenre;
         private DevExpress.XtraEditors.CheckedListBoxControl clGenre;
+        private System.Windows.Forms.BindingSource bookBindingSource;
     }
 }

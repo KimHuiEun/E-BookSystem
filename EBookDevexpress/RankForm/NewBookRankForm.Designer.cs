@@ -48,10 +48,11 @@ namespace EBookDevexpress
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             xyDiagram1.Rotated = true;
             this.NewBookRankChart.Diagram = xyDiagram1;
+            this.NewBookRankChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NewBookRankChart.Legend.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.NewBookRankChart.Legend.Name = "Default Legend";
-            this.NewBookRankChart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.NewBookRankChart.Location = new System.Drawing.Point(12, 12);
+            this.NewBookRankChart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            this.NewBookRankChart.Location = new System.Drawing.Point(0, 0);
             this.NewBookRankChart.Name = "NewBookRankChart";
             this.NewBookRankChart.PaletteName = "Apex";
             series1.ArgumentDataMember = "Title";
@@ -59,14 +60,15 @@ namespace EBookDevexpress
             this.NewBookRankChart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
             this.NewBookRankChart.SeriesTemplate.ArgumentDataMember = "RentCount";
-            this.NewBookRankChart.Size = new System.Drawing.Size(620, 395);
+            this.NewBookRankChart.Size = new System.Drawing.Size(895, 446);
             this.NewBookRankChart.TabIndex = 3;
             // 
             // genreSelectControl1
             // 
-            this.genreSelectControl1.Location = new System.Drawing.Point(649, 92);
+            this.genreSelectControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.genreSelectControl1.Location = new System.Drawing.Point(782, 0);
             this.genreSelectControl1.Name = "genreSelectControl1";
-            this.genreSelectControl1.Size = new System.Drawing.Size(220, 315);
+            this.genreSelectControl1.Size = new System.Drawing.Size(113, 446);
             this.genreSelectControl1.TabIndex = 4;
             // 
             // NewBookRankForm
@@ -87,7 +89,7 @@ namespace EBookDevexpress
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource bookModelBindingSource;
+        //private System.Windows.Forms.BindingSource bookModelBindingSource;
         private DevExpress.XtraCharts.ChartControl NewBookRankChart;
         private System.Windows.Forms.BindingSource bookBindingSource;
         private GenreSelectControl genreSelectControl1;

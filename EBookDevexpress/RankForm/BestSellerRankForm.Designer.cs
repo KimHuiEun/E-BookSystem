@@ -34,6 +34,7 @@ namespace EBookDevexpress
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             this.BestSellerRankChart = new DevExpress.XtraCharts.ChartControl();
             this.sbsBestSellerRank = new System.Windows.Forms.BindingSource(this.components);
+            this.genreSelectControl1 = new EBookDevexpress.GenreSelectControl();
             ((System.ComponentModel.ISupportInitialize)(this.BestSellerRankChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
@@ -49,6 +50,7 @@ namespace EBookDevexpress
             this.BestSellerRankChart.Diagram = xyDiagram1;
             this.BestSellerRankChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BestSellerRankChart.Legend.Name = "Default Legend";
+            this.BestSellerRankChart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
             this.BestSellerRankChart.Location = new System.Drawing.Point(0, 0);
             this.BestSellerRankChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BestSellerRankChart.Name = "BestSellerRankChart";
@@ -69,11 +71,21 @@ namespace EBookDevexpress
             // 
             this.sbsBestSellerRank.DataSource = typeof(EBook.Data.Summary);
             // 
+            // genreSelectControl1
+            // 
+            this.genreSelectControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.genreSelectControl1.Location = new System.Drawing.Point(657, 0);
+            this.genreSelectControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.genreSelectControl1.Name = "genreSelectControl1";
+            this.genreSelectControl1.Size = new System.Drawing.Size(120, 542);
+            this.genreSelectControl1.TabIndex = 1;
+            // 
             // BestSellerRankForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 542);
+            this.Controls.Add(this.genreSelectControl1);
             this.Controls.Add(this.BestSellerRankChart);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "BestSellerRankForm";
@@ -90,5 +102,6 @@ namespace EBookDevexpress
 
         private DevExpress.XtraCharts.ChartControl BestSellerRankChart;
         private System.Windows.Forms.BindingSource sbsBestSellerRank;
+        private GenreSelectControl genreSelectControl1;
     }
 }

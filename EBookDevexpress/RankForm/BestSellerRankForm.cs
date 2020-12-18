@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using static EBookDevexpress.GenreSelectControl;
 
 namespace EBookDevexpress
 {

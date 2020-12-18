@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static EBookDevexpress.GenreSelectControl;
 
 namespace EBookDevexpress
 {
@@ -21,9 +22,9 @@ namespace EBookDevexpress
 
         }
 
-        private void GcGenre_CheckboxClicked(object sender, CheckboxClickedEventArgs e)
+        private void GcGenre_CheckboxClicked(object sender, SelectedIndexClickedEventArgs e)
         {
-            throw new NotImplementedException();
+            MessageBox.Show($"Test Clicked : {e.clGenreText}");
         }
 
         protected override void OnLoad(EventArgs e)
@@ -33,14 +34,11 @@ namespace EBookDevexpress
             if (DesignMode)
                 return;
 
-
-            Summary summary = new Summary();
-            NewBookRankChart.DataSource = summary.Rank.ToString();
+            /*Summary summary = new Summary();
+            //NewBookRankChart.DataSource = summary.Rank.ToString();
             var book = summary.Title.Max();
             //NewBookRankChart.Series[0].View.Colorizer = CreateColorizer(summary);
-            NewBookRankChart.DataSource = book;
-
-
+            NewBookRankChart.DataSource = book;*/
         }
     }
 }
