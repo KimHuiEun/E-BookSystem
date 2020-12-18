@@ -1,7 +1,7 @@
 ﻿
 namespace EBookDevexpress
 {
-    partial class gcGenre
+    partial class GenreSelectControl
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -29,10 +29,22 @@ namespace EBookDevexpress
         /// </summary>
         private void InitializeComponent()
         {
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.checkedListBox = new DevExpress.XtraEditors.CheckedListBoxControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkedListBox)).BeginInit();
             this.SuspendLayout();
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.AutoSize = true;
+            this.groupControl1.Controls.Add(this.checkedListBox);
+            this.groupControl1.Location = new System.Drawing.Point(3, 3);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(218, 310);
+            this.groupControl1.TabIndex = 9;
+            this.groupControl1.Text = "항목 선택";
             // 
             // checkedListBox
             // 
@@ -41,32 +53,22 @@ namespace EBookDevexpress
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "교양"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "문학"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "사회과학")});
-            this.checkedListBox.Location = new System.Drawing.Point(14, 40);
+            this.checkedListBox.Location = new System.Drawing.Point(5, 31);
             this.checkedListBox.MultiColumn = true;
             this.checkedListBox.Name = "checkedListBox";
             this.checkedListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.checkedListBox.Size = new System.Drawing.Size(132, 270);
-            this.checkedListBox.TabIndex = 5;
-            this.checkedListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_SelectedIndexChanged);
+            this.checkedListBox.Size = new System.Drawing.Size(202, 270);
+            this.checkedListBox.TabIndex = 9;
             // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(14, 13);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(53, 21);
-            this.labelControl3.TabIndex = 6;
-            this.labelControl3.Text = "항목 선택";
-            // 
-            // gcGenre
+            // GenreSelectControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.checkedListBox);
-            this.Name = "gcGenre";
-            this.Size = new System.Drawing.Size(160, 328);
+            this.Controls.Add(this.groupControl1);
+            this.Name = "GenreSelectControl";
+            this.Size = new System.Drawing.Size(220, 315);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.checkedListBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -75,7 +77,7 @@ namespace EBookDevexpress
 
         #endregion
 
+        private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.CheckedListBoxControl checkedListBox;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }

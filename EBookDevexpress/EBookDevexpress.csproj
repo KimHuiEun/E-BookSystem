@@ -45,8 +45,12 @@
     <Reference Include="DevExpress.XtraCharts.v20.2.UI, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v20.2.Wizard, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Core.Desktop, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -79,32 +83,32 @@
     <Compile Include="CustomerForm\Age_GenreChartForm.Designer.cs">
       <DependentUpon>Age_GenreChartForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BestSellerRankForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BestSellerRankForm.Designer.cs">
-      <DependentUpon>BestSellerRankForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ChartBasePage.cs" />
-    <Compile Include="UserControls\QuarterSelectControl.cs">
+    <Compile Include="UserControls\DaySelectControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\QuarterSelectControl.Designer.cs">
-      <DependentUpon>QuarterSelectControl.cs</DependentUpon>
+    <Compile Include="UserControls\DaySelectControl.Designer.cs">
+      <DependentUpon>DaySelectControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\WeekSelectControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\WeekSelectControl.Designer.cs">
-      <DependentUpon>WeekSelectControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Diagram3D.cs" />
     <Compile Include="UserControls\GenreSelectControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\GenreSelectControl.Designer.cs">
       <DependentUpon>GenreSelectControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\QuarterSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\QuarterSelectControl.Designer.cs">
+      <DependentUpon>QuarterSelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RankForm\BestSellerRankForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RankForm\BestSellerRankForm.Designer.cs">
+      <DependentUpon>BestSellerRankForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartBasePage.cs" />
+    <Compile Include="Diagram3D.cs" />
     <Compile Include="NaverBooks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,17 +127,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewBookRankForm.cs">
+    <Compile Include="RankForm\NewBookRankForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewBookRankForm.Designer.cs">
+    <Compile Include="RankForm\NewBookRankForm.Designer.cs">
       <DependentUpon>NewBookRankForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\DaySelectControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\DaySelectControl.Designer.cs">
-      <DependentUpon>DaySelectControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -149,13 +147,19 @@
     <Compile Include="PeriodForm\WeeklyChartForm.Designer.cs">
       <DependentUpon>WeeklyChartForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\WeekSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\WeekSelectControl.Designer.cs">
+      <DependentUpon>WeekSelectControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CustomerForm\Age_GenderChartForm.resx">
       <DependentUpon>Age_GenderChartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerForm\Age_GenreChartForm.resx">
       <DependentUpon>Age_GenreChartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BestSellerRankForm.resx">
+    <EmbeddedResource Include="RankForm\BestSellerRankForm.resx">
       <DependentUpon>BestSellerRankForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NaverBooks.resx">
@@ -167,7 +171,7 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewBookRankForm.resx">
+    <EmbeddedResource Include="RankForm\NewBookRankForm.resx">
       <DependentUpon>NewBookRankForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -186,11 +190,11 @@
     <EmbeddedResource Include="PeriodForm\WeeklyChartForm.resx">
       <DependentUpon>WeeklyChartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GenreSelectControl.resx">
-      <DependentUpon>GenreSelectControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DaySelectControl.resx">
       <DependentUpon>DaySelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GenreSelectControl.resx">
+      <DependentUpon>GenreSelectControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\QuarterSelectControl.resx">
       <DependentUpon>QuarterSelectControl.cs</DependentUpon>
@@ -229,8 +233,6 @@
       <Name>EBook.Data</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RankForm\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

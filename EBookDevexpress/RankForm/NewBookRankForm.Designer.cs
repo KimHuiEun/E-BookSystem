@@ -68,8 +68,7 @@ namespace EBookDevexpress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.gcGenre1);
+            this.ClientSize = new System.Drawing.Size(822, 470);
             this.Controls.Add(this.NewBookRankChart);
             this.Name = "NewBookRankForm";
             this.Text = "신간 대여순위";

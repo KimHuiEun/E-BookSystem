@@ -30,26 +30,36 @@ namespace EBookDevexpress
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeekSelectControl));
-            this.gcWeek = new DevExpress.XtraEditors.GroupControl();
+            this.groupCtrlWeekly = new DevExpress.XtraEditors.GroupControl();
+            this.lblSearchGuide = new DevExpress.XtraEditors.LabelControl();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.lblCtrlStartdate = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit = new DevExpress.XtraEditors.DateEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcWeek)).BeginInit();
-            this.gcWeek.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties)).BeginInit();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupCtrlWeekly)).BeginInit();
+            this.groupCtrlWeekly.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // gcWeek
+            // groupCtrlWeekly
             // 
-            this.gcWeek.Controls.Add(this.dateEdit);
-            this.gcWeek.Controls.Add(this.btnSearch);
-            this.gcWeek.Controls.Add(this.lblCtrlStartdate);
-            this.gcWeek.Location = new System.Drawing.Point(12, 12);
-            this.gcWeek.Name = "gcWeek";
-            this.gcWeek.Size = new System.Drawing.Size(776, 75);
-            this.gcWeek.TabIndex = 2;
-            this.gcWeek.Text = "주간 대여 통계";
+            this.groupCtrlWeekly.Controls.Add(this.dateEdit1);
+            this.groupCtrlWeekly.Controls.Add(this.lblSearchGuide);
+            this.groupCtrlWeekly.Controls.Add(this.btnSearch);
+            this.groupCtrlWeekly.Controls.Add(this.lblCtrlStartdate);
+            this.groupCtrlWeekly.Location = new System.Drawing.Point(12, 13);
+            this.groupCtrlWeekly.Name = "groupCtrlWeekly";
+            this.groupCtrlWeekly.Size = new System.Drawing.Size(776, 96);
+            this.groupCtrlWeekly.TabIndex = 5;
+            this.groupCtrlWeekly.Text = "주간 대여 통계";
+            // 
+            // lblSearchGuide
+            // 
+            this.lblSearchGuide.Location = new System.Drawing.Point(118, 68);
+            this.lblSearchGuide.Name = "lblSearchGuide";
+            this.lblSearchGuide.Size = new System.Drawing.Size(378, 18);
+            this.lblSearchGuide.TabIndex = 3;
+            this.lblSearchGuide.Text = "*선택일 시작 기준으로 일주일 간의 통계를 조회할 수 있습니다.";
             // 
             // btnSearch
             // 
@@ -59,7 +69,6 @@ namespace EBookDevexpress
             this.btnSearch.Size = new System.Drawing.Size(71, 27);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "조회";
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lblCtrlStartdate
             // 
@@ -67,41 +76,42 @@ namespace EBookDevexpress
             this.lblCtrlStartdate.Name = "lblCtrlStartdate";
             this.lblCtrlStartdate.Size = new System.Drawing.Size(88, 18);
             this.lblCtrlStartdate.TabIndex = 0;
-            this.lblCtrlStartdate.Text = "조회 날짜 선택";
+            this.lblCtrlStartdate.Text = "조회 기간 선택";
             // 
-            // dateEdit
+            // dateEdit1
             // 
-            this.dateEdit.EditValue = null;
-            this.dateEdit.Location = new System.Drawing.Point(108, 37);
-            this.dateEdit.Name = "dateEdit";
-            this.dateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(109, 37);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit.Size = new System.Drawing.Size(167, 24);
-            this.dateEdit.TabIndex = 4;
+            this.dateEdit1.Size = new System.Drawing.Size(166, 24);
+            this.dateEdit1.TabIndex = 4;
             // 
             // WeekSelectControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gcWeek);
+            this.Controls.Add(this.groupCtrlWeekly);
             this.Name = "WeekSelectControl";
-            this.Size = new System.Drawing.Size(806, 105);
-            ((System.ComponentModel.ISupportInitialize)(this.gcWeek)).EndInit();
-            this.gcWeek.ResumeLayout(false);
-            this.gcWeek.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties)).EndInit();
+            this.Size = new System.Drawing.Size(805, 124);
+            ((System.ComponentModel.ISupportInitialize)(this.groupCtrlWeekly)).EndInit();
+            this.groupCtrlWeekly.ResumeLayout(false);
+            this.groupCtrlWeekly.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.GroupControl gcWeek;
+        private DevExpress.XtraEditors.GroupControl groupCtrlWeekly;
+        private DevExpress.XtraEditors.LabelControl lblSearchGuide;
         private DevExpress.XtraEditors.SimpleButton btnSearch;
         private DevExpress.XtraEditors.LabelControl lblCtrlStartdate;
-        private DevExpress.XtraEditors.DateEdit dateEdit;
+        private DevExpress.XtraEditors.DateEdit dateEdit1;
     }
 }

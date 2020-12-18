@@ -1,7 +1,7 @@
 ﻿
 namespace EBookDevexpress
 {
-    partial class PeriodSearchControl
+    partial class DaySelectControl
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -29,49 +29,36 @@ namespace EBookDevexpress
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PeriodSearchControl));
-            this.gcDay = new DevExpress.XtraEditors.GroupControl();
-            this.dateEdit = new DevExpress.XtraEditors.DateEdit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DaySelectControl));
+            this.groupCtrlWeekly = new DevExpress.XtraEditors.GroupControl();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.lblCtrlStartdate = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.gcDay)).BeginInit();
-            this.gcDay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties)).BeginInit();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupCtrlWeekly)).BeginInit();
+            this.groupCtrlWeekly.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // gcDay
+            // groupCtrlWeekly
             // 
-            this.gcDay.Controls.Add(this.dateEdit);
-            this.gcDay.Controls.Add(this.btnSearch);
-            this.gcDay.Controls.Add(this.lblCtrlStartdate);
-            this.gcDay.Location = new System.Drawing.Point(14, 13);
-            this.gcDay.Name = "gcDay";
-            this.gcDay.Size = new System.Drawing.Size(776, 75);
-            this.gcDay.TabIndex = 1;
-            this.gcDay.Text = "일간 대여 통계";
-            // 
-            // dateEdit
-            // 
-            this.dateEdit.EditValue = null;
-            this.dateEdit.Location = new System.Drawing.Point(108, 38);
-            this.dateEdit.Name = "dateEdit";
-            this.dateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit.Size = new System.Drawing.Size(167, 24);
-            this.dateEdit.TabIndex = 3;
+            this.groupCtrlWeekly.Controls.Add(this.dateEdit1);
+            this.groupCtrlWeekly.Controls.Add(this.btnSearch);
+            this.groupCtrlWeekly.Controls.Add(this.lblCtrlStartdate);
+            this.groupCtrlWeekly.Location = new System.Drawing.Point(14, 13);
+            this.groupCtrlWeekly.Name = "groupCtrlWeekly";
+            this.groupCtrlWeekly.Size = new System.Drawing.Size(776, 96);
+            this.groupCtrlWeekly.TabIndex = 6;
+            this.groupCtrlWeekly.Text = "일간 대여 통계";
             // 
             // btnSearch
             // 
             this.btnSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.ImageOptions.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(281, 36);
+            this.btnSearch.Location = new System.Drawing.Point(281, 35);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(71, 27);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "조회";
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lblCtrlStartdate
             // 
@@ -79,29 +66,41 @@ namespace EBookDevexpress
             this.lblCtrlStartdate.Name = "lblCtrlStartdate";
             this.lblCtrlStartdate.Size = new System.Drawing.Size(88, 18);
             this.lblCtrlStartdate.TabIndex = 0;
-            this.lblCtrlStartdate.Text = "조회 날짜 선택";
+            this.lblCtrlStartdate.Text = "조회 기간 선택";
             // 
-            // PeriodSearchControl
+            // dateEdit1
+            // 
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(109, 36);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Size = new System.Drawing.Size(166, 24);
+            this.dateEdit1.TabIndex = 3;
+            // 
+            // DaySelectControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gcDay);
-            this.Name = "PeriodSearchControl";
-            this.Size = new System.Drawing.Size(806, 104);
-            ((System.ComponentModel.ISupportInitialize)(this.gcDay)).EndInit();
-            this.gcDay.ResumeLayout(false);
-            this.gcDay.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties)).EndInit();
+            this.Controls.Add(this.groupCtrlWeekly);
+            this.Name = "DaySelectControl";
+            this.Size = new System.Drawing.Size(802, 125);
+            ((System.ComponentModel.ISupportInitialize)(this.groupCtrlWeekly)).EndInit();
+            this.groupCtrlWeekly.ResumeLayout(false);
+            this.groupCtrlWeekly.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.GroupControl gcDay;
+        private DevExpress.XtraEditors.GroupControl groupCtrlWeekly;
         private DevExpress.XtraEditors.SimpleButton btnSearch;
         private DevExpress.XtraEditors.LabelControl lblCtrlStartdate;
-        private DevExpress.XtraEditors.DateEdit dateEdit;
+        private DevExpress.XtraEditors.DateEdit dateEdit1;
     }
 }

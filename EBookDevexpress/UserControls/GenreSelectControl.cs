@@ -10,16 +10,12 @@ using System.Windows.Forms;
 
 namespace EBookDevexpress
 {
-    public partial class gcGenre : UserControl
+    public partial class GenreSelectControl : UserControl
     {
-        public gcGenre()
+        public GenreSelectControl()
         {
             InitializeComponent();
         }
 
-        private void checkedListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
