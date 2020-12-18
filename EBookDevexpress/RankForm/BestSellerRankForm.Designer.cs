@@ -64,10 +64,7 @@ namespace EBookDevexpress
             this.BestSellerRankChart.SeriesTemplate.Visible = false;
             this.BestSellerRankChart.Size = new System.Drawing.Size(777, 542);
             this.BestSellerRankChart.TabIndex = 0;
-            // 
-            // bdsBestSeller
-            // 
-            this.bdsBestSeller.DataSource = typeof(EBook.Data.DecadeGenreSummary);
+            
             // 
             // BestSellerRankForm
             // 

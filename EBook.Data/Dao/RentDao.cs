@@ -157,6 +157,7 @@ namespace EBook.Data
                 var list = query.Take(10).ToList();
 
                 return list.ConvertAll(x => new RankSummary { Title = x.Title, BookCountRank = x.BookCount});
+
             }
         }
 

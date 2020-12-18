@@ -19,7 +19,7 @@ namespace EBookDevexpress
 
         private void btnQuarterSearch_Click(object sender, EventArgs e)
         {
-            OnButtonQuarterSearch(quarter.Text);
+           OnButtonQuarterSearch(quarter.Text);
         }
 
         #region ButtonQuarterSearch event things for C# 3.0
@@ -31,9 +31,9 @@ namespace EBookDevexpress
                 ButtonQuarterSearch(this, e);
         }
 
-        private ButtonQuarterSearchEventArgs OnButtonQuarterSearch(string quarterSelect)
+        private ButtonQuarterSearchEventArgs OnButtonQuarterSearch(string quarter)
         {
-            ButtonQuarterSearchEventArgs args = new ButtonQuarterSearchEventArgs(quarterSelect);
+            ButtonQuarterSearchEventArgs args = new ButtonQuarterSearchEventArgs(quarter);
             OnButtonQuarterSearch(args);
 
             return args;
@@ -49,15 +49,15 @@ namespace EBookDevexpress
 
         public class ButtonQuarterSearchEventArgs : EventArgs
         {
-            public string QuarterSelect { get; set; }
+            public string Quarter { get; set; }
 
             public ButtonQuarterSearchEventArgs()
             {
             }
 
-            public ButtonQuarterSearchEventArgs(string quarterSelect)
+            public ButtonQuarterSearchEventArgs(string quarter)
             {
-                QuarterSelect = quarterSelect;
+                Quarter = quarter;
             }
         }
         #endregion

@@ -146,7 +146,7 @@ namespace EBookDevexpress
             DevExpress.Skins.SkinPaddingEdges skinPaddingEdges3 = new DevExpress.Skins.SkinPaddingEdges();
             DevExpress.Skins.SkinPaddingEdges skinPaddingEdges4 = new DevExpress.Skins.SkinPaddingEdges();
             this.uiChart_Main = new DevExpress.XtraCharts.ChartControl();
-            this.rentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            //this.rentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.commandBarGalleryDropDown1 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown2 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown3 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
@@ -192,10 +192,7 @@ namespace EBookDevexpress
             this.uiChart_Main.SeriesTemplate.View = line3DSeriesView2;
             this.uiChart_Main.Size = new System.Drawing.Size(918, 677);
             this.uiChart_Main.TabIndex = 0;
-            // 
-            // rentBindingSource
-            // 
-            this.rentBindingSource.DataSource = typeof(EBook.Data.Summary);
+            
             // 
             // commandBarGalleryDropDown1
             // 
@@ -883,10 +880,7 @@ namespace EBookDevexpress
             // chartBarController1
             // 
             this.chartBarController1.Control = this.uiChart_Main;
-            // 
-            // bdsAgeGenre
-            // 
-            this.bdsAgeGenre.DataSource = typeof(EBook.Data.DecadeGenreSummary);
+            
             // 
             // Age_GenreChartForm
             // 
@@ -899,7 +893,6 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3D2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(line3DSeriesView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiChart_Main)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown3)).EndInit();

@@ -18,12 +18,9 @@ namespace EBookDevexpress
             InitializeComponent();
         }
 
-
         private void daySelectControl1_ButtonDaySearch(object sender, DaySelectControl.ButtonDaySearchEventArgs e)
         {
-            bdsList.DataSource = Dao.Rent.DaySearch(e.Day);
-                //e.Day = new 
-            
+            bdsDay.DataSource = Dao.Rent.DaySearch(e.Day);
         }
     }
 }

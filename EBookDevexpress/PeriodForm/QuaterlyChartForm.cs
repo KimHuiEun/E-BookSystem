@@ -17,9 +17,5 @@ namespace EBookDevexpress
             InitializeComponent();
         }
 
-        private void quarterSelectControl1_ButtonQuarterSearch(object sender, QuarterSelectControl.ButtonQuarterSearchEventArgs e)
-        {
-
-        }
     }
 }

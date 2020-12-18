@@ -1,4 +1,5 @@
 ﻿using EBook.Data;
+using EBook.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,10 +22,10 @@ namespace EBookDevexpress
 
         }
 
-        private void GcGenre_CheckboxClicked(object sender, CheckboxClickedEventArgs e)
+        /*private void GcGenre_CheckboxClicked(object sender, CheckboxClickedEventArgs e)
         {
             throw new NotImplementedException();
-        }
+        }*/
 
         protected override void OnLoad(EventArgs e)
         {
@@ -34,7 +35,7 @@ namespace EBookDevexpress
                 return;
 
 
-            DecadeGenreSummary summary = new DecadeGenreSummary();
+            RankSummary summary = new RankSummary();
             NewBookRankChart.DataSource = summary.Rank.ToString();
             var book = summary.Title.Max();
             //NewBookRankChart.Series[0].View.Colorizer = CreateColorizer(summary);

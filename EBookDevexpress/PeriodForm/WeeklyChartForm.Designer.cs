@@ -42,8 +42,8 @@ namespace EBookDevexpress
             this.timeSpanChartRangeControlClient1 = new DevExpress.XtraEditors.TimeSpanChartRangeControlClient();
             this.chartCntrlWeekly = new DevExpress.XtraCharts.ChartControl();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.genreSelectControl1 = new EBookDevexpress.GenreSelectControl();
             this.weekSelectControl1 = new EBookDevexpress.WeekSelectControl();
+            this.bdsWeek = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.timeSpanChartRangeControlClient1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartCntrlWeekly)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -56,10 +56,12 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsWeek)).BeginInit();
             this.SuspendLayout();
             // 
             // chartCntrlWeekly
             // 
+            this.chartCntrlWeekly.DataSource = this.bdsWeek;
             xyDiagram1.AxisX.MinorCount = 5;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
@@ -85,14 +87,6 @@ namespace EBookDevexpress
             this.chartCntrlWeekly.Size = new System.Drawing.Size(558, 324);
             this.chartCntrlWeekly.TabIndex = 2;
             // 
-            // genreSelectControl1
-            // 
-            this.genreSelectControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.genreSelectControl1.Location = new System.Drawing.Point(644, 99);
-            this.genreSelectControl1.Name = "genreSelectControl1";
-            this.genreSelectControl1.Size = new System.Drawing.Size(220, 394);
-            this.genreSelectControl1.TabIndex = 4;
-            // 
             // weekSelectControl1
             // 
             this.weekSelectControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -102,12 +96,15 @@ namespace EBookDevexpress
             this.weekSelectControl1.TabIndex = 3;
             this.weekSelectControl1.ButtonWeekSearch += new System.EventHandler<EBookDevexpress.WeekSelectControl.ButtonWeekSearchEventArgs>(this.weekSelectControl1_ButtonWeekSearch);
             // 
+            // bdsWeek
+            // 
+            this.bdsWeek.DataSource = typeof(EBook.Data.Models.PeriodSummary);
+            // 
             // WeeklyChartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 493);
-            this.Controls.Add(this.genreSelectControl1);
             this.Controls.Add(this.weekSelectControl1);
             this.Controls.Add(this.chartCntrlWeekly);
             this.Name = "WeeklyChartForm";
@@ -124,6 +121,7 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartCntrlWeekly)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsWeek)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -133,6 +131,6 @@ namespace EBookDevexpress
         private DevExpress.XtraCharts.ChartControl chartCntrlWeekly;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private WeekSelectControl weekSelectControl1;
-        private GenreSelectControl genreSelectControl1;
+        private System.Windows.Forms.BindingSource bdsWeek;
     }
 }

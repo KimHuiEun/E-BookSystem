@@ -89,6 +89,12 @@
     <Compile Include="BookListForm.Designer.cs">
       <DependentUpon>BookListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PeriodForm\DailyChartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeriodForm\DailyChartForm.Designer.cs">
+      <DependentUpon>DailyChartForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exceptions\FakeVirtualMemberException.cs" />
     <Compile Include="UserControls\DaySelectControl.cs">
       <SubType>UserControl</SubType>
@@ -121,12 +127,6 @@
     </Compile>
     <Compile Include="NaverBooks.Designer.cs">
       <DependentUpon>NaverBooks.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PeriodForm\DailyChartForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PeriodForm\DailyChartForm.Designer.cs">
-      <DependentUpon>DailyChartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -174,14 +174,14 @@
     <EmbeddedResource Include="BookListForm.resx">
       <DependentUpon>BookListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PeriodForm\DailyChartForm.resx">
+      <DependentUpon>DailyChartForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RankForm\BestSellerRankForm.resx">
       <DependentUpon>BestSellerRankForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NaverBooks.resx">
       <DependentUpon>NaverBooks.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PeriodForm\DailyChartForm.resx">
-      <DependentUpon>DailyChartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -221,6 +221,7 @@
     <None Include="EBook.Data.BookModel.datasource" />
     <None Include="EBook.Data.Customer.datasource" />
     <None Include="EBook.Data.CustomerSummary.datasource" />
+    <None Include="EBook.Data.Models.PeriodSummary.datasource" />
     <None Include="EBook.Data.Models.TheModel.datasource" />
     <None Include="EBook.Data.Rent.datasource" />
     <None Include="EBook.Data.RentDao.datasource" />

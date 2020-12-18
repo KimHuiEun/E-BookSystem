@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EBook.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace EBookDevexpress
 
         private void weekSelectControl1_ButtonWeekSearch(object sender, WeekSelectControl.ButtonWeekSearchEventArgs e)
         {
-
+            bdsWeek.DataSource = Dao.Rent.DaySearch(e.Week);
         }
     }
 }

@@ -68,7 +68,7 @@ namespace EBookDevexpress
             // 
             // summaryBindingSource
             // 
-            this.summaryBindingSource.DataSource = typeof(EBook.Data.Summary);
+            //this.summaryBindingSource.DataSource = typeof(EBook.Data.Summary);
             // 
             // Age_GenderChartForm
             // 

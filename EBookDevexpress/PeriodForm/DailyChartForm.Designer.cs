@@ -29,52 +29,32 @@ namespace EBookDevexpress
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraCharts.SwiftPlotDiagram swiftPlotDiagram1 = new DevExpress.XtraCharts.SwiftPlotDiagram();
-            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SwiftPlotSeriesView swiftPlotSeriesView1 = new DevExpress.XtraCharts.SwiftPlotSeriesView();
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
-            this.chartCntrlDaily = new DevExpress.XtraCharts.ChartControl();
-            this.daySelectControl2 = new EBookDevexpress.DaySelectControl();
+            this.daySelectControl1 = new EBookDevexpress.DaySelectControl();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            ((System.ComponentModel.ISupportInitialize)(this.chartCntrlDaily)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(swiftPlotDiagram1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(swiftPlotSeriesView1)).BeginInit();
+            this.bdsDay = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsDay)).BeginInit();
             this.SuspendLayout();
             // 
-            // chartCntrlDaily
+            // daySelectControl1
             // 
-            swiftPlotDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            swiftPlotDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartCntrlDaily.Diagram = swiftPlotDiagram1;
-            this.chartCntrlDaily.Legend.Name = "Default Legend";
-            this.chartCntrlDaily.Location = new System.Drawing.Point(22, 118);
-            this.chartCntrlDaily.Name = "chartCntrlDaily";
-            series1.ArgumentDataMember = "Hour";
-            series1.Name = "일일 대여량";
-            series1.ValueDataMembersSerializable = "Count";
-            series1.View = swiftPlotSeriesView1;
-            this.chartCntrlDaily.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
-            this.chartCntrlDaily.Size = new System.Drawing.Size(776, 345);
-            this.chartCntrlDaily.TabIndex = 1;
-            // 
-            // daySelectControl2
-            // 
-            this.daySelectControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.daySelectControl2.Location = new System.Drawing.Point(0, 0);
-            this.daySelectControl2.Name = "daySelectControl2";
-            this.daySelectControl2.Size = new System.Drawing.Size(827, 98);
-            this.daySelectControl2.TabIndex = 0;
+            this.daySelectControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.daySelectControl1.Location = new System.Drawing.Point(0, 0);
+            this.daySelectControl1.Name = "daySelectControl1";
+            this.daySelectControl1.Size = new System.Drawing.Size(853, 98);
+            this.daySelectControl1.TabIndex = 0;
+            this.daySelectControl1.ButtonDaySearch += new System.EventHandler<EBookDevexpress.DaySelectControl.ButtonDaySearchEventArgs>(this.daySelectControl1_ButtonDaySearch);
             // 
             // chartControl1
             // 
+            this.chartControl1.DataSource = this.bdsDay;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl1.Diagram = xyDiagram1;
@@ -82,38 +62,39 @@ namespace EBookDevexpress
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Location = new System.Drawing.Point(0, 98);
             this.chartControl1.Name = "chartControl1";
-            series2.Name = "Series 1";
-            series2.View = lineSeriesView1;
+            series1.Name = "Series 1";
+            series1.View = lineSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series2};
-            this.chartControl1.Size = new System.Drawing.Size(827, 404);
+        series1};
+            this.chartControl1.Size = new System.Drawing.Size(853, 388);
             this.chartControl1.TabIndex = 1;
+            // 
+            // bdsDay
+            // 
+            this.bdsDay.DataSource = typeof(EBook.Data.Models.PeriodSummary);
             // 
             // DailyChartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 502);
+            this.ClientSize = new System.Drawing.Size(853, 486);
             this.Controls.Add(this.chartControl1);
-            this.Controls.Add(this.daySelectControl2);
+            this.Controls.Add(this.daySelectControl1);
             this.Name = "DailyChartForm";
-            this.Text = "일간 대여";
-            ((System.ComponentModel.ISupportInitialize)(swiftPlotDiagram1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(swiftPlotSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartCntrlDaily)).EndInit();
+            this.Text = "DailyChartForm";
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsDay)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private DevExpress.XtraCharts.ChartControl chartCntrlDaily;
+
         private DaySelectControl daySelectControl1;
-        private DaySelectControl daySelectControl2;
         private DevExpress.XtraCharts.ChartControl chartControl1;
+        private System.Windows.Forms.BindingSource bdsDay;
     }
 }

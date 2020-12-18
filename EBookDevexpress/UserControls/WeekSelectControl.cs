@@ -19,7 +19,7 @@ namespace EBookDevexpress
 
         private void btnWeekSearch_Click(object sender, EventArgs e)
         {
-            OnButtonWeekSearch(week.Text);
+            OnButtonWeekSearch(week.DateTime);
         }
 
         #region ButtonWeekSearch event things for C# 3.0
@@ -31,9 +31,9 @@ namespace EBookDevexpress
                 ButtonWeekSearch(this, e);
         }
 
-        private ButtonWeekSearchEventArgs OnButtonWeekSearch(string weekSelect)
+        private ButtonWeekSearchEventArgs OnButtonWeekSearch(DateTime week)
         {
-            ButtonWeekSearchEventArgs args = new ButtonWeekSearchEventArgs(weekSelect);
+            ButtonWeekSearchEventArgs args = new ButtonWeekSearchEventArgs(week);
             OnButtonWeekSearch(args);
 
             return args;
@@ -49,15 +49,15 @@ namespace EBookDevexpress
 
         public class ButtonWeekSearchEventArgs : EventArgs
         {
-            public string WeekSelect { get; set; }
+            public DateTime Week { get; set; }
 
             public ButtonWeekSearchEventArgs()
             {
             }
 
-            public ButtonWeekSearchEventArgs(string weekSelect)
+            public ButtonWeekSearchEventArgs(DateTime week)
             {
-                WeekSelect = weekSelect;
+                Week = week;
             }
         }
         #endregion

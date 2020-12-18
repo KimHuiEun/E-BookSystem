@@ -29,6 +29,7 @@ namespace EBookDevexpress
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
@@ -41,6 +42,9 @@ namespace EBookDevexpress
             this.chartCntrlQuarterly = new DevExpress.XtraCharts.ChartControl();
             this.quarterSelectControl1 = new EBookDevexpress.QuarterSelectControl();
             this.genreSelectControl1 = new EBookDevexpress.GenreSelectControl();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.quarterSelectControl2 = new EBookDevexpress.QuarterSelectControl();
+            this.bdsQuarter = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chartCntrlQuarterly)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
@@ -51,6 +55,8 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsQuarter)).BeginInit();
             this.SuspendLayout();
             // 
             // chartCntrlQuarterly
@@ -87,7 +93,6 @@ namespace EBookDevexpress
             this.quarterSelectControl1.Name = "quarterSelectControl1";
             this.quarterSelectControl1.Size = new System.Drawing.Size(813, 98);
             this.quarterSelectControl1.TabIndex = 7;
-            this.quarterSelectControl1.ButtonQuarterSearch += new System.EventHandler<EBookDevexpress.QuarterSelectControl.ButtonQuarterSearchEventArgs>(this.quarterSelectControl1_ButtonQuarterSearch);
             // 
             // genreSelectControl1
             // 
@@ -97,14 +102,35 @@ namespace EBookDevexpress
             this.genreSelectControl1.Size = new System.Drawing.Size(220, 401);
             this.genreSelectControl1.TabIndex = 8;
             // 
+            // chartControl1
+            // 
+            this.chartControl1.DataSource = this.bdsQuarter;
+            this.chartControl1.Legend.Name = "Default Legend";
+            this.chartControl1.Location = new System.Drawing.Point(154, 179);
+            this.chartControl1.Name = "chartControl1";
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chartControl1.Size = new System.Drawing.Size(300, 200);
+            this.chartControl1.TabIndex = 0;
+            // 
+            // quarterSelectControl2
+            // 
+            this.quarterSelectControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.quarterSelectControl2.Location = new System.Drawing.Point(0, 0);
+            this.quarterSelectControl2.Name = "quarterSelectControl2";
+            this.quarterSelectControl2.Size = new System.Drawing.Size(813, 98);
+            this.quarterSelectControl2.TabIndex = 1;
+            // 
+            // bdsQuarter
+            // 
+            this.bdsQuarter.DataSource = typeof(EBook.Data.Models.PeriodSummary);
+            // 
             // QuaterlyChartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 499);
-            this.Controls.Add(this.genreSelectControl1);
-            this.Controls.Add(this.quarterSelectControl1);
-            this.Controls.Add(this.chartCntrlQuarterly);
+            this.Controls.Add(this.quarterSelectControl2);
+            this.Controls.Add(this.chartControl1);
             this.Name = "QuaterlyChartForm";
             this.Text = "분기 대여";
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
@@ -117,6 +143,8 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartCntrlQuarterly)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsQuarter)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,5 +153,8 @@ namespace EBookDevexpress
         private DevExpress.XtraCharts.ChartControl chartCntrlQuarterly;
         private QuarterSelectControl quarterSelectControl1;
         private GenreSelectControl genreSelectControl1;
+        private DevExpress.XtraCharts.ChartControl chartControl1;
+        private System.Windows.Forms.BindingSource bdsQuarter;
+        private QuarterSelectControl quarterSelectControl2;
     }
 }
