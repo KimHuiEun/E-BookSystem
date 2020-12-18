@@ -29,28 +29,28 @@ namespace EBookDevexpress
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupCtrlQuarterly = new DevExpress.XtraEditors.GroupControl();
+            this.gcQuarter = new DevExpress.XtraEditors.GroupControl();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblSearchGuide = new DevExpress.XtraEditors.LabelControl();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.lblCtrlStartdate = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.groupCtrlQuarterly)).BeginInit();
-            this.groupCtrlQuarterly.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcQuarter)).BeginInit();
+            this.gcQuarter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupCtrlQuarterly
+            // gcQuarter
             // 
-            this.groupCtrlQuarterly.Controls.Add(this.comboBoxEdit1);
-            this.groupCtrlQuarterly.Controls.Add(this.lblSearchGuide);
-            this.groupCtrlQuarterly.Controls.Add(this.btnSearch);
-            this.groupCtrlQuarterly.Controls.Add(this.lblCtrlStartdate);
-            this.groupCtrlQuarterly.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupCtrlQuarterly.Location = new System.Drawing.Point(0, 0);
-            this.groupCtrlQuarterly.Name = "groupCtrlQuarterly";
-            this.groupCtrlQuarterly.Size = new System.Drawing.Size(800, 98);
-            this.groupCtrlQuarterly.TabIndex = 3;
-            this.groupCtrlQuarterly.Text = "분기 대여 통계";
+            this.gcQuarter.Controls.Add(this.comboBoxEdit1);
+            this.gcQuarter.Controls.Add(this.lblSearchGuide);
+            this.gcQuarter.Controls.Add(this.btnSearch);
+            this.gcQuarter.Controls.Add(this.lblCtrlStartdate);
+            this.gcQuarter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcQuarter.Location = new System.Drawing.Point(0, 0);
+            this.gcQuarter.Name = "gcQuarter";
+            this.gcQuarter.Size = new System.Drawing.Size(800, 98);
+            this.gcQuarter.TabIndex = 3;
+            this.gcQuarter.Text = "분기 대여 통계";
             // 
             // comboBoxEdit1
             // 
@@ -94,12 +94,12 @@ namespace EBookDevexpress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupCtrlQuarterly);
+            this.Controls.Add(this.gcQuarter);
             this.Name = "QuarterSelectControl";
             this.Size = new System.Drawing.Size(800, 98);
-            ((System.ComponentModel.ISupportInitialize)(this.groupCtrlQuarterly)).EndInit();
-            this.groupCtrlQuarterly.ResumeLayout(false);
-            this.groupCtrlQuarterly.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcQuarter)).EndInit();
+            this.gcQuarter.ResumeLayout(false);
+            this.gcQuarter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -107,7 +107,7 @@ namespace EBookDevexpress
 
         #endregion
 
-        private DevExpress.XtraEditors.GroupControl groupCtrlQuarterly;
+        private DevExpress.XtraEditors.GroupControl gcQuarter;
         private DevExpress.XtraEditors.LabelControl lblSearchGuide;
         private DevExpress.XtraEditors.SimpleButton btnSearch;
         private DevExpress.XtraEditors.LabelControl lblCtrlStartdate;
