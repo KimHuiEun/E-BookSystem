@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Linq;
+using EBook.Data.Models;
 
 namespace EBook.Data
 {
@@ -15,16 +16,16 @@ namespace EBook.Data
         /// </summary>
         /// <param name="borrow"></param>
         /// <returns></returns>
-        public List<Summary> Search(int borrow)  //데이터를 리스트화해서 찾는 메소드
+        public List<DecadeExtraSummary> DecadeGenreSearch(int borrow)  //데이터를 리스트화해서 찾는 메소드
         {
-            List<Rent> rents = GetWithExtra(borrow); //Rent데이터를 리스트화 한 매개변수를 rents.
+            List<Rent> rents = GetWithDecadeGenre(borrow); //Rent데이터를 리스트화 한 매개변수를 rents.
                                                      //GetWithExtra라는 메소드에서 생긴 리스트를 rents에 저장.
 
-            List<Summary> models = new List<Summary>();
+            List<DecadeExtraSummary> models = new List<DecadeExtraSummary>();
 
             foreach (Rent rent in rents)  //Rents에 있는 rent를 돌린다.
             {
-                Summary summary = models.Find(x => x.Decade == rent.Decade && x.Genre == rent.Genre);
+                DecadeExtraSummary summary = models.Find(x => x.Decade == rent.Decade && x.Genre == rent.Genre);
                 //매개변수 summary = models에 있는 리스트를 찾는다.(Find)
                 //foreach에서 생성한 매개변수 x에 있는 Decade 값이 Rents에 있는 Decade 값도 동일한지 체크.
                 //                                   Genre 값이 Rents에 있는 Genre 값이 동일한지 체크.
@@ -37,7 +38,7 @@ namespace EBook.Data
                 //null값일 경우
                 else
                 {
-                    summary = new Summary();
+                    summary = new DecadeExtraSummary();
                     summary.Count = 1;
                     summary.Decade = rent.Decade;
                     summary.Genre = rent.Genre;
@@ -50,8 +51,7 @@ namespace EBook.Data
             return models; //models를 반환함.
         }
 
-
-        private List<Rent> GetWithExtra(int year) //Search 메소드에서 만든 것 생성.
+        private List<Rent> GetWithDecadeGenre(int year) //Search 메소드에서 만든 것 생성.
         {
             using (var context = DbContextCreator.Create())   //MSSQL 사용문
             {
@@ -89,8 +89,7 @@ namespace EBook.Data
         }
 
 
-
-        /* private List<Rent> GetWithExtra2(int year) 
+        /* private List<Rent> GetWithDecadeGenre2(int year) 
          {
              using (var context = DbContextCreator.Create())
              {
@@ -142,7 +141,7 @@ namespace EBook.Data
 
 
         //대여량을 기준으로 카운트해서 순위 추출.
-        public List<Summary> GetModels()  //TODO : GetSummary? GetModels  
+        public List<RankSummary> BookCountRank()  
         {
             using (var context = DbContextCreator.Create())
             {
@@ -157,7 +156,7 @@ namespace EBook.Data
 
                 var list = query.Take(10).ToList();
 
-                return list.ConvertAll(x => new Summary { Title = x.Title, BookCount = x.BookCount});
+                return list.ConvertAll(x => new RankSummary { Title = x.Title, BookCountRank = x.BookCount});
             }
         }
 
@@ -168,22 +167,22 @@ namespace EBook.Data
         /// </summary>
         /// <param name="borrow"></param>
         /// <returns></returns>
-        public List<Summary> Search2(string borrow)  
+        public List<DecadeExtraSummary> DecadeGenderSearch(string borrow)  
         {
-            List<Rent> rents = GetWithExtra3(borrow); 
+            List<Rent> rents = GetWithDecadeGender(borrow); 
 
-            List<Summary> models = new List<Summary>();
+            List<DecadeExtraSummary> models = new List<DecadeExtraSummary>();
 
             foreach (Rent rent in rents)  
             {
-                Summary summary = models.Find(x => x.Decade == rent.Decade && x.Gender == rent.Gender);
+                DecadeExtraSummary summary = models.Find(x => x.Decade == rent.Decade && x.Gender == rent.Gender);
                 
                 if (summary != null)
                     summary.Count++;
                 
                 else
                 {
-                    summary = new Summary();
+                    summary = new DecadeExtraSummary();
                     summary.Count = 1;
                     summary.Decade = rent.Decade;
                     summary.Gender = rent.Gender;
@@ -197,7 +196,7 @@ namespace EBook.Data
         }
 
 
-        private List<Rent> GetWithExtra3(string gender)
+        private List<Rent> GetWithDecadeGender(string gender)
         {
             using (var context = DbContextCreator.Create())
             {
@@ -222,6 +221,45 @@ namespace EBook.Data
                 return list;
             }
         }
+
+
+
+
+        public List<PeriodSummary> DaySearch(DateTime day)
+        {
+            using (var context = DbContextCreator.Create())
+            {
+                DateTime @from = day.Date;          //자정으로 임의의 날짜를 만듦. from은 키워드이기때문에 '@'가 들어간다.
+                DateTime to = from.AddDays(1);      //임의의 날짜 다음날(자정).
+
+                var query = from x in context.Rents
+                            //where x.RentDate >= @from && x.RentDate < to 
+                            select x;               //하루동안의 렌트 기록을 뽑는다.
+
+                var list = query.ToList();          //리스트로 만들기.
+
+                // RentedOn
+                var query2 = from x in list
+                             group x by x.RentDate.Hour into HourGroup          //리스트를 모아 한 그룹을 g라고 한다.
+                             //select new ThePeriod { Hour = g.Key, Count = g.Count()};
+                             select HourGroup;                                  
+
+                //return query2.ToList();
+
+                List<PeriodSummary> periods = new List<PeriodSummary>();
+                foreach(var g in query2)
+                {
+                    PeriodSummary period = new PeriodSummary();
+                    period.Value = g.Key;                                //렌트기록중에 '시'만 뽑는다.
+                    period.Count = g.Count();                           //ex) 2020.12.18. 14:58:12에 대여기록이 있다면 '14'
+
+                    periods.Add(period);
+                }
+
+                return periods;
+            }
+        }
+
 
 
 

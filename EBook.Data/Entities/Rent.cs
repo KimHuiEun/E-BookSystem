@@ -28,7 +28,6 @@ namespace EBook.Data
         
         //TODO : 책 당 대여량을 구해야하는 것이므로 책을 정렬 한 후 그 책에 따른 렌트아이디를 정렬해서 순위를 부여.
                  //-> 쿼리를 써서 리스트를 만드는것.
-                 
 
 
         public int BirthYear { get; set; }

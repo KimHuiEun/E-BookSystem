@@ -33,16 +33,16 @@ namespace EBookDevexpress
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             this.BestSellerRankChart = new DevExpress.XtraCharts.ChartControl();
-            this.sbsBestSellerRank = new System.Windows.Forms.BindingSource(this.components);
+            this.bdsBestSeller = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.BestSellerRankChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sbsBestSellerRank)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsBestSeller)).BeginInit();
             this.SuspendLayout();
             // 
             // BestSellerRankChart
             // 
-            this.BestSellerRankChart.DataSource = this.sbsBestSellerRank;
+            this.BestSellerRankChart.DataSource = this.bdsBestSeller;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             xyDiagram1.Rotated = true;
@@ -65,9 +65,9 @@ namespace EBookDevexpress
             this.BestSellerRankChart.Size = new System.Drawing.Size(777, 542);
             this.BestSellerRankChart.TabIndex = 0;
             // 
-            // sbsBestSellerRank
+            // bdsBestSeller
             // 
-            this.sbsBestSellerRank.DataSource = typeof(EBook.Data.Summary);
+            this.bdsBestSeller.DataSource = typeof(EBook.Data.DecadeGenreSummary);
             // 
             // BestSellerRankForm
             // 
@@ -81,7 +81,7 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BestSellerRankChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sbsBestSellerRank)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsBestSeller)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -89,6 +89,6 @@ namespace EBookDevexpress
         #endregion
 
         private DevExpress.XtraCharts.ChartControl BestSellerRankChart;
-        private System.Windows.Forms.BindingSource sbsBestSellerRank;
+        private System.Windows.Forms.BindingSource bdsBestSeller;
     }
 }

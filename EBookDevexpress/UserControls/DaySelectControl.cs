@@ -19,7 +19,7 @@ namespace EBookDevexpress
 
         private void btnDaySearch_Click(object sender, EventArgs e)
         {
-            OnButtonDaySearch(day.Text);
+            OnButtonDaySearch(day.DateTime);
         }
 
         #region ButtonDaySearch event things for C# 3.0
@@ -31,9 +31,9 @@ namespace EBookDevexpress
                 ButtonDaySearch(this, e);
         }
 
-        private ButtonDaySearchEventArgs OnButtonDaySearch(string daySelect)
+        private ButtonDaySearchEventArgs OnButtonDaySearch(DateTime day)
         {
-            ButtonDaySearchEventArgs args = new ButtonDaySearchEventArgs(daySelect);
+            ButtonDaySearchEventArgs args = new ButtonDaySearchEventArgs(day);
             OnButtonDaySearch(args);
 
             return args;
@@ -49,15 +49,15 @@ namespace EBookDevexpress
 
         public class ButtonDaySearchEventArgs : EventArgs
         {
-            public string DaySelect { get; set; }
+            public DateTime Day { get; set; }
 
             public ButtonDaySearchEventArgs()
             {
             }
 
-            public ButtonDaySearchEventArgs(string daySelect)
+            public ButtonDaySearchEventArgs(DateTime day)
             {
-                DaySelect = daySelect;
+                Day = day;
             }
         }
         #endregion

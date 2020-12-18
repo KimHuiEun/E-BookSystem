@@ -87,6 +87,7 @@ namespace EBookDevexpress
             this.quarterSelectControl1.Name = "quarterSelectControl1";
             this.quarterSelectControl1.Size = new System.Drawing.Size(813, 98);
             this.quarterSelectControl1.TabIndex = 7;
+            this.quarterSelectControl1.ButtonQuarterSearch += new System.EventHandler<EBookDevexpress.QuarterSelectControl.ButtonQuarterSearchEventArgs>(this.quarterSelectControl1_ButtonQuarterSearch);
             // 
             // genreSelectControl1
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EBook.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,13 @@ namespace EBook.ConsoleUI
 
         static void Main(string[] args)
         {
+            var rents = Dao.Rent.GetAll();
+
+            var periods = Dao.Rent.DaySearch(DateTime.Today);
+            foreach (var period in periods)
+            {
+                Console.WriteLine(period);
+            }
         }
     }
 }

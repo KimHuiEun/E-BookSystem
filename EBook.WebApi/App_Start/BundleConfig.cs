@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace EBook.WebApi
+namespace Ebook.WebApi
 {
     public class BundleConfig
     {
