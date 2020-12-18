@@ -33,5 +33,16 @@ namespace EBookDevexpress.Properties {
                 return ((string)(this["_E_BookConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"cn76.ipdisk.co.kr, 3423\";Initial Catalog=_E-Book;User ID=8F;Password" +
+            "=1")]
+        public string _E_BookConnectionString1 {
+            get {
+                return ((string)(this["_E_BookConnectionString1"]));
+            }
+        }
     }
 }
