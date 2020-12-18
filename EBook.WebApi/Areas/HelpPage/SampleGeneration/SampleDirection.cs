@@ -1,4 +1,4 @@
-namespace EBook.WebApi.Areas.HelpPage
+namespace Ebook.WebApi.Areas.HelpPage
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response

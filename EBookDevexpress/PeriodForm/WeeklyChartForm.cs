@@ -17,6 +17,9 @@ namespace EBookDevexpress
             InitializeComponent();
         }
 
+        private void weekSelectControl1_ButtonWeekSearch(object sender, WeekSelectControl.ButtonWeekSearchEventArgs e)
+        {
 
+        }
     }
 }

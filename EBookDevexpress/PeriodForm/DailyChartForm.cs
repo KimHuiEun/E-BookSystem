@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EBook.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,12 @@ namespace EBookDevexpress
             InitializeComponent();
         }
 
+
+        private void daySelectControl1_ButtonDaySearch(object sender, DaySelectControl.ButtonDaySearchEventArgs e)
+        {
+            bdsList.DataSource = Dao.Rent.DaySearch(e.Day);
+                //e.Day = new 
+            
+        }
     }
 }

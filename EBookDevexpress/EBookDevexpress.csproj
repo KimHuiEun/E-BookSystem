@@ -89,6 +89,7 @@
     <Compile Include="BookListForm.Designer.cs">
       <DependentUpon>BookListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Exceptions\FakeVirtualMemberException.cs" />
     <Compile Include="UserControls\DaySelectControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -220,6 +221,7 @@
     <None Include="EBook.Data.BookModel.datasource" />
     <None Include="EBook.Data.Customer.datasource" />
     <None Include="EBook.Data.CustomerSummary.datasource" />
+    <None Include="EBook.Data.Models.TheModel.datasource" />
     <None Include="EBook.Data.Rent.datasource" />
     <None Include="EBook.Data.RentDao.datasource" />
     <None Include="EBook.Data.RentModel.datasource" />

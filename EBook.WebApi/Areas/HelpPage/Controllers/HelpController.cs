@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using EBook.WebApi.Areas.HelpPage.ModelDescriptions;
-using EBook.WebApi.Areas.HelpPage.Models;
+using Ebook.WebApi.Areas.HelpPage.ModelDescriptions;
+using Ebook.WebApi.Areas.HelpPage.Models;
 
-namespace EBook.WebApi.Areas.HelpPage.Controllers
+namespace Ebook.WebApi.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

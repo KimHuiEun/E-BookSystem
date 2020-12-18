@@ -34,7 +34,7 @@ namespace EBookDevexpress
                 return;
 
 
-            Summary summary = new Summary();
+            DecadeGenreSummary summary = new DecadeGenreSummary();
             NewBookRankChart.DataSource = summary.Rank.ToString();
             var book = summary.Title.Max();
             //NewBookRankChart.Series[0].View.Colorizer = CreateColorizer(summary);

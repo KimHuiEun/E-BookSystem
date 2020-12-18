@@ -29,10 +29,11 @@ namespace EBookDevexpress
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuarterSelectControl));
             this.gcQuarter = new DevExpress.XtraEditors.GroupControl();
+            this.btnQuarterSearch = new DevExpress.XtraEditors.SimpleButton();
             this.quarter = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblSearchGuide = new DevExpress.XtraEditors.LabelControl();
-            this.btnQuarterSearch = new DevExpress.XtraEditors.SimpleButton();
             this.lblCtrlStartdate = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gcQuarter)).BeginInit();
             this.gcQuarter.SuspendLayout();
@@ -41,9 +42,9 @@ namespace EBookDevexpress
             // 
             // gcQuarter
             // 
+            this.gcQuarter.Controls.Add(this.btnQuarterSearch);
             this.gcQuarter.Controls.Add(this.quarter);
             this.gcQuarter.Controls.Add(this.lblSearchGuide);
-            this.gcQuarter.Controls.Add(this.btnQuarterSearch);
             this.gcQuarter.Controls.Add(this.lblCtrlStartdate);
             this.gcQuarter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcQuarter.Location = new System.Drawing.Point(0, 0);
@@ -51,6 +52,16 @@ namespace EBookDevexpress
             this.gcQuarter.Size = new System.Drawing.Size(800, 98);
             this.gcQuarter.TabIndex = 3;
             this.gcQuarter.Text = "분기 대여 통계";
+            // 
+            // btnQuarterSearch
+            // 
+            this.btnQuarterSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnQuarterSearch.ImageOptions.Image")));
+            this.btnQuarterSearch.Location = new System.Drawing.Point(295, 36);
+            this.btnQuarterSearch.Name = "btnQuarterSearch";
+            this.btnQuarterSearch.Size = new System.Drawing.Size(71, 27);
+            this.btnQuarterSearch.TabIndex = 5;
+            this.btnQuarterSearch.Text = "조회";
+            this.btnQuarterSearch.Click += new System.EventHandler(this.btnQuarterSearch_Click);
             // 
             // quarter
             // 
@@ -63,7 +74,7 @@ namespace EBookDevexpress
             "2/4분기",
             "3/4분기",
             "4/4분기"});
-            this.quarter.Size = new System.Drawing.Size(125, 24);
+            this.quarter.Size = new System.Drawing.Size(162, 24);
             this.quarter.TabIndex = 4;
             // 
             // lblSearchGuide
@@ -73,15 +84,6 @@ namespace EBookDevexpress
             this.lblSearchGuide.Size = new System.Drawing.Size(373, 18);
             this.lblSearchGuide.TabIndex = 3;
             this.lblSearchGuide.Text = "*선택일 시작 기준으로 3개월 간의 통계를 조회할 수 있습니다.";
-            // 
-            // btnQuarterSearch
-            // 
-            this.btnQuarterSearch.Location = new System.Drawing.Point(249, 36);
-            this.btnQuarterSearch.Name = "btnQuarterSearch";
-            this.btnQuarterSearch.Size = new System.Drawing.Size(71, 27);
-            this.btnQuarterSearch.TabIndex = 2;
-            this.btnQuarterSearch.Text = "조회";
-            this.btnQuarterSearch.Click += new System.EventHandler(this.btnQuarterSearch_Click);
             // 
             // lblCtrlStartdate
             // 
@@ -110,8 +112,8 @@ namespace EBookDevexpress
 
         private DevExpress.XtraEditors.GroupControl gcQuarter;
         private DevExpress.XtraEditors.LabelControl lblSearchGuide;
-        private DevExpress.XtraEditors.SimpleButton btnQuarterSearch;
         private DevExpress.XtraEditors.LabelControl lblCtrlStartdate;
         private DevExpress.XtraEditors.ComboBoxEdit quarter;
+        private DevExpress.XtraEditors.SimpleButton btnQuarterSearch;
     }
 }
