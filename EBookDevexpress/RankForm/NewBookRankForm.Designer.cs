@@ -57,12 +57,18 @@ namespace EBookDevexpress
             series1.Name = "Series 1";
             this.NewBookRankChart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.NewBookRankChart.Size = new System.Drawing.Size(800, 450);
-            this.NewBookRankChart.TabIndex = 0;
+            this.NewBookRankChart.SeriesTemplate.ArgumentDataMember = "RentCount";
+            this.NewBookRankChart.Size = new System.Drawing.Size(620, 395);
+            this.NewBookRankChart.TabIndex = 3;
             // 
             // bookBindingSource
             // 
-            this.bookBindingSource.DataSource = typeof(EBook.Data.Book);
+            this.gcGenre1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.gcGenre1.AutoSize = true;
+            this.gcGenre1.Location = new System.Drawing.Point(631, 85);
+            this.gcGenre1.Name = "gcGenre1";
+            this.gcGenre1.Size = new System.Drawing.Size(157, 322);
+            this.gcGenre1.TabIndex = 5;
             // 
             // NewBookRankForm
             // 
