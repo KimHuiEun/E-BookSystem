@@ -31,9 +31,9 @@ namespace EBookDevexpress
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DaySelectControl));
             this.groupCtrlWeekly = new DevExpress.XtraEditors.GroupControl();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.lblCtrlStartdate = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupCtrlWeekly)).BeginInit();
             this.groupCtrlWeekly.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
@@ -45,11 +45,24 @@ namespace EBookDevexpress
             this.groupCtrlWeekly.Controls.Add(this.dateEdit1);
             this.groupCtrlWeekly.Controls.Add(this.btnSearch);
             this.groupCtrlWeekly.Controls.Add(this.lblCtrlStartdate);
-            this.groupCtrlWeekly.Location = new System.Drawing.Point(14, 13);
+            this.groupCtrlWeekly.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupCtrlWeekly.Location = new System.Drawing.Point(0, 0);
             this.groupCtrlWeekly.Name = "groupCtrlWeekly";
-            this.groupCtrlWeekly.Size = new System.Drawing.Size(776, 96);
+            this.groupCtrlWeekly.Size = new System.Drawing.Size(802, 98);
             this.groupCtrlWeekly.TabIndex = 6;
             this.groupCtrlWeekly.Text = "일간 대여 통계";
+            // 
+            // dateEdit1
+            // 
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(109, 36);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Size = new System.Drawing.Size(166, 24);
+            this.dateEdit1.TabIndex = 3;
             // 
             // btnSearch
             // 
@@ -68,25 +81,13 @@ namespace EBookDevexpress
             this.lblCtrlStartdate.TabIndex = 0;
             this.lblCtrlStartdate.Text = "조회 기간 선택";
             // 
-            // dateEdit1
-            // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(109, 36);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(166, 24);
-            this.dateEdit1.TabIndex = 3;
-            // 
             // DaySelectControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupCtrlWeekly);
             this.Name = "DaySelectControl";
-            this.Size = new System.Drawing.Size(802, 125);
+            this.Size = new System.Drawing.Size(802, 98);
             ((System.ComponentModel.ISupportInitialize)(this.groupCtrlWeekly)).EndInit();
             this.groupCtrlWeekly.ResumeLayout(false);
             this.groupCtrlWeekly.PerformLayout();

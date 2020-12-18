@@ -40,9 +40,10 @@ namespace EBookDevexpress
             // 
             this.gcGenre.AutoSize = true;
             this.gcGenre.Controls.Add(this.clGenre);
-            this.gcGenre.Location = new System.Drawing.Point(3, 3);
+            this.gcGenre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcGenre.Location = new System.Drawing.Point(0, 0);
             this.gcGenre.Name = "gcGenre";
-            this.gcGenre.Size = new System.Drawing.Size(218, 310);
+            this.gcGenre.Size = new System.Drawing.Size(220, 315);
             this.gcGenre.TabIndex = 9;
             this.gcGenre.Text = "항목 선택";
             // 
@@ -53,11 +54,11 @@ namespace EBookDevexpress
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "교양"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "문학"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "사회과학")});
-            this.clGenre.Location = new System.Drawing.Point(5, 31);
+            this.clGenre.Location = new System.Drawing.Point(10, 31);
             this.clGenre.MultiColumn = true;
             this.clGenre.Name = "clGenre";
             this.clGenre.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.clGenre.Size = new System.Drawing.Size(202, 270);
+            this.clGenre.Size = new System.Drawing.Size(197, 270);
             this.clGenre.TabIndex = 9;
             // 
             // GenreSelectControl
