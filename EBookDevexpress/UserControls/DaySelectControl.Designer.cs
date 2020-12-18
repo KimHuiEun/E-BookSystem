@@ -31,9 +31,9 @@ namespace EBookDevexpress
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PeriodSearchControl));
             this.gcDay = new DevExpress.XtraEditors.GroupControl();
+            this.dateEdit = new DevExpress.XtraEditors.DateEdit();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.lblCtrlStartdate = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDay)).BeginInit();
             this.gcDay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit.Properties.CalendarTimeProperties)).BeginInit();
@@ -50,6 +50,18 @@ namespace EBookDevexpress
             this.gcDay.Size = new System.Drawing.Size(776, 75);
             this.gcDay.TabIndex = 1;
             this.gcDay.Text = "일간 대여 통계";
+            // 
+            // dateEdit
+            // 
+            this.dateEdit.EditValue = null;
+            this.dateEdit.Location = new System.Drawing.Point(108, 38);
+            this.dateEdit.Name = "dateEdit";
+            this.dateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit.Size = new System.Drawing.Size(167, 24);
+            this.dateEdit.TabIndex = 3;
             // 
             // btnSearch
             // 
@@ -68,18 +80,6 @@ namespace EBookDevexpress
             this.lblCtrlStartdate.Size = new System.Drawing.Size(88, 18);
             this.lblCtrlStartdate.TabIndex = 0;
             this.lblCtrlStartdate.Text = "조회 날짜 선택";
-            // 
-            // dateEdit
-            // 
-            this.dateEdit.EditValue = null;
-            this.dateEdit.Location = new System.Drawing.Point(108, 38);
-            this.dateEdit.Name = "dateEdit";
-            this.dateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit.Size = new System.Drawing.Size(167, 24);
-            this.dateEdit.TabIndex = 3;
             // 
             // PeriodSearchControl
             // 

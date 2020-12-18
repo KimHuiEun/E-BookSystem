@@ -86,12 +86,6 @@
       <DependentUpon>BestSellerRankForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ChartBasePage.cs" />
-    <Compile Include="UserControls\PeriodBaseControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\PeriodBaseControl.Designer.cs">
-      <DependentUpon>PeriodBaseControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\QuarterSelectControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

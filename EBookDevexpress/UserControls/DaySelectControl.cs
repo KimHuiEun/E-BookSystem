@@ -17,6 +17,7 @@ namespace EBookDevexpress
             InitializeComponent();
         }
 
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             OnSearchButtonClicked(dateEdit.Text);
