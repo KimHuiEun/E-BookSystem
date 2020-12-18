@@ -83,6 +83,12 @@
     <Compile Include="CustomerForm\Age_GenreChartForm.Designer.cs">
       <DependentUpon>Age_GenreChartForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookListForm.Designer.cs">
+      <DependentUpon>BookListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DaySelectControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,11 +159,19 @@
     <Compile Include="UserControls\WeekSelectControl.Designer.cs">
       <DependentUpon>WeekSelectControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="__E_BookDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>__E_BookDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CustomerForm\Age_GenderChartForm.resx">
       <DependentUpon>Age_GenderChartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerForm\Age_GenreChartForm.resx">
       <DependentUpon>Age_GenreChartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookListForm.resx">
+      <DependentUpon>BookListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RankForm\BestSellerRankForm.resx">
       <DependentUpon>BestSellerRankForm.cs</DependentUpon>
@@ -220,6 +234,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="__E_BookDataSet.xsc">
+      <DependentUpon>__E_BookDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="__E_BookDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>__E_BookDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="__E_BookDataSet.xss">
+      <DependentUpon>__E_BookDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

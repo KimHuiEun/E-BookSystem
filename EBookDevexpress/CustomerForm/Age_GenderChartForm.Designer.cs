@@ -36,8 +36,6 @@ namespace EBookDevexpress
             DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.AreaSeriesView areaSeriesView2 = new DevExpress.XtraCharts.AreaSeriesView();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.toastNotificationsManager1 = new DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager(this.components);
             this.summaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -45,8 +43,6 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(areaSeriesView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(areaSeriesView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.summaryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,8 +50,6 @@ namespace EBookDevexpress
             // 
             this.chartControl1.DataSource = this.summaryBindingSource;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisX.WholeRange.EndSideMargin = 0D;
-            xyDiagram1.AxisX.WholeRange.StartSideMargin = 0D;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -71,14 +65,6 @@ namespace EBookDevexpress
         series2};
             this.chartControl1.Size = new System.Drawing.Size(1082, 753);
             this.chartControl1.TabIndex = 0;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataSource = typeof(EBook.Data.Customer);
-            // 
-            // toastNotificationsManager1
-            // 
-            this.toastNotificationsManager1.ApplicationId = "b6157ccb-9cd3-4882-8879-ed241261c5f7";
             // 
             // summaryBindingSource
             // 
@@ -98,8 +84,6 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(areaSeriesView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.summaryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -108,8 +92,6 @@ namespace EBookDevexpress
         #endregion
 
         private DevExpress.XtraCharts.ChartControl chartControl1;
-        private System.Windows.Forms.BindingSource customerBindingSource;
-        private DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager toastNotificationsManager1;
         private System.Windows.Forms.BindingSource summaryBindingSource;
     }
 }
