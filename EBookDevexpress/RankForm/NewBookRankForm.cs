@@ -17,7 +17,7 @@ namespace EBookDevexpress
         {
             InitializeComponent();
 
-            gcGenre.CheckboxClicked += GcGenre_CheckboxClicked;
+            //gcGenre.CheckboxClicked += GcGenre_CheckboxClicked;
 
         }
 

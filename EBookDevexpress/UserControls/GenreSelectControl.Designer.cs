@@ -29,47 +29,47 @@ namespace EBookDevexpress
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.checkedListBox = new DevExpress.XtraEditors.CheckedListBoxControl();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedListBox)).BeginInit();
+            this.gcGenre = new DevExpress.XtraEditors.GroupControl();
+            this.clGenre = new DevExpress.XtraEditors.CheckedListBoxControl();
+            ((System.ComponentModel.ISupportInitialize)(this.gcGenre)).BeginInit();
+            this.gcGenre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clGenre)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupControl1
+            // gcGenre
             // 
-            this.groupControl1.AutoSize = true;
-            this.groupControl1.Controls.Add(this.checkedListBox);
-            this.groupControl1.Location = new System.Drawing.Point(3, 3);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(218, 310);
-            this.groupControl1.TabIndex = 9;
-            this.groupControl1.Text = "항목 선택";
+            this.gcGenre.AutoSize = true;
+            this.gcGenre.Controls.Add(this.clGenre);
+            this.gcGenre.Location = new System.Drawing.Point(3, 3);
+            this.gcGenre.Name = "gcGenre";
+            this.gcGenre.Size = new System.Drawing.Size(218, 310);
+            this.gcGenre.TabIndex = 9;
+            this.gcGenre.Text = "항목 선택";
             // 
-            // checkedListBox
+            // clGenre
             // 
-            this.checkedListBox.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
+            this.clGenre.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "경제"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "교양"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "문학"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "사회과학")});
-            this.checkedListBox.Location = new System.Drawing.Point(5, 31);
-            this.checkedListBox.MultiColumn = true;
-            this.checkedListBox.Name = "checkedListBox";
-            this.checkedListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.checkedListBox.Size = new System.Drawing.Size(202, 270);
-            this.checkedListBox.TabIndex = 9;
+            this.clGenre.Location = new System.Drawing.Point(5, 31);
+            this.clGenre.MultiColumn = true;
+            this.clGenre.Name = "clGenre";
+            this.clGenre.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.clGenre.Size = new System.Drawing.Size(202, 270);
+            this.clGenre.TabIndex = 9;
             // 
             // GenreSelectControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.gcGenre);
             this.Name = "GenreSelectControl";
             this.Size = new System.Drawing.Size(220, 315);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.checkedListBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcGenre)).EndInit();
+            this.gcGenre.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.clGenre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,7 +77,7 @@ namespace EBookDevexpress
 
         #endregion
 
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.CheckedListBoxControl checkedListBox;
+        private DevExpress.XtraEditors.GroupControl gcGenre;
+        private DevExpress.XtraEditors.CheckedListBoxControl clGenre;
     }
 }
