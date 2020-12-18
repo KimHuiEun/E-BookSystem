@@ -206,6 +206,7 @@
     <None Include="EBook.Data.RentDao.datasource" />
     <None Include="EBook.Data.RentModel.datasource" />
     <None Include="EBook.Data.RentSummary.datasource" />
+    <None Include="EBook.Data.Summary.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

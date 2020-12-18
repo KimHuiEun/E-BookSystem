@@ -1,13 +1,16 @@
 ﻿using DevExpress.XtraBars.Docking2010.Views;
 using DevExpress.XtraCharts;
+using DevExpress.XtraEditors;
+using EBook.Data;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace EBookDevexpress
 {
-    public partial class BestSellerRankForm : Form
+    public partial class BestSellerRankForm : XtraForm
     {
         public BestSellerRankForm()
         {
@@ -20,26 +23,6 @@ namespace EBookDevexpress
 
             if (DesignMode)
                 return;
-/*
-            //NewBookRankChart.DataSource = BookModel.RentCount.GetModels();
-            var book = BookModel.RentCount.GetModels();
-            BestSellerRankChart.Series[0].View.Colorizer = CreateColorizer(book);
-            BestSellerRankChart.DataSource = book;
-
-            CreateColorizerBase CreateColorizer(List<BookModel> models)
-            {
-                KeyColorizer colorizer = new KeyColorizer()
-                {
-                    PaletteName = "Apex"
-                };
-
-                var names = book.Select(x => x.name).ToList();
-                colorizer.Keys.AddRange(names);
-
-                return colorizer;
-            }*/
         }
-
-
     }
 }

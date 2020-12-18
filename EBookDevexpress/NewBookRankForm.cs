@@ -25,23 +25,14 @@ namespace EBookDevexpress
             if (DesignMode)
                 return;
 
-            /*//NewBookRankChart.DataSource = BookModel.RentCount.GetModels();
-            var book = BookModel.RentCount.GetModels();
-            NewBookRankChart.Series[0].View.Colorizer = CreateColorizer(book);
+
+            Summary summary = new Summary();
+            NewBookRankChart.DataSource = summary.Rank.ToString();
+            var book = summary.Title.Max();
+            //NewBookRankChart.Series[0].View.Colorizer = CreateColorizer(summary);
             NewBookRankChart.DataSource = book;
 
-            CreateColorizerBase CreateColorizer(List<BookModel> models)
-            {
-                KeyColorizer colorizer = new KeyColorizer()
-                {
-                    PaletteName = "Apex"
-                };
 
-                var names = book.Select(x => x.name).ToList();
-                colorizer.Keys.AddRange(names);
-
-                return colorizer;
-            }*/
         }
     }
 }
