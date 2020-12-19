@@ -24,5 +24,10 @@ namespace EBookDevexpress
             if (DesignMode)
                 return;
         }
+
+        private void genreSelectControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

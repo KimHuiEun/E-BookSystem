@@ -33,24 +33,24 @@ namespace EBookDevexpress
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             this.NewBookRankChart = new DevExpress.XtraCharts.ChartControl();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbsNewbook = new System.Windows.Forms.BindingSource(this.components);
             this.genreSelectControl1 = new EBookDevexpress.GenreSelectControl();
             ((System.ComponentModel.ISupportInitialize)(this.NewBookRankChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbsNewbook)).BeginInit();
             this.SuspendLayout();
             // 
             // NewBookRankChart
             // 
-            this.NewBookRankChart.DataSource = this.bookBindingSource;
+            this.NewBookRankChart.DataSource = this.dbsNewbook;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             xyDiagram1.Rotated = true;
             this.NewBookRankChart.Diagram = xyDiagram1;
             this.NewBookRankChart.Legend.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.NewBookRankChart.Legend.Name = "Default Legend";
-            this.NewBookRankChart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.NewBookRankChart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
             this.NewBookRankChart.Location = new System.Drawing.Point(12, 12);
             this.NewBookRankChart.Name = "NewBookRankChart";
             this.NewBookRankChart.PaletteName = "Apex";
@@ -64,16 +64,18 @@ namespace EBookDevexpress
             // 
             // genreSelectControl1
             // 
+            this.genreSelectControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.genreSelectControl1.Location = new System.Drawing.Point(649, 92);
             this.genreSelectControl1.Name = "genreSelectControl1";
             this.genreSelectControl1.Size = new System.Drawing.Size(220, 315);
             this.genreSelectControl1.TabIndex = 4;
+            this.genreSelectControl1.Load += new System.EventHandler(this.genreSelectControl1_Load);
             // 
             // NewBookRankForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 446);
+            this.ClientSize = new System.Drawing.Size(883, 422);
             this.Controls.Add(this.genreSelectControl1);
             this.Controls.Add(this.NewBookRankChart);
             this.Name = "NewBookRankForm";
@@ -81,15 +83,14 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewBookRankChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbsNewbook)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource bookModelBindingSource;
         private DevExpress.XtraCharts.ChartControl NewBookRankChart;
-        private System.Windows.Forms.BindingSource bookBindingSource;
+        private System.Windows.Forms.BindingSource dbsNewbook;
         private GenreSelectControl genreSelectControl1;
     }
 }

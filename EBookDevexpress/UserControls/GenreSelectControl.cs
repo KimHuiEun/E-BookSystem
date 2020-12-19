@@ -17,15 +17,10 @@ namespace EBookDevexpress
             InitializeComponent();
         }
 
-        /*public event EventHandler<CheckboxClickedEventArgs> CheckboxClicked;
-        private void checkedListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void clGenre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Test");
-        }*/
+            string text = clGenre.Name;
+            MessageBox.Show($"I clicked {text}");
+        }
     }
-
-   /* public class CheckboxClickedEventArgs : EventArgs
-    {
-        public string Text { get; set; }
-    }*/
 }

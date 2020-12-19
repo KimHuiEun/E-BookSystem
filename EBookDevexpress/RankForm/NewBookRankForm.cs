@@ -17,15 +17,7 @@ namespace EBookDevexpress
         public NewBookRankForm()
         {
             InitializeComponent();
-
-            //gcGenre.CheckboxClicked += GcGenre_CheckboxClicked;
-
         }
-
-        /*private void GcGenre_CheckboxClicked(object sender, CheckboxClickedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }*/
 
         protected override void OnLoad(EventArgs e)
         {
@@ -33,15 +25,11 @@ namespace EBookDevexpress
 
             if (DesignMode)
                 return;
+        }
 
-
-            RankSummary summary = new RankSummary();
-            NewBookRankChart.DataSource = summary.Rank.ToString();
-            var book = summary.Title.Max();
-            //NewBookRankChart.Series[0].View.Colorizer = CreateColorizer(summary);
-            NewBookRankChart.DataSource = book;
-
-
+        private void genreSelectControl1_Load(object sender, EventArgs e)
+        {
+            //dbsNewbook.DataSource = Dao.Rent.BookCountRank(e);
         }
     }
 }

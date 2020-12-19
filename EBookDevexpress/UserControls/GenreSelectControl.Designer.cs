@@ -60,6 +60,7 @@ namespace EBookDevexpress
             this.clGenre.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.clGenre.Size = new System.Drawing.Size(197, 270);
             this.clGenre.TabIndex = 9;
+            this.clGenre.SelectedIndexChanged += new System.EventHandler(this.clGenre_SelectedIndexChanged);
             // 
             // GenreSelectControl
             // 
