@@ -19,8 +19,7 @@ namespace EBookDevexpress
 
         private void clGenre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string text = clGenre.Name;
-            MessageBox.Show($"I clicked {text}");
+
         }
     }
 }

@@ -25,9 +25,19 @@ namespace EBookDevexpress
                 return;
         }
 
-        private void genreSelectControl1_Load(object sender, EventArgs e)
+        private void checkedListBoxControl1_ItemCheck(object sender, DevExpress.XtraEditors.Controls.ItemCheckEventArgs e)
         {
-
+            int i;
+            string s;
+            s = "Checked items:\n";
+            for (i = 0; i <= (checkedListBoxControl1.Items.Count - 1); i++)
+            {
+                if (checkedListBoxControl1.GetItemChecked(i))
+                {
+                    s = s + "Item " + (i + 1).ToString() + " = " + checkedListBoxControl1.Items[i].ToString() + "\n";
+                }
+            }
+            MessageBox.Show(s);
         }
     }
 }
