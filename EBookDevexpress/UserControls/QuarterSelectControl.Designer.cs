@@ -31,12 +31,12 @@ namespace EBookDevexpress
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuarterSelectControl));
             this.gcQuarter = new DevExpress.XtraEditors.GroupControl();
-            this.lblCtrlStartdate = new DevExpress.XtraEditors.LabelControl();
             this.btnPeriod4 = new System.Windows.Forms.RadioButton();
             this.btnPeriod3 = new System.Windows.Forms.RadioButton();
             this.btnPeriod2 = new System.Windows.Forms.RadioButton();
             this.btnPeriod1 = new System.Windows.Forms.RadioButton();
             this.btnQuarterSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.lblCtrlStartdate = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gcQuarter)).BeginInit();
             this.gcQuarter.SuspendLayout();
             this.SuspendLayout();
@@ -56,14 +56,6 @@ namespace EBookDevexpress
             this.gcQuarter.TabIndex = 3;
             this.gcQuarter.Text = "분기 대여 통계";
             // 
-            // lblCtrlStartdate
-            // 
-            this.lblCtrlStartdate.Location = new System.Drawing.Point(14, 41);
-            this.lblCtrlStartdate.Name = "lblCtrlStartdate";
-            this.lblCtrlStartdate.Size = new System.Drawing.Size(88, 18);
-            this.lblCtrlStartdate.TabIndex = 0;
-            this.lblCtrlStartdate.Text = "조회 기간 선택";
-            // 
             // btnPeriod4
             // 
             this.btnPeriod4.AutoSize = true;
@@ -74,6 +66,7 @@ namespace EBookDevexpress
             this.btnPeriod4.TabStop = true;
             this.btnPeriod4.Text = "4분기(10~12월)";
             this.btnPeriod4.UseVisualStyleBackColor = true;
+            this.btnPeriod4.CheckedChanged += new System.EventHandler(this.btnPeriod4_CheckedChanged);
             // 
             // btnPeriod3
             // 
@@ -85,6 +78,7 @@ namespace EBookDevexpress
             this.btnPeriod3.TabStop = true;
             this.btnPeriod3.Text = "3분기(7~9월)";
             this.btnPeriod3.UseVisualStyleBackColor = true;
+            this.btnPeriod3.CheckedChanged += new System.EventHandler(this.btnPeriod3_CheckedChanged);
             // 
             // btnPeriod2
             // 
@@ -96,6 +90,7 @@ namespace EBookDevexpress
             this.btnPeriod2.TabStop = true;
             this.btnPeriod2.Text = "2분기(4~6월)";
             this.btnPeriod2.UseVisualStyleBackColor = true;
+            this.btnPeriod2.CheckedChanged += new System.EventHandler(this.btnPeriod2_CheckedChanged);
             // 
             // btnPeriod1
             // 
@@ -107,6 +102,7 @@ namespace EBookDevexpress
             this.btnPeriod1.TabStop = true;
             this.btnPeriod1.Text = "1분기(1~3월)";
             this.btnPeriod1.UseVisualStyleBackColor = true;
+            this.btnPeriod1.CheckedChanged += new System.EventHandler(this.btnPeriod1_CheckedChanged);
             // 
             // btnQuarterSearch
             // 
@@ -116,6 +112,14 @@ namespace EBookDevexpress
             this.btnQuarterSearch.Size = new System.Drawing.Size(71, 27);
             this.btnQuarterSearch.TabIndex = 10;
             this.btnQuarterSearch.Text = "조회";
+            // 
+            // lblCtrlStartdate
+            // 
+            this.lblCtrlStartdate.Location = new System.Drawing.Point(14, 41);
+            this.lblCtrlStartdate.Name = "lblCtrlStartdate";
+            this.lblCtrlStartdate.Size = new System.Drawing.Size(88, 18);
+            this.lblCtrlStartdate.TabIndex = 0;
+            this.lblCtrlStartdate.Text = "조회 기간 선택";
             // 
             // QuarterSelectControl
             // 

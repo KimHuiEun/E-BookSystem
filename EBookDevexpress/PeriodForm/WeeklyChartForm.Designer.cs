@@ -41,9 +41,9 @@ namespace EBookDevexpress
             DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
             this.timeSpanChartRangeControlClient1 = new DevExpress.XtraEditors.TimeSpanChartRangeControlClient();
             this.chartCntrlWeekly = new DevExpress.XtraCharts.ChartControl();
+            this.bdsWeek = new System.Windows.Forms.BindingSource(this.components);
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.weekSelectControl1 = new EBookDevexpress.WeekSelectControl();
-            this.bdsWeek = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.timeSpanChartRangeControlClient1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartCntrlWeekly)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -55,8 +55,8 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsWeek)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // chartCntrlWeekly
@@ -69,7 +69,7 @@ namespace EBookDevexpress
             xyDiagram1.PaneDistance = 100;
             this.chartCntrlWeekly.Diagram = xyDiagram1;
             this.chartCntrlWeekly.Legend.Name = "Default Legend";
-            this.chartCntrlWeekly.Location = new System.Drawing.Point(26, 130);
+            this.chartCntrlWeekly.Location = new System.Drawing.Point(0, 105);
             this.chartCntrlWeekly.Name = "chartCntrlWeekly";
             series1.Name = "경제";
             series1.View = lineSeriesView1;
@@ -84,8 +84,12 @@ namespace EBookDevexpress
         series2,
         series3,
         series4};
-            this.chartCntrlWeekly.Size = new System.Drawing.Size(558, 324);
+            this.chartCntrlWeekly.Size = new System.Drawing.Size(852, 389);
             this.chartCntrlWeekly.TabIndex = 2;
+            // 
+            // bdsWeek
+            // 
+            this.bdsWeek.DataSource = typeof(EBook.Data.Models.PeriodSummary);
             // 
             // weekSelectControl1
             // 
@@ -95,10 +99,6 @@ namespace EBookDevexpress
             this.weekSelectControl1.Size = new System.Drawing.Size(864, 99);
             this.weekSelectControl1.TabIndex = 3;
             this.weekSelectControl1.ButtonWeekSearch += new System.EventHandler<EBookDevexpress.WeekSelectControl.ButtonWeekSearchEventArgs>(this.weekSelectControl1_ButtonWeekSearch);
-            // 
-            // bdsWeek
-            // 
-            this.bdsWeek.DataSource = typeof(EBook.Data.Models.PeriodSummary);
             // 
             // WeeklyChartForm
             // 
@@ -120,8 +120,8 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartCntrlWeekly)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsWeek)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
 
         }

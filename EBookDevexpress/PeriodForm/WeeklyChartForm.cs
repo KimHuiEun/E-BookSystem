@@ -22,5 +22,6 @@ namespace EBookDevexpress
         {
             bdsWeek.DataSource = Dao.Rent.DaySearch(e.Week);
         }
+
     }
 }

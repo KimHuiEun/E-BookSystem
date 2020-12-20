@@ -17,5 +17,9 @@ namespace EBookDevexpress
             InitializeComponent();
         }
 
+        private void quarterSelectControl2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
