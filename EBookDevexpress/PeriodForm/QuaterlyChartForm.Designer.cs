@@ -30,59 +30,73 @@ namespace EBookDevexpress
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.FullStackedLineSeriesView fullStackedLineSeriesView1 = new DevExpress.XtraCharts.FullStackedLineSeriesView();
-            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.XYDiagram xyDiagram3 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series8 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView7 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.Series series9 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.FullStackedLineSeriesView fullStackedLineSeriesView2 = new DevExpress.XtraCharts.FullStackedLineSeriesView();
+            DevExpress.XtraCharts.Series series10 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView8 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.Series series11 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView9 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.XYDiagram xyDiagram4 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series12 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView10 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.Series series13 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView11 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.Series series14 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView12 = new DevExpress.XtraCharts.LineSeriesView();
             this.chartCntrlQuarterly = new DevExpress.XtraCharts.ChartControl();
             this.quarterSelectControl1 = new EBookDevexpress.QuarterSelectControl();
             this.genreSelectControl1 = new EBookDevexpress.GenreSelectControl();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.quarterSelectControl2 = new EBookDevexpress.QuarterSelectControl();
             this.bdsQuarter = new System.Windows.Forms.BindingSource(this.components);
+            this.chartCntrlQuaterly = new DevExpress.XtraCharts.ChartControl();
+            this.quarterSelectControl2 = new EBookDevexpress.QuarterSelectControl();
             ((System.ComponentModel.ISupportInitialize)(this.chartCntrlQuarterly)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedLineSeriesView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedLineSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsQuarter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartCntrlQuaterly)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView12)).BeginInit();
             this.SuspendLayout();
             // 
             // chartCntrlQuarterly
             // 
-            xyDiagram1.AxisX.MinorCount = 5;
-            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram1.EnableAxisXScrolling = true;
-            xyDiagram1.PaneDistance = 100;
-            this.chartCntrlQuarterly.Diagram = xyDiagram1;
+            xyDiagram3.AxisX.MinorCount = 5;
+            xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram3.EnableAxisXScrolling = true;
+            xyDiagram3.PaneDistance = 100;
+            this.chartCntrlQuarterly.Diagram = xyDiagram3;
             this.chartCntrlQuarterly.Legend.Name = "Default Legend";
             this.chartCntrlQuarterly.Location = new System.Drawing.Point(12, 115);
             this.chartCntrlQuarterly.Name = "chartCntrlQuarterly";
-            series1.Name = "경제";
-            series1.View = lineSeriesView1;
-            series2.Name = "교양";
-            series2.View = fullStackedLineSeriesView1;
-            series3.Name = "문학";
-            series3.View = lineSeriesView2;
-            series4.Name = "사회과학";
-            series4.View = lineSeriesView3;
+            series8.Name = "경제";
+            series8.View = lineSeriesView7;
+            series9.Name = "교양";
+            series9.View = fullStackedLineSeriesView2;
+            series10.Name = "문학";
+            series10.View = lineSeriesView8;
+            series11.Name = "사회과학";
+            series11.View = lineSeriesView9;
             this.chartCntrlQuarterly.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1,
-        series2,
-        series3,
-        series4};
+        series8,
+        series9,
+        series10,
+        series11};
             this.chartCntrlQuarterly.Size = new System.Drawing.Size(558, 324);
             this.chartCntrlQuarterly.TabIndex = 4;
             // 
@@ -102,27 +116,38 @@ namespace EBookDevexpress
             this.genreSelectControl1.Size = new System.Drawing.Size(220, 401);
             this.genreSelectControl1.TabIndex = 8;
             // 
-            // chartControl1
-            // 
-            this.chartControl1.DataSource = this.bdsQuarter;
-            this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Location = new System.Drawing.Point(154, 179);
-            this.chartControl1.Name = "chartControl1";
-            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartControl1.Size = new System.Drawing.Size(300, 200);
-            this.chartControl1.TabIndex = 0;
-            // 
-            // quarterSelectControl2
-            // 
-            this.quarterSelectControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.quarterSelectControl2.Location = new System.Drawing.Point(0, 0);
-            this.quarterSelectControl2.Name = "quarterSelectControl2";
-            this.quarterSelectControl2.Size = new System.Drawing.Size(813, 98);
-            this.quarterSelectControl2.TabIndex = 1;
-            // 
             // bdsQuarter
             // 
             this.bdsQuarter.DataSource = typeof(EBook.Data.Models.PeriodSummary);
+            // 
+            // chartCntrlQuaterly
+            // 
+            this.chartCntrlQuaterly.DataSource = this.bdsQuarter;
+            xyDiagram4.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram4.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartCntrlQuaterly.Diagram = xyDiagram4;
+            this.chartCntrlQuaterly.Legend.Name = "Default Legend";
+            this.chartCntrlQuaterly.Location = new System.Drawing.Point(1, 104);
+            this.chartCntrlQuaterly.Name = "chartCntrlQuaterly";
+            series12.Name = "경제";
+            series12.View = lineSeriesView10;
+            series13.Name = "교양";
+            series13.View = lineSeriesView11;
+            series14.Name = "사회과학";
+            series14.View = lineSeriesView12;
+            this.chartCntrlQuaterly.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series12,
+        series13,
+        series14};
+            this.chartCntrlQuaterly.Size = new System.Drawing.Size(815, 397);
+            this.chartCntrlQuaterly.TabIndex = 1;
+            // 
+            // quarterSelectControl2
+            // 
+            this.quarterSelectControl2.Location = new System.Drawing.Point(1, 0);
+            this.quarterSelectControl2.Name = "quarterSelectControl2";
+            this.quarterSelectControl2.Size = new System.Drawing.Size(815, 98);
+            this.quarterSelectControl2.TabIndex = 2;
             // 
             // QuaterlyChartForm
             // 
@@ -130,21 +155,28 @@ namespace EBookDevexpress
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 499);
             this.Controls.Add(this.quarterSelectControl2);
-            this.Controls.Add(this.chartControl1);
+            this.Controls.Add(this.chartCntrlQuaterly);
             this.Name = "QuaterlyChartForm";
             this.Text = "분기 대여";
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedLineSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedLineSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartCntrlQuarterly)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsQuarter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartCntrlQuaterly)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -153,8 +185,8 @@ namespace EBookDevexpress
         private DevExpress.XtraCharts.ChartControl chartCntrlQuarterly;
         private QuarterSelectControl quarterSelectControl1;
         private GenreSelectControl genreSelectControl1;
-        private DevExpress.XtraCharts.ChartControl chartControl1;
         private System.Windows.Forms.BindingSource bdsQuarter;
+        private DevExpress.XtraCharts.ChartControl chartCntrlQuaterly;
         private QuarterSelectControl quarterSelectControl2;
     }
 }
