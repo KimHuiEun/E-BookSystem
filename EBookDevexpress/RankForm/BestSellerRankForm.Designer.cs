@@ -49,6 +49,7 @@ namespace EBookDevexpress
             this.BestSellerRankChart.Diagram = xyDiagram1;
             this.BestSellerRankChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BestSellerRankChart.Legend.Name = "Default Legend";
+            this.BestSellerRankChart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.BestSellerRankChart.Location = new System.Drawing.Point(0, 0);
             this.BestSellerRankChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BestSellerRankChart.Name = "BestSellerRankChart";
@@ -64,7 +65,6 @@ namespace EBookDevexpress
             this.BestSellerRankChart.SeriesTemplate.Visible = false;
             this.BestSellerRankChart.Size = new System.Drawing.Size(777, 542);
             this.BestSellerRankChart.TabIndex = 0;
-            
             // 
             // BestSellerRankForm
             // 

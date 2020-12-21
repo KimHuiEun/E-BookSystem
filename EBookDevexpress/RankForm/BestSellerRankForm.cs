@@ -23,6 +23,8 @@ namespace EBookDevexpress
 
             if (DesignMode)
                 return;
+
+            bdsBestSeller.DataSource = Dao.Rent.BookCountRank();
         }
     }
 }
