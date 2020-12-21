@@ -17,11 +17,11 @@ namespace EBookDevexpress
             InitializeComponent();
         }
 
-        private void btnQuarterSearch_Click(object sender, EventArgs e)
+        /*private void btnQuarterSearch_Click(object sender, EventArgs e)
         {
            OnButtonQuarterSearch(quarter.Text);
         }
-
+*/
         #region ButtonQuarterSearch event things for C# 3.0
         public event EventHandler<ButtonQuarterSearchEventArgs> ButtonQuarterSearch;
 
