@@ -54,13 +54,12 @@ namespace EBookDevexpress
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "교양"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "문학"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "사회과학")});
-            this.clGenre.Location = new System.Drawing.Point(10, 31);
+            this.clGenre.Location = new System.Drawing.Point(5, 35);
             this.clGenre.MultiColumn = true;
             this.clGenre.Name = "clGenre";
             this.clGenre.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.clGenre.Size = new System.Drawing.Size(197, 270);
             this.clGenre.TabIndex = 9;
-            this.clGenre.SelectedIndexChanged += new System.EventHandler(this.clGenre_SelectedIndexChanged);
             // 
             // GenreSelectControl
             // 

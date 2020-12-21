@@ -15,6 +15,8 @@ namespace EBookDevexpress
         public BestSellerRankForm()
         {
             InitializeComponent();
+
+            genreSelectControl1.ItemClicked += GenreSelectControl1_ItemClicked;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -25,19 +27,24 @@ namespace EBookDevexpress
                 return;
         }
 
-        private void checkedListBoxControl1_ItemCheck(object sender, DevExpress.XtraEditors.Controls.ItemCheckEventArgs e)
+        private void GenreSelectControl1_ItemClicked(object sender, ItemClickedEventArgs e)
         {
-            int i;
-            string s;
-            s = "Checked items:\n";
-            for (i = 0; i <= (checkedListBoxControl1.Items.Count - 1); i++)
-            {
-                if (checkedListBoxControl1.GetItemChecked(i))
-                {
-                    s = s + "Item " + (i + 1).ToString() + " = " + checkedListBoxControl1.Items[i].ToString() + "\n";
-                }
-            }
-            MessageBox.Show(s);
+            
+            MessageBox.Show(e.Text);
+        }
+
+        private void BestSellerRankForm_Load(object sender, EventArgs e)
+        {
+            //TODO : 책 대여량 베스트 10 가져오는 소스 코드 필요함
+            //dbsNewbook.DataSource = Dao.Rent.BookCountRank();
+            //dbsBestSeller.DataSource = Dao.Rent.BookCountRank();
+        }
+
+        //EBookDevexpress.ItemClickedEventArgs += private ItemCheckedEventArgs_ItemClicked();
+
+        private void genreSelectControl1_ItemClicked(object sender, ItemClickedEventArgs e)
+        {
+            MessageBox.Show(e.Text);
         }
     }
 }
