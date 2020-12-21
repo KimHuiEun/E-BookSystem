@@ -232,28 +232,8 @@ namespace EBook.Data
 
 
 
-
-
         /// <summary>
-        /// Rent테이블에 BookId의 갯수를 리스트화 : 대여량 
-        /// </summary>
-        /// <param name="bookId"></param>
-        /// <returns></returns>
-        public int GetCount(int bookId)
-        {
-            using (var context = DbContextCreator.Create())
-            {
-                return context.Rents.Count(x => x.BookId == bookId);
-                //var query = from x in context.Rents
-                //            where x.BookId == bookId
-                //            select x;
-
-                //return query.Count();
-            }
-        }
-
-        /// <summary>
-        /// 대여량을 기준으로 카운트해서 순위 추출.
+        /// 대여량을 기준으로 베스트셀러 카운트.
         /// </summary>
         /// <returns></returns>
         public List<RankSummary> BestsellerRank()  
@@ -271,7 +251,7 @@ namespace EBook.Data
 
                 var list = query.Take(10).ToList();
 
-                return list.ConvertAll(x => new RankSummary { Title = x.Title, BookCountRank = x.BookCount});
+                return list.ConvertAll(x => new RankSummary { Title = x.Title, BestsellerRank = x.BookCount});
             }
         }
 

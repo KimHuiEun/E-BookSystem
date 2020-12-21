@@ -8,15 +8,11 @@ namespace EBook.Data.Models
 {
     public class RankSummary
     {
-        public int Rank { get; set; }
-
-        public int BookCountRank { get; set; }
-
-        public int NewBookRank { get; set; }
+        public string Title { get; set; }
 
         public int BestsellerRank { get; set; }
 
-        public string Title { get; set; }
+        public int NewBookRank { get; set; }
 
     }
 }
