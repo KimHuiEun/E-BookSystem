@@ -71,6 +71,9 @@ namespace EBookDevexpress
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2};
+            this.chartControl1.SeriesTemplate.ArgumentDataMember = "Count";
+            this.chartControl1.SeriesTemplate.ColorDataMember = "Gender";
+            this.chartControl1.SeriesTemplate.ValueDataMembersSerializable = "Decade";
             this.chartControl1.Size = new System.Drawing.Size(871, 543);
             this.chartControl1.TabIndex = 0;
             // 
