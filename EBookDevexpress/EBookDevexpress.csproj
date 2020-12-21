@@ -221,6 +221,7 @@
     <None Include="EBook.Data.BookModel.datasource" />
     <None Include="EBook.Data.Customer.datasource" />
     <None Include="EBook.Data.CustomerSummary.datasource" />
+    <None Include="EBook.Data.Models.DecadeExtraSummary.datasource" />
     <None Include="EBook.Data.Models.PeriodSummary.datasource" />
     <None Include="EBook.Data.Models.TheModel.datasource" />
     <None Include="EBook.Data.Rent.datasource" />
