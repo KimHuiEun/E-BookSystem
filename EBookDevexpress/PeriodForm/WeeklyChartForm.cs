@@ -23,5 +23,11 @@ namespace EBookDevexpress
             bdsWeek.DataSource = Dao.Rent.DaySearch(e.Week);
         }
 
+        private void genreSelectControl1_Load(object sender, EventArgs e)
+        {
+            bdsWeek.DataSource = Dao.Book.ToString();
+           // Visible.ToString = false();
+
+        }
     }
 }

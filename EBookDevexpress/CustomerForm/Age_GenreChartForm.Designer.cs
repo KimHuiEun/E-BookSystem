@@ -146,6 +146,7 @@ namespace EBookDevexpress
             DevExpress.Skins.SkinPaddingEdges skinPaddingEdges1 = new DevExpress.Skins.SkinPaddingEdges();
             DevExpress.Skins.SkinPaddingEdges skinPaddingEdges2 = new DevExpress.Skins.SkinPaddingEdges();
             this.uiChart_Main = new DevExpress.XtraCharts.ChartControl();
+            this.bdsAgeGenre = new System.Windows.Forms.BindingSource(this.components);
             this.commandBarGalleryDropDown1 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown2 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown3 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
@@ -155,10 +156,10 @@ namespace EBookDevexpress
             this.commandBarGalleryDropDown7 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown8 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.chartBarController1 = new DevExpress.XtraCharts.UI.ChartBarController(this.components);
-            this.bdsAgeGenre = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.uiChart_Main)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3D1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(line3DSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsAgeGenre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown3)).BeginInit();
@@ -168,7 +169,6 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBarController1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsAgeGenre)).BeginInit();
             this.SuspendLayout();
             // 
             // uiChart_Main
@@ -191,6 +191,10 @@ namespace EBookDevexpress
             this.uiChart_Main.SeriesTemplate.View = line3DSeriesView1;
             this.uiChart_Main.Size = new System.Drawing.Size(918, 677);
             this.uiChart_Main.TabIndex = 0;
+            // 
+            // bdsAgeGenre
+            // 
+            this.bdsAgeGenre.DataSource = typeof(EBook.Data.Models.DecadeExtraSummary);
             // 
             // commandBarGalleryDropDown1
             // 
@@ -879,10 +883,6 @@ namespace EBookDevexpress
             // 
             this.chartBarController1.Control = this.uiChart_Main;
             // 
-            // bdsAgeGenre
-            // 
-            this.bdsAgeGenre.DataSource = typeof(EBook.Data.Models.DecadeExtraSummary);
-            // 
             // Age_GenreChartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -894,6 +894,7 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3D1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(line3DSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiChart_Main)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsAgeGenre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown3)).EndInit();
@@ -903,7 +904,6 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBarController1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsAgeGenre)).EndInit();
             this.ResumeLayout(false);
 
         }

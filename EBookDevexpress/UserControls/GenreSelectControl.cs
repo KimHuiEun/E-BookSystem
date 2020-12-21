@@ -15,17 +15,48 @@ namespace EBookDevexpress
         public GenreSelectControl()
         {
             InitializeComponent();
+            OnGenreSelected(clGenre.Text);
         }
 
-        /*public event EventHandler<CheckboxClickedEventArgs> CheckboxClicked;
-        private void checkedListBox_SelectedIndexChanged(object sender, EventArgs e)
+        #region GenreSelected event things for C# 3.0
+        public event EventHandler<GenreSelectedEventArgs> GenreSelected;
+
+        protected virtual void OnGenreSelected(GenreSelectedEventArgs e)
         {
-            MessageBox.Show("Test");
-        }*/
+            if (GenreSelected != null)
+                GenreSelected(this, e);
+        }
+
+        private GenreSelectedEventArgs OnGenreSelected(string genre)
+        {
+            GenreSelectedEventArgs args = new GenreSelectedEventArgs(genre);
+            OnGenreSelected(args);
+
+            return args;
+        }
+
+        private GenreSelectedEventArgs OnGenreSelectedForOut()
+        {
+            GenreSelectedEventArgs args = new GenreSelectedEventArgs();
+            OnGenreSelected(args);
+
+            return args;
+        }
+
+        public class GenreSelectedEventArgs : EventArgs
+        {
+            public string Genre { get; set; }
+
+            public GenreSelectedEventArgs()
+            {
+            }
+
+            public GenreSelectedEventArgs(string genre)
+            {
+                Genre = genre;
+            }
+        }
+        #endregion
     }
 
-   /* public class CheckboxClickedEventArgs : EventArgs
-    {
-        public string Text { get; set; }
-    }*/
 }
