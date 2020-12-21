@@ -29,11 +29,14 @@ namespace EBookDevexpress
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gcGenre = new DevExpress.XtraEditors.GroupControl();
             this.clGenre = new DevExpress.XtraEditors.CheckedListBoxControl();
+            this.bdsBookCategory = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gcGenre)).BeginInit();
             this.gcGenre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clGenre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsBookCategory)).BeginInit();
             this.SuspendLayout();
             // 
             // gcGenre
@@ -49,17 +52,20 @@ namespace EBookDevexpress
             // 
             // clGenre
             // 
-            this.clGenre.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "경제"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "교양"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "문학"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "사회과학")});
+            this.clGenre.DataSource = this.bdsBookCategory;
+            this.clGenre.DisplayMember = "Name";
             this.clGenre.Location = new System.Drawing.Point(10, 31);
             this.clGenre.MultiColumn = true;
             this.clGenre.Name = "clGenre";
             this.clGenre.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.clGenre.Size = new System.Drawing.Size(197, 270);
             this.clGenre.TabIndex = 9;
+            this.clGenre.ValueMember = "Id";
+            this.clGenre.ItemCheck += new DevExpress.XtraEditors.Controls.ItemCheckEventHandler(this.clGenre_ItemCheck);
+            // 
+            // bdsBookCategory
+            // 
+            this.bdsBookCategory.DataSource = typeof(EBook.Data.Models.BookCategory);
             // 
             // GenreSelectControl
             // 
@@ -71,6 +77,7 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(this.gcGenre)).EndInit();
             this.gcGenre.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.clGenre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsBookCategory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,5 +87,6 @@ namespace EBookDevexpress
 
         private DevExpress.XtraEditors.GroupControl gcGenre;
         private DevExpress.XtraEditors.CheckedListBoxControl clGenre;
+        private System.Windows.Forms.BindingSource bdsBookCategory;
     }
 }

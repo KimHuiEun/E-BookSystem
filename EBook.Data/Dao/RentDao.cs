@@ -51,6 +51,8 @@ namespace EBook.Data
             return models; //models를 반환함.
         }
 
+        
+
         private List<Rent> GetWithDecadeGenre(int year) //Search 메소드에서 만든 것 생성.
         {
             using (var context = DbContextCreator.Create())   //MSSQL 사용문
@@ -261,8 +263,40 @@ namespace EBook.Data
             }
         }
 
+        //TODO
+        public object WeekSearch(DateTime week)
+        {
+            using (var context = DbContextCreator.Create())
+            {
+                
 
+                var query = from x in context.Rents
+                                //where x.RentDate >= @from && x.RentDate < to 
+                            select x;               //하루동안의 렌트 기록을 뽑는다.
 
+                var list = query.ToList();          //리스트로 만들기.
+
+                // RentedOn
+                var query2 = from x in list
+                             group x by x.RentDate.Hour into HourGroup          //리스트를 모아 한 그룹을 g라고 한다.
+                             //select new ThePeriod { Hour = g.Key, Count = g.Count()};
+                             select HourGroup;
+
+                //return query2.ToList();
+
+                List<PeriodSummary> periods = new List<PeriodSummary>();
+                foreach (var g in query2)
+                {
+                    PeriodSummary period = new PeriodSummary();
+                    period.Value = g.Key;                                //렌트기록중에 '시'만 뽑는다.
+                    period.Count = g.Count();                           //ex) 2020.12.18. 14:58:12에 대여기록이 있다면 '14'
+
+                    periods.Add(period);
+                }
+
+                return periods;
+            }
+        }
 
     }
 }

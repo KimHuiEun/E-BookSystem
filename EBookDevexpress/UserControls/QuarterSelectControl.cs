@@ -17,11 +17,6 @@ namespace EBookDevexpress
             InitializeComponent();
         }
 
-        /*private void btnQuarterSearch_Click(object sender, EventArgs e)
-        {
-           OnButtonQuarterSearch(quarter.Text);
-        }
-*/
         #region ButtonQuarterSearch event things for C# 3.0
         public event EventHandler<ButtonQuarterSearchEventArgs> ButtonQuarterSearch;
 
@@ -61,37 +56,19 @@ namespace EBookDevexpress
             }
         }
         #endregion
-
-        private void btnPeriod1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (btnPeriod1.Checked == true)
-            {
-                //차트의 기간을 1분기로 기간선택하는 이벤트 발생
-            }
-        }
-
-        private void btnPeriod2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (btnPeriod2.Checked == true)
-            {
-
-            }
-        }
-
-        private void btnPeriod3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (btnPeriod3.Checked == true)
-            {
-
-            }
-        }
-
-        private void btnPeriod4_CheckedChanged(object sender, EventArgs e)
-        {
-            if (btnPeriod4.Checked == true)
-            {
-
-            }
-        }
     }
+
+
+
+    //    private void btnQuarterSearch_Click(object sender, EventArgs e)
+    //    {
+    //        RadioButton quartSelect = sender as RadioButton;
+    //        string msg = //초기화.
+
+    //        if (quartSelect.Checked = false)
+    //            return;
+
+    //        msg = string.Format(quartSelect.Text);
+    //    }
+    //}
 }

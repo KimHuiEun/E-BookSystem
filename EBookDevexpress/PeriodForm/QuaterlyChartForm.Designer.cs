@@ -49,16 +49,16 @@ namespace EBookDevexpress
             this.chartCntrlQuarterly = new DevExpress.XtraCharts.ChartControl();
             this.quarterSelectControl1 = new EBookDevexpress.QuarterSelectControl();
             this.genreSelectControl1 = new EBookDevexpress.GenreSelectControl();
-            this.bdsQuarter = new System.Windows.Forms.BindingSource(this.components);
             this.chartCntrlQuaterly = new DevExpress.XtraCharts.ChartControl();
             this.quarterSelectControl2 = new EBookDevexpress.QuarterSelectControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.genreSelectControl2 = new EBookDevexpress.GenreSelectControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.genreSelectControl2 = new EBookDevexpress.GenreSelectControl();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.bdsQuarter = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chartCntrlQuarterly)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
@@ -69,7 +69,6 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsQuarter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartCntrlQuaterly)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
@@ -85,6 +84,7 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsQuarter)).BeginInit();
             this.SuspendLayout();
             // 
             // chartCntrlQuarterly
@@ -130,10 +130,6 @@ namespace EBookDevexpress
             this.genreSelectControl1.Size = new System.Drawing.Size(220, 401);
             this.genreSelectControl1.TabIndex = 8;
             // 
-            // bdsQuarter
-            // 
-            this.bdsQuarter.DataSource = typeof(EBook.Data.Models.PeriodSummary);
-            // 
             // chartCntrlQuaterly
             // 
             this.chartCntrlQuaterly.DataSource = this.bdsQuarter;
@@ -175,6 +171,13 @@ namespace EBookDevexpress
             this.layoutControl1.TabIndex = 3;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // genreSelectControl2
+            // 
+            this.genreSelectControl2.Location = new System.Drawing.Point(639, 96);
+            this.genreSelectControl2.Name = "genreSelectControl2";
+            this.genreSelectControl2.Size = new System.Drawing.Size(219, 411);
+            this.genreSelectControl2.TabIndex = 4;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -213,13 +216,6 @@ namespace EBookDevexpress
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // genreSelectControl2
-            // 
-            this.genreSelectControl2.Location = new System.Drawing.Point(639, 96);
-            this.genreSelectControl2.Name = "genreSelectControl2";
-            this.genreSelectControl2.Size = new System.Drawing.Size(219, 411);
-            this.genreSelectControl2.TabIndex = 4;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.genreSelectControl2;
@@ -228,6 +224,10 @@ namespace EBookDevexpress
             this.layoutControlItem3.Size = new System.Drawing.Size(223, 415);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
+            // 
+            // bdsQuarter
+            // 
+            this.bdsQuarter.DataSource = typeof(EBook.Data.Models.PeriodSummary);
             // 
             // QuaterlyChartForm
             // 
@@ -247,7 +247,6 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartCntrlQuarterly)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsQuarter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
@@ -263,6 +262,7 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsQuarter)).EndInit();
             this.ResumeLayout(false);
 
         }

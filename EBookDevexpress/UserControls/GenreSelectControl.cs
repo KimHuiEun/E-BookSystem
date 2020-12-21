@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EBook.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,16 @@ namespace EBookDevexpress
         public GenreSelectControl()
         {
             InitializeComponent();
-            OnGenreSelected(clGenre.Text);
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            if (DesignMode)
+                return;
+
+            bdsBookCategory.DataSource = BookCategory.Create();
         }
 
         #region GenreSelected event things for C# 3.0
@@ -57,6 +67,15 @@ namespace EBookDevexpress
             }
         }
         #endregion
+
+        private void clGenre_ItemCheck(object sender, DevExpress.XtraEditors.Controls.ItemCheckEventArgs e)
+        {
+            BookCategory current = (BookCategory)bdsBookCategory[e.Index];
+            string genre = current.Name;
+
+            OnGenreSelected(genre);
+            //e.Index
+        }
     }
 
 }

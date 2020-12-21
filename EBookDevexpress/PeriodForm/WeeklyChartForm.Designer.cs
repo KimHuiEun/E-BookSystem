@@ -100,7 +100,7 @@ namespace EBookDevexpress
         series2,
         series3,
         series4};
-            this.chartCntrlWeekly.Size = new System.Drawing.Size(569, 425);
+            this.chartCntrlWeekly.Size = new System.Drawing.Size(606, 425);
             this.chartCntrlWeekly.TabIndex = 2;
             // 
             // bdsWeek
@@ -121,10 +121,11 @@ namespace EBookDevexpress
             // 
             // genreSelectControl1
             // 
-            this.genreSelectControl1.Location = new System.Drawing.Point(585, 116);
+            this.genreSelectControl1.Location = new System.Drawing.Point(622, 116);
             this.genreSelectControl1.Name = "genreSelectControl1";
-            this.genreSelectControl1.Size = new System.Drawing.Size(258, 425);
+            this.genreSelectControl1.Size = new System.Drawing.Size(221, 425);
             this.genreSelectControl1.TabIndex = 5;
+            this.genreSelectControl1.GenreSelected += new System.EventHandler<EBookDevexpress.GenreSelectControl.GenreSelectedEventArgs>(this.genreSelectControl1_GenreSelected);
             this.genreSelectControl1.Load += new System.EventHandler(this.genreSelectControl1_Load);
             // 
             // weekSelectControl1
@@ -161,7 +162,7 @@ namespace EBookDevexpress
             this.layoutControlItem1.Control = this.chartCntrlWeekly;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 104);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(573, 429);
+            this.layoutControlItem1.Size = new System.Drawing.Size(610, 429);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -184,9 +185,9 @@ namespace EBookDevexpress
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.genreSelectControl1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(573, 104);
+            this.layoutControlItem3.Location = new System.Drawing.Point(610, 104);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(262, 429);
+            this.layoutControlItem3.Size = new System.Drawing.Size(225, 429);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 

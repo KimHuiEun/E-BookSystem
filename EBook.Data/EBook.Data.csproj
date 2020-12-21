@@ -88,6 +88,7 @@
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Rent.cs" />
     <Compile Include="Dao\RentDao.cs" />
+    <Compile Include="Models\BookCategory.cs" />
     <Compile Include="Models\PeriodSummary.cs" />
     <Compile Include="Models\DecadeExtraSummary.cs" />
     <Compile Include="Models\RankSummary.cs" />
