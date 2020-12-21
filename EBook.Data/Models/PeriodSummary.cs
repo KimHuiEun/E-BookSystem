@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EBook.Data.Models
 {
-    public enum TimeUnit
+    public enum TimeUnit  //기간을 계산하기 위한 단위열거형 -> value를 위해
     {
         Month,
         Week,
@@ -15,11 +15,11 @@ namespace EBook.Data.Models
 
     public class PeriodSummary
     {
-        public int Value { get; set; }
+        public int Value { get; set; } //hours, days, months 함축형
 
         public int Count { get; set; }
 
-        public TimeUnit Unit { get; set; }
+        public TimeUnit Unit { get; set; } //열거형 데이터 프로퍼티
 
         /*public string TimeZone          //시간대 지정하는 소스 힌트
         {
@@ -43,5 +43,7 @@ namespace EBook.Data.Models
                 
             }
         }*/
+
+        public string Genre { get; set; }
     }
 }

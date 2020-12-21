@@ -33,25 +33,25 @@ namespace EBookDevexpress
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             this.NewBookRankChart = new DevExpress.XtraCharts.ChartControl();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.genreSelectControl1 = new EBookDevexpress.GenreSelectControl();
+            this.bdsNewBook = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.NewBookRankChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsNewBook)).BeginInit();
             this.SuspendLayout();
             // 
             // NewBookRankChart
             // 
-            this.NewBookRankChart.DataSource = this.bookBindingSource;
+            this.NewBookRankChart.DataSource = this.bdsNewBook;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             xyDiagram1.Rotated = true;
             this.NewBookRankChart.Diagram = xyDiagram1;
+            this.NewBookRankChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NewBookRankChart.Legend.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.NewBookRankChart.Legend.Name = "Default Legend";
             this.NewBookRankChart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.NewBookRankChart.Location = new System.Drawing.Point(12, 12);
+            this.NewBookRankChart.Location = new System.Drawing.Point(0, 0);
             this.NewBookRankChart.Name = "NewBookRankChart";
             this.NewBookRankChart.PaletteName = "Apex";
             series1.ArgumentDataMember = "Title";
@@ -59,29 +59,21 @@ namespace EBookDevexpress
             this.NewBookRankChart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
             this.NewBookRankChart.SeriesTemplate.ArgumentDataMember = "RentCount";
-            this.NewBookRankChart.Size = new System.Drawing.Size(620, 395);
+            this.NewBookRankChart.Size = new System.Drawing.Size(895, 446);
             this.NewBookRankChart.TabIndex = 3;
-            // 
-            // genreSelectControl1
-            // 
-            this.genreSelectControl1.Location = new System.Drawing.Point(649, 92);
-            this.genreSelectControl1.Name = "genreSelectControl1";
-            this.genreSelectControl1.Size = new System.Drawing.Size(220, 315);
-            this.genreSelectControl1.TabIndex = 4;
             // 
             // NewBookRankForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(895, 446);
-            this.Controls.Add(this.genreSelectControl1);
             this.Controls.Add(this.NewBookRankChart);
             this.Name = "NewBookRankForm";
             this.Text = "신간 대여순위";
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewBookRankChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsNewBook)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -89,7 +81,6 @@ namespace EBookDevexpress
         #endregion
         private System.Windows.Forms.BindingSource bookModelBindingSource;
         private DevExpress.XtraCharts.ChartControl NewBookRankChart;
-        private System.Windows.Forms.BindingSource bookBindingSource;
-        private GenreSelectControl genreSelectControl1;
+        private System.Windows.Forms.BindingSource bdsNewBook;
     }
 }

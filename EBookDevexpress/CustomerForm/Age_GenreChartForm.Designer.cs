@@ -31,7 +31,13 @@ namespace EBookDevexpress
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram3D xyDiagram3D1 = new DevExpress.XtraCharts.XYDiagram3D();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.Line3DSeriesView line3DSeriesView1 = new DevExpress.XtraCharts.Line3DSeriesView();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.Line3DSeriesView line3DSeriesView2 = new DevExpress.XtraCharts.Line3DSeriesView();
+            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.Line3DSeriesView line3DSeriesView3 = new DevExpress.XtraCharts.Line3DSeriesView();
+            DevExpress.XtraCharts.Line3DSeriesView line3DSeriesView4 = new DevExpress.XtraCharts.Line3DSeriesView();
             DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn chartControlCommandGalleryItemGroup2DColumn1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn();
             DevExpress.XtraCharts.UI.CreateBarChartItem createBarChartItem1 = new DevExpress.XtraCharts.UI.CreateBarChartItem();
             DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem createFullStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem();
@@ -158,7 +164,13 @@ namespace EBookDevexpress
             this.chartBarController1 = new DevExpress.XtraCharts.UI.ChartBarController(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.uiChart_Main)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3D1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(line3DSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(line3DSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(line3DSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(line3DSeriesView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsAgeGenre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).BeginInit();
@@ -183,12 +195,19 @@ namespace EBookDevexpress
             this.uiChart_Main.Location = new System.Drawing.Point(2, 12);
             this.uiChart_Main.Name = "uiChart_Main";
             this.uiChart_Main.PaletteName = "Red Orange";
-            this.uiChart_Main.SeriesDataMember = "Genre";
-            this.uiChart_Main.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            series1.Name = "Series 1";
+            series1.View = line3DSeriesView1;
+            series2.Name = "Series 2";
+            series2.View = line3DSeriesView2;
+            series3.Name = "Series 3";
+            series3.View = line3DSeriesView3;
+            this.uiChart_Main.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1,
+        series2,
+        series3};
             this.uiChart_Main.SeriesTemplate.ArgumentDataMember = "Decade";
-            this.uiChart_Main.SeriesTemplate.SeriesDataMember = "Genre";
             this.uiChart_Main.SeriesTemplate.ValueDataMembersSerializable = "Count";
-            this.uiChart_Main.SeriesTemplate.View = line3DSeriesView1;
+            this.uiChart_Main.SeriesTemplate.View = line3DSeriesView4;
             this.uiChart_Main.Size = new System.Drawing.Size(918, 677);
             this.uiChart_Main.TabIndex = 0;
             // 
@@ -893,6 +912,12 @@ namespace EBookDevexpress
             this.Text = "연령/장르 차트";
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3D1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(line3DSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(line3DSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(line3DSeriesView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(line3DSeriesView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiChart_Main)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsAgeGenre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).EndInit();

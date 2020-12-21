@@ -39,10 +39,7 @@ namespace EBookDevexpress
             DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
             DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
-            this.timeSpanChartRangeControlClient1 = new DevExpress.XtraEditors.TimeSpanChartRangeControlClient();
             this.chartCntrlWeekly = new DevExpress.XtraCharts.ChartControl();
-            this.bdsWeek = new System.Windows.Forms.BindingSource(this.components);
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.genreSelectControl1 = new EBookDevexpress.GenreSelectControl();
             this.weekSelectControl1 = new EBookDevexpress.WeekSelectControl();
@@ -52,7 +49,7 @@ namespace EBookDevexpress
             this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanChartRangeControlClient1)).BeginInit();
+            this.bdsWeek = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chartCntrlWeekly)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
@@ -63,8 +60,6 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsWeek)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -73,6 +68,7 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsWeek)).BeginInit();
             this.SuspendLayout();
             // 
             // chartCntrlWeekly
@@ -100,12 +96,10 @@ namespace EBookDevexpress
         series2,
         series3,
         series4};
+            this.chartCntrlWeekly.SeriesTemplate.ArgumentDataMember = "TimeZone";
+            this.chartCntrlWeekly.SeriesTemplate.ValueDataMembersSerializable = "Count";
             this.chartCntrlWeekly.Size = new System.Drawing.Size(606, 425);
             this.chartCntrlWeekly.TabIndex = 2;
-            // 
-            // bdsWeek
-            // 
-            this.bdsWeek.DataSource = typeof(EBook.Data.Models.PeriodSummary);
             // 
             // layoutControl1
             // 
@@ -126,7 +120,6 @@ namespace EBookDevexpress
             this.genreSelectControl1.Size = new System.Drawing.Size(221, 425);
             this.genreSelectControl1.TabIndex = 5;
             this.genreSelectControl1.GenreSelected += new System.EventHandler<EBookDevexpress.GenreSelectControl.GenreSelectedEventArgs>(this.genreSelectControl1_GenreSelected);
-            this.genreSelectControl1.Load += new System.EventHandler(this.genreSelectControl1_Load);
             // 
             // weekSelectControl1
             // 
@@ -191,6 +184,10 @@ namespace EBookDevexpress
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
+            // bdsWeek
+            // 
+            this.bdsWeek.DataSource = typeof(EBook.Data.Models.PeriodSummary);
+            // 
             // WeeklyChartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -199,7 +196,6 @@ namespace EBookDevexpress
             this.Controls.Add(this.layoutControl1);
             this.Name = "WeeklyChartForm";
             this.Text = "주간 대여";
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanChartRangeControlClient1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
@@ -210,8 +206,6 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartCntrlWeekly)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsWeek)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -220,15 +214,13 @@ namespace EBookDevexpress
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsWeek)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private DevExpress.XtraEditors.TimeSpanChartRangeControlClient timeSpanChartRangeControlClient1;
         private DevExpress.XtraCharts.ChartControl chartCntrlWeekly;
-        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
-        private System.Windows.Forms.BindingSource bdsWeek;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private GenreSelectControl genreSelectControl1;
         private WeekSelectControl weekSelectControl1;
@@ -238,5 +230,6 @@ namespace EBookDevexpress
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private System.Windows.Forms.BindingSource bdsWeek;
     }
 }

@@ -34,14 +34,7 @@ namespace EBookDevexpress
             if (DesignMode)
                 return;
 
-
-            RankSummary summary = new RankSummary();
-            NewBookRankChart.DataSource = summary.Rank.ToString();
-            var book = summary.Title.Max();
-            //NewBookRankChart.Series[0].View.Colorizer = CreateColorizer(summary);
-            NewBookRankChart.DataSource = book;
-
-
+            bdsNewBook.DataSource = Dao.Rent.BestsellerRank();
         }
     }
 }

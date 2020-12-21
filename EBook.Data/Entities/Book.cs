@@ -10,7 +10,15 @@ namespace EBook.Data
     {
         public override string ToString()
         {
-            return $"{BookId} / {Title} / {Author} / {Publisher} / {PublicationYear} / {Genre} / {Price}";
+            return $"{BookId} / {Title} / {Author} / {Publisher} / {PublicationDate} / {Genre}";
+        }
+
+        public bool IsNewBook
+        {
+            get
+            {
+                return PublicationDate >= DateTime.Today.AddMonths(-3);
+            }
         }
     }
 }

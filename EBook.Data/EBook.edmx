@@ -13,9 +13,8 @@
           <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Author" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Publisher" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="PublicationYear" Type="int" Nullable="false" />
+          <Property Name="PublicationDate" Type="datetime" Nullable="false" />
           <Property Name="Genre" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Price" Type="decimal" Precision="10" Scale="0" Nullable="false" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
@@ -103,9 +102,8 @@
           <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Author" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Publisher" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="PublicationYear" Type="Int32" Nullable="false" />
+          <Property Name="PublicationDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Genre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Price" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
           <NavigationProperty Name="Rents" Relationship="Model.FK_Rent_Book" FromRole="Book" ToRole="Rent" />
         </EntityType>
         <EntityType Name="Customer">
@@ -168,9 +166,8 @@
           <EntitySetMapping Name="Books">
             <EntityTypeMapping TypeName="Model.Book">
               <MappingFragment StoreEntitySet="Book">
-                <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Genre" ColumnName="Genre" />
-                <ScalarProperty Name="PublicationYear" ColumnName="PublicationYear" />
+                <ScalarProperty Name="PublicationDate" ColumnName="PublicationDate" />
                 <ScalarProperty Name="Publisher" ColumnName="Publisher" />
                 <ScalarProperty Name="Author" ColumnName="Author" />
                 <ScalarProperty Name="Title" ColumnName="Title" />

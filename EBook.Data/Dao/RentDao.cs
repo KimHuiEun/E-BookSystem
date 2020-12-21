@@ -51,8 +51,6 @@ namespace EBook.Data
             return models; //models를 반환함.
         }
 
-        
-
         private List<Rent> GetWithDecadeGenre(int year) //Search 메소드에서 만든 것 생성.
         {
             using (var context = DbContextCreator.Create())   //MSSQL 사용문
@@ -90,7 +88,6 @@ namespace EBook.Data
             }
         }
 
-
         /* private List<Rent> GetWithDecadeGenre2(int year) 
          {
              using (var context = DbContextCreator.Create())
@@ -121,68 +118,24 @@ namespace EBook.Data
              }
          }*/
 
-
-
-        /// <summary>
-        /// Rent테이블에 BookId의 갯수를 리스트화 : 대여량
-        /// </summary>
-        /// <param name="bookId"></param>
-        /// <returns></returns>
-        public int GetCount(int bookId)
-        {
-            using (var context = DbContextCreator.Create())
-            {
-                return context.Rents.Count(x => x.BookId == bookId);
-                //var query = from x in context.Rents
-                //            where x.BookId == bookId
-                //            select x;
-
-                //return query.Count();
-            }
-        }
-
-
-        //대여량을 기준으로 카운트해서 순위 추출.
-        public List<RankSummary> BookCountRank()  
-        {
-            using (var context = DbContextCreator.Create())
-            {
-                var query = from x in context.Books
-                            let rentCount = x.Rents.Count()
-                            orderby rentCount descending
-                            select new 
-                            {
-                                Title = x.Title,
-                                BookCount = rentCount
-                            };
-
-                var list = query.Take(10).ToList();
-
-                return list.ConvertAll(x => new RankSummary { Title = x.Title, BookCountRank = x.BookCount});
-
-            }
-        }
-
-
-
         /// <summary>
         /// 연령별로 성별 리스트화 메소드
         /// </summary>
         /// <param name="borrow"></param>
         /// <returns></returns>
-        public List<DecadeExtraSummary> DecadeGenderSearch(string borrow)  
+        public List<DecadeExtraSummary> DecadeGenderSearch(string borrow)
         {
-            List<Rent> rents = GetWithDecadeGender(borrow); 
+            List<Rent> rents = GetWithDecadeGender(borrow);
 
             List<DecadeExtraSummary> models = new List<DecadeExtraSummary>();
 
-            foreach (Rent rent in rents)  
+            foreach (Rent rent in rents)
             {
                 DecadeExtraSummary summary = models.Find(x => x.Decade == rent.Decade && x.Gender == rent.Gender);
-                
+
                 if (summary != null)
                     summary.Count++;
-                
+
                 else
                 {
                     summary = new DecadeExtraSummary();
@@ -192,13 +145,11 @@ namespace EBook.Data
 
                     models.Add(summary);
                 }
-                
+
             }
 
             return models; //models를 반환함.
         }
-
-
         private List<Rent> GetWithDecadeGender(string gender)
         {
             using (var context = DbContextCreator.Create())
@@ -206,8 +157,8 @@ namespace EBook.Data
 
                 Dictionary<int, int> birthyears
                      = context.Customers.ToDictionary(x => x.CustomerId, x => x.BirthYear);
-                
-                Dictionary<int,string> genders =  context.Customers.ToDictionary(x => x.CustomerId, x => x.Gender);
+
+                Dictionary<int, string> genders = context.Customers.ToDictionary(x => x.CustomerId, x => x.Gender);
 
 
                 var query = from x in context.Rents
@@ -227,7 +178,11 @@ namespace EBook.Data
 
 
 
-
+        /// <summary>
+        /// 시간당 체크 데이터 리스트 메소드
+        /// </summary>
+        /// <param name="day"></param>
+        /// <returns></returns>
         public List<PeriodSummary> DaySearch(DateTime day)
         {
             using (var context = DbContextCreator.Create())
@@ -236,7 +191,7 @@ namespace EBook.Data
                 DateTime to = from.AddDays(1);      //임의의 날짜 다음날(자정).
 
                 var query = from x in context.Rents
-                            //where x.RentDate >= @from && x.RentDate < to 
+                                //where x.RentDate >= @from && x.RentDate < to 
                             select x;               //하루동안의 렌트 기록을 뽑는다.
 
                 var list = query.ToList();          //리스트로 만들기.
@@ -245,12 +200,12 @@ namespace EBook.Data
                 var query2 = from x in list
                              group x by x.RentDate.Hour into HourGroup          //리스트를 모아 한 그룹을 g라고 한다.
                              //select new ThePeriod { Hour = g.Key, Count = g.Count()};
-                             select HourGroup;                                  
+                             select HourGroup;
 
                 //return query2.ToList();
 
                 List<PeriodSummary> periods = new List<PeriodSummary>();
-                foreach(var g in query2)
+                foreach (var g in query2)
                 {
                     PeriodSummary period = new PeriodSummary();
                     period.Value = g.Key;                                //렌트기록중에 '시'만 뽑는다.
@@ -262,6 +217,66 @@ namespace EBook.Data
                 return periods;
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// Rent테이블에 BookId의 갯수를 리스트화 : 대여량 
+        /// </summary>
+        /// <param name="bookId"></param>
+        /// <returns></returns>
+        public int GetCount(int bookId)
+        {
+            using (var context = DbContextCreator.Create())
+            {
+                return context.Rents.Count(x => x.BookId == bookId);
+                //var query = from x in context.Rents
+                //            where x.BookId == bookId
+                //            select x;
+
+                //return query.Count();
+            }
+        }
+
+        /// <summary>
+        /// 대여량을 기준으로 카운트해서 순위 추출.
+        /// </summary>
+        /// <returns></returns>
+        public List<RankSummary> BestsellerRank()  
+        {
+            using (var context = DbContextCreator.Create())
+            {
+                var query = from x in context.Books
+                            let rentCount = x.Rents.Count()
+                            orderby rentCount descending
+                            select new 
+                            {
+                                Title = x.Title,
+                                BookCount = rentCount
+                            };
+
+                var list = query.Take(10).ToList();
+
+                return list.ConvertAll(x => new RankSummary { Title = x.Title, BookCountRank = x.BookCount});
+            }
+        }
+
+
+        
 
         //TODO
         public object WeekSearch(DateTime week)

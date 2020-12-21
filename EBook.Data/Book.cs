@@ -24,9 +24,8 @@ namespace EBook.Data
         public string Title { get; set; }
         public string Author { get; set; }
         public string Publisher { get; set; }
-        public int PublicationYear { get; set; }
+        public System.DateTime PublicationDate { get; set; }
         public string Genre { get; set; }
-        public decimal Price { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rent> Rents { get; set; }

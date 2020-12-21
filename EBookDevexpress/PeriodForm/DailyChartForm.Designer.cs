@@ -48,7 +48,7 @@ namespace EBookDevexpress
             this.daySelectControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.daySelectControl1.Location = new System.Drawing.Point(0, 0);
             this.daySelectControl1.Name = "daySelectControl1";
-            this.daySelectControl1.Size = new System.Drawing.Size(849, 98);
+            this.daySelectControl1.Size = new System.Drawing.Size(857, 98);
             this.daySelectControl1.TabIndex = 0;
             this.daySelectControl1.ButtonDaySearch += new System.EventHandler<EBookDevexpress.DaySelectControl.ButtonDaySearchEventArgs>(this.daySelectControl1_ButtonDaySearch);
             // 
@@ -69,7 +69,7 @@ namespace EBookDevexpress
             series1.View = lineSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl1.Size = new System.Drawing.Size(849, 406);
+            this.chartControl1.Size = new System.Drawing.Size(857, 430);
             this.chartControl1.TabIndex = 1;
             // 
             // bdsDay
@@ -80,7 +80,7 @@ namespace EBookDevexpress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 504);
+            this.ClientSize = new System.Drawing.Size(857, 528);
             this.Controls.Add(this.chartControl1);
             this.Controls.Add(this.daySelectControl1);
             this.Name = "DailyChartForm";

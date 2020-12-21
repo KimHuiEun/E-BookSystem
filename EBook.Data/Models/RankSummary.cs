@@ -12,6 +12,10 @@ namespace EBook.Data.Models
 
         public int BookCountRank { get; set; }
 
+        public int NewBookRank { get; set; }
+
+        public int BestsellerRank { get; set; }
+
         public string Title { get; set; }
 
     }
