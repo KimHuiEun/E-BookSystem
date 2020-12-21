@@ -62,7 +62,10 @@ namespace EBookDevexpress
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Location = new System.Drawing.Point(0, 98);
             this.chartControl1.Name = "chartControl1";
-            series1.Name = "Series 1";
+            series1.ArgumentDataMember = "TimeZone";
+            series1.Name = "일일 대여량";
+            series1.ValueDataMembersSerializable = "Count";
+            lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
             series1.View = lineSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
