@@ -51,6 +51,8 @@ namespace EBook.Data
             return models; //models를 반환함.
         }
 
+
+
         private List<Rent> GetWithDecadeGenre(int year) //Search 메소드에서 만든 것 생성.
         {
             using (var context = DbContextCreator.Create())   //MSSQL 사용문
@@ -219,7 +221,10 @@ namespace EBook.Data
         }
 
 
-
+        public object WeekSearch(DateTime week)
+        {
+            throw new NotImplementedException();
+        }
 
 
 
@@ -241,29 +246,66 @@ namespace EBook.Data
             using (var context = DbContextCreator.Create())
             {
                 var query = from x in context.Books
-                            let rentCount = x.Rents.Count()
-                            orderby rentCount descending
+                            let bestsellerCount = x.Rents.Count()
+                            orderby bestsellerCount descending
                             select new 
                             {
                                 Title = x.Title,
-                                BookCount = rentCount
+                                BestSellerCount = bestsellerCount
                             };
 
                 var list = query.Take(10).ToList();
 
-                return list.ConvertAll(x => new RankSummary { Title = x.Title, BestsellerRank = x.BookCount});
+                return list.ConvertAll(x => new RankSummary { Title = x.Title, BestsellerRank = x.BestSellerCount});
             }
         }
 
 
-        
+        public List<RankSummary> NewBookRank()
+        {
+            DateTime firstDay = DateTime.Today.AddMonths(-3);
+            DateTime lastDay = DateTime.Today;
 
-        //TODO
-        public object WeekSearch(DateTime week)
+
+            using (var context = DbContextCreator.Create())
+            {
+                var query = from x in context.Books
+                            where x.PublicationDate <= firstDay && x.PublicationDate == lastDay
+                            let newBookRank = x.Rents.Count()
+                            orderby newBookRank descending
+                            select new
+                            {
+                                Title = x.Title,
+                                NewBookRank = newBookRank
+                            };
+
+                var list = query.Take(10).ToList();
+
+                return list.ConvertAll(x => new RankSummary { Title = x.Title, NewBookRank = x.NewBookRank});
+            }
+           
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //선택한 날을 포함한 주.
+        /*public object WeekSearch(DateTime week)
         {
             using (var context = DbContextCreator.Create())
             {
-                
+                DateTime startWeek = DateTime
 
                 var query = from x in context.Rents
                                 //where x.RentDate >= @from && x.RentDate < to 
@@ -291,7 +333,7 @@ namespace EBook.Data
 
                 return periods;
             }
-        }
+        }*/
 
     }
 }

@@ -79,7 +79,6 @@ namespace EBookDevexpress
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource bookModelBindingSource;
         private DevExpress.XtraCharts.ChartControl NewBookRankChart;
         private System.Windows.Forms.BindingSource bdsNewBook;
     }

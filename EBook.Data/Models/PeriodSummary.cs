@@ -21,16 +21,21 @@ namespace EBook.Data.Models
 
         public TimeUnit Unit { get; set; } //열거형 데이터 프로퍼티
 
-        /*public string TimeZone          //시간대 지정하는 소스 힌트
+       /* public string PeriodType          //시간대 지정하는 소스 힌트
         {
             get
             {
                 if (Unit == TimeUnit.Day)
                 {
-                    if (Value < 6)
-                        return "새벽";
+                    if (Value > 0 && Value <= 3)
+                        return "3시";
+                    if (Value > 3 && Value <= 6)
+                        return "6시";
+
                     else
                         return "";
+
+                 
                 }
                 else if (Unit == TimeUnit.Week)
                 {
@@ -42,8 +47,8 @@ namespace EBook.Data.Models
                 }
                 
             }
-        }*/
-
+        }
+*/
         public string Genre { get; set; }
     }
 }
