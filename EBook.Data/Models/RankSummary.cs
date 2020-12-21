@@ -14,5 +14,7 @@ namespace EBook.Data.Models
 
         public int NewBookRank { get; set; }
 
+        public DateTime PublicationDate { get; set; }
+
     }
 }
