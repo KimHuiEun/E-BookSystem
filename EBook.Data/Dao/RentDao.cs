@@ -256,44 +256,7 @@ namespace EBook.Data
         }
 
 
-        public List<RankSummary> NewBookRank()
-        {
-            DateTime firstDay = DateTime.Today.AddMonths(-3);
-            DateTime lastDay = DateTime.Today;
-
-
-            using (var context = DbContextCreator.Create())
-            {
-                var query = from x in context.Books
-                            where x.PublicationDate <= firstDay && x.PublicationDate == lastDay
-                            let rentCount = x.Rents.Count()
-                            orderby rentCount descending
-                            select new
-                            {
-                                Title = x.Title,
-                                BookCount = rentCount
-                            };
-
-                var list = query.Take(10).ToList();
-
-                return list.ConvertAll(x => new RankSummary { Title = x.Title, NewBookRank = x.BookCount });
-            }
-           
-            
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
 
         //TODO
         public object WeekSearch(DateTime week)

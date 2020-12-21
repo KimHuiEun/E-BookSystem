@@ -17,7 +17,15 @@ namespace EBookDevexpress
         public NewBookRankForm()
         {
             InitializeComponent();
+
+            //gcGenre.CheckboxClicked += GcGenre_CheckboxClicked;
+
         }
+
+        /*private void GcGenre_CheckboxClicked(object sender, CheckboxClickedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }*/
 
         protected override void OnLoad(EventArgs e)
         {
@@ -26,7 +34,7 @@ namespace EBookDevexpress
             if (DesignMode)
                 return;
 
-            bdsNewBook.DataSource = Dao.Rent.NewBookRank();
+            bdsNewBook.DataSource = Dao.Rent.BestsellerRank();
         }
     }
 }
