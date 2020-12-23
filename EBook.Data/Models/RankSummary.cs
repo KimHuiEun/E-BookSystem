@@ -14,7 +14,7 @@ namespace EBook.Data.Models
 
         public int NewBookRank { get; set; }
 
-        public int Count { get; set; }
+       // public int Count { get; set; }
 
     }
 }

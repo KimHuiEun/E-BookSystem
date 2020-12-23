@@ -241,7 +241,7 @@ namespace EBook.Data
         /// 대여량을 기준으로 베스트셀러 카운트.
         /// </summary>
         /// <returns></returns>
-        public List<RankSummary> BestsellerRank()  
+        public List<RankSummary> BestsellerRank()
         {
             using (var context = DbContextCreator.Create())
             {
