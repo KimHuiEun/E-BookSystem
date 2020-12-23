@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EBook.Data.BookDao" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dao\BookDao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EBook.Data.CustomerDao" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Dao\CustomerDao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EBook.Data.Dao" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAABAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dao\Dao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EBook.Data.RentDao">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAABAAAACAAQBAEAAAQAAAAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Dao\RentDao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EBook.Data.EBookEntities">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAEAAAAAAAAAAAAkAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EBook.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EBook.Data.Book" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIACAAAAAAEAFAEiAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EBook.Data.Customer" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAEAACEAAAAAAQAAAAAABAAAAAAIAAAAAA=</HashCode>
+      <FileName>Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EBook.Data.Rent" Collapsed="true">
+    <Position X="12.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEACACAAAAQAEDEAAIAAAAAAQAAABEAAAAAAAAQAAA=</HashCode>
+      <FileName>Rent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EBook.Data.Program" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EFLibrary.BaseDao&lt;T&gt;" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>EFLibrary\BaseDao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EFLibrary.DbContextCreator" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAACAAAAAAAAA=</HashCode>
+      <FileName>EFLibrary\DbContextCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EFLibrary.SingleKeyDao&lt;T, K&gt;" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAEAAAAAAAAAAABAAAAAQAAAAA=</HashCode>
+      <FileName>EFLibrary\SingleKeyDao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EBook.Data.Models.BookCategory">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\BookCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EBook.Data.Models.DecadeExtraSummary">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAIAAAQAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Models\DecadeExtraSummary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EBook.Data.Models.PeriodSummary">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAIAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\PeriodSummary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EBook.Data.Models.RankSummary" Collapsed="true">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAQAAAAAQAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\RankSummary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Enum Name="EBook.Data.Models.TimeUnit">
+    <Position X="7.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAEAAAAAIAAAAA=</HashCode>
+      <FileName>Models\PeriodSummary.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

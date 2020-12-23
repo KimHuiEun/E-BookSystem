@@ -109,6 +109,7 @@
     <None Include="EBook.edmx.diagram">
       <DependentUpon>EBook.edmx</DependentUpon>
     </None>
+    <None Include="EBookClassDiagram.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
