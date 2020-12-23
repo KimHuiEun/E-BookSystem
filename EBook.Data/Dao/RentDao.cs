@@ -271,17 +271,17 @@ namespace EBook.Data
             {
                 var query = from x in context.Books
                             where x.PublicationDate <= firstDay && x.PublicationDate == lastDay
-                            let newBookRank = x.Rents.Count()
-                            orderby newBookRank descending
+                            let newBookCount = x.Rents.Count()
+                            orderby newBookCount descending
                             select new
                             {
                                 Title = x.Title,
-                                NewBookRank = newBookRank
+                                NewBookCount = newBookCount
                             };
 
                 var list = query.Take(10).ToList();
 
-                return list.ConvertAll(x => new RankSummary { Title = x.Title, NewBookRank = x.NewBookRank});
+                return list.ConvertAll(x => new RankSummary { Title = x.Title, NewBookRank = x.NewBookCount });
             }
            
             

@@ -34,7 +34,7 @@ namespace EBookDevexpress
             if (DesignMode)
                 return;
 
-            bdsNewBook.DataSource = Dao.Rent.BestsellerRank();
+            bdsNewBook.DataSource = Dao.Rent.NewBookRank();
         }
     }
 }
