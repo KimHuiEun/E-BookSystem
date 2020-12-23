@@ -52,22 +52,29 @@ namespace EBookDevexpress
             this.NewBookRankChart.Legend.Name = "Default Legend";
             this.NewBookRankChart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.NewBookRankChart.Location = new System.Drawing.Point(0, 0);
+            this.NewBookRankChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NewBookRankChart.Name = "NewBookRankChart";
             this.NewBookRankChart.PaletteName = "Apex";
             series1.ArgumentDataMember = "Title";
             series1.Name = "Series 1";
             this.NewBookRankChart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.NewBookRankChart.SeriesTemplate.ArgumentDataMember = "RentCount";
-            this.NewBookRankChart.Size = new System.Drawing.Size(895, 446);
+            this.NewBookRankChart.SeriesTemplate.ArgumentDataMember = "Title";
+            this.NewBookRankChart.SeriesTemplate.ValueDataMembersSerializable = "NewBookRank";
+            this.NewBookRankChart.Size = new System.Drawing.Size(895, 535);
             this.NewBookRankChart.TabIndex = 3;
+            // 
+            // bdsNewBook
+            // 
+            this.bdsNewBook.DataSource = typeof(EBook.Data.Models.RankSummary);
             // 
             // NewBookRankForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 446);
+            this.ClientSize = new System.Drawing.Size(895, 535);
             this.Controls.Add(this.NewBookRankChart);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "NewBookRankForm";
             this.Text = "신간 대여순위";
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();

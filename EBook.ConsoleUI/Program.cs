@@ -18,17 +18,14 @@ namespace EBook.ConsoleUI
         {
             var rents = Dao.Rent.GetAll();
 
-            /*            var periods = Dao.Rent.DaySearch(DateTime.Today);
-                        foreach (var period in periods)
-                        {
-                            Console.WriteLine(period);
-                        }*/
-
-            var periods = Dao.Rent.BestsellerRank();
+            //var periods = Dao.Rent.DaySearch(DateTime.Today);
+            //var periods = Dao.Rent.BestsellerRank();
+            var periods = Dao.Rent.NewBookRank();
             foreach (var period in periods)
             {
                 Console.WriteLine(period);
             }
+           
         }
     }
 }

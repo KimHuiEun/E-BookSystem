@@ -239,6 +239,7 @@
     <None Include="EBook.Data.Models.BookCategory.datasource" />
     <None Include="EBook.Data.Models.DecadeExtraSummary.datasource" />
     <None Include="EBook.Data.Models.PeriodSummary.datasource" />
+    <None Include="EBook.Data.Models.RankSummary.datasource" />
     <None Include="EBook.Data.Models.TheModel.datasource" />
     <None Include="EBook.Data.Rent.datasource" />
     <None Include="EBook.Data.RentDao.datasource" />

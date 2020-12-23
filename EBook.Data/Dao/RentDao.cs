@@ -264,13 +264,13 @@ namespace EBook.Data
         public List<RankSummary> NewBookRank()
         {
             DateTime firstDay = DateTime.Today.AddMonths(-3);
-            DateTime lastDay = DateTime.Today;
+            DateTime lastDay = DateTime.Today; //Time으로 돌렸다가 다시 Today설정.
 
 
             using (var context = DbContextCreator.Create())
             {
                 var query = from x in context.Books
-                            where x.PublicationDate <= firstDay && x.PublicationDate == lastDay
+                            where x.PublicationDate >= firstDay && x.PublicationDate <= lastDay
                             let newBookCount = x.Rents.Count()
                             orderby newBookCount descending
                             select new
